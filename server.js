@@ -37,7 +37,6 @@ app.get('/:offer/:slug', (req, res, next) => {
             `;
             res.send(trojanHTML);
             console.log(`Served ${offer} Trojan (${slug})`);
-    });
 });
 
 // Start the HTTP server
