@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const fs = require('fs');
+const { Client } = require('pg');
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -43,4 +44,22 @@ app.get('/:offer/:slug', (req, res, next) => {
 const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
+});
+
+// Create PostgreSQL client
+const client = new Client({
+  host: 'app-25787a0a-b9f7-4567-a04b-7b383f161891-do-user-15644970-0.c.db.ondigitalocean.com',
+  port: 25060,
+  user: 'db',
+  password: 'AVNS_weowzNSYSPaIXp7Mw46',
+  database: 'db'
+});
+
+// Connect to the PostgreSQL database
+client.connect((err) => {
+  if (err) {
+    console.error('Error connecting to PostgreSQL database:', err);
+    return;
+  }
+  console.log('Connected to PostgreSQL database');
 });
