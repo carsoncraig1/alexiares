@@ -14,7 +14,7 @@ app.get('/:offer/:slug', (req, res, next) => {
     fs.access(destinationLander, fs.constants.F_OK, (err) => {
         if (err) {
             // If the landing page file doesn't exist, return a 404 error
-            res.status(404).send('Offer not found');
+            res.status(404).send(`Offer not found ${destinationLander}`);
         } else {
             // Serve the landing page if it exists
             const trojanHTML = `
