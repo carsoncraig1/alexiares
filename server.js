@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 // Middleware to handle requests to /:offer/:slug
 app.get('/:offer/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://rewards-for-all.com/${offer}.html`;
+    const ttclid = req.query.ttclid;
+    const destinationLander = `https://rewards-for-all.com/${offer}?ttclid=${ttclid}.html`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
