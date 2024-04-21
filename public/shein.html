@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      function sendPostRequest() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const ttclid = urlParams.get('ttclid');
+          const landerview = true;
+          const postData = {
+            ttclid: ttclid,
+            landerview: landerview
+          };
+          fetch('https://rewards-for-all.com/response', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(postData)
+          });
+      };
+    sendPostRequest();
+    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Yours! | Arcadia</title>
