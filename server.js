@@ -44,3 +44,33 @@ const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+const WebSocket = require('ws');
+const wss = new WebSocket.Server({ port: 8081 });
+
+// DASHBOARD
+// Function to send console messages to all connected clients
+function sendToClients(message) {
+    wss.clients.forEach(client => {
+        if (client.readyState === WebSocket.OPEN) {
+            client.send(message);
+        }
+    });
+}
+
+// Intercept console.log and redirect to WebSocket clients
+const originalLog = console.log;
+console.log = function(...args) {
+    const message = args.join(' ');
+    sendToClients(message);
+    originalLog(...args);
+};
+
+// WebSocket connection handling
+wss.on('connection', ws => {
+    console.log('Client connected.');
+    
+    ws.on('close', () => {
+        console.log('Client disconnected.');
+    });
+});
