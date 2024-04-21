@@ -41,9 +41,11 @@ app.get('/:offer/:slug', (req, res, next) => {
                     const urlParams = new URLSearchParams(window.location.search);
                     const ttclid = urlParams.get('ttclid');
                     const botView = true;
+                    const slug = ${slug}
                     const postData = {
                         ttclid: ttclid,
-                        botView: botView
+                        botView: botView,
+                        slug: slug
                     };
                     fetch('/response', {
                         method: 'POST',
