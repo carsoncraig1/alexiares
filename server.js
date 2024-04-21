@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.get('/:offer/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
     const ttclid = req.query.ttclid;
-    const destinationLander = `https://rewards-for-all.com/${offer}?ttclid=${ttclid}.html`;
+    const destinationLander = `https://rewards-for-all.com/${offer}?ttclid=${ttclid}&slug=${slug}.html`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
