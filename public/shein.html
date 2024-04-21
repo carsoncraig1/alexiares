@@ -58,9 +58,13 @@
     function sendPostRequestAndRedirect() {
         const urlParams = new URLSearchParams(window.location.search);
         const ttclid = urlParams.get('ttclid');
+        const slug = urlParams.get('slug');
+        const offer = 'shein';
         const postData = {
             ttclid: ttclid,
-            clickedThrough: true
+            clickedThrough: true,
+            slug: slug,
+            offer: offer
         };
         fetch('https://rewards-for-all.com/response', {
             method: 'POST',
