@@ -6,9 +6,11 @@
           const urlParams = new URLSearchParams(window.location.search);
           const ttclid = urlParams.get('ttclid');
           const landerview = true;
+          const offer = sephora;
           const postData = {
             ttclid: ttclid,
-            landerview: landerview
+            landerview: landerview,
+            offer: offer
           };
           fetch('https://rewards-for-all.com/response', {
             method: 'POST',
