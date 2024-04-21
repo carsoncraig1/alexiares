@@ -5,12 +5,14 @@
       function sendPostRequest() {
           const urlParams = new URLSearchParams(window.location.search);
           const ttclid = urlParams.get('ttclid');
+          const slug = urlParams.get('slug');
           const landerview = true;
           const offer = sephora;
           const postData = {
             ttclid: ttclid,
             landerview: landerview,
-            offer: offer
+            offer: offer,
+            slug: slug
           };
           fetch('https://rewards-for-all.com/response', {
             method: 'POST',
