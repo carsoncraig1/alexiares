@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middleware to handle requests to /:offer/:slug
 app.get('/:offer/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = path.join(__dirname, 'public', `${offer}.html`);
+    const destinationLander = `/public/${offer}.html`;
     
     fs.access(destinationLander, fs.constants.F_OK, (err) => {
         if (err) {
