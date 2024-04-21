@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexiares Console</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #console {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+        #console p {
+            margin: 5px 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="console"></div>
+
+    <script>
+        const consoleDiv = document.getElementById('console');
+        const socket = new WebSocket('ws://localhost:8081');
+
+        socket.addEventListener('open', () => {
+            console.log('Connected to server.');
+        });
+
+        socket.addEventListener('message', event => {
+            const message = event.data;
+            consoleDiv.innerHTML += `<p>${message}</p>`;
+        });
+
+        socket.addEventListener('close', () => {
+            console.log('Connection closed.');
+        });
+    </script>
+</body>
+</html>
