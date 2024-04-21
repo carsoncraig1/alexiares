@@ -69,38 +69,54 @@ app.get('/:offer/:slug', (req, res, next) => {
 app.post('/response', async (req, res) => {
     try {
         const { ttclid, botView, landerView, clickedThrough, offer, slug } = req.body;
-
+        let ttclid_view = ttclid.substring(0, 5);
+        
         // Logic to log a clickThrough and return response so they can redirect
         if (clickedThrough) {
             const clickThroughQuery = {
-                text: 'UPDATE activitylog SET clickedthrough = TRUE WHERE TTCLID = $1',
-                values: [ttclid]
+                text: 'UPDATE activitylog SET clickedthrough = $1 WHERE TTCLID = $2',
+                values: [clickedThrough, ttclid]
             };
             try {
                 await client.query(clickThroughQuery);
-                console.log(`User sent to ${offer} Offer thru ${slug}`);
+                console.log(`User ${ttclid_view} sent to ${offer} Offer thru ${slug}`);
                 return res.status(200).send('Click through logged successfully.');
             } catch (error) {
-                console.error('Error logging click through:', error);
-                return res.status(500).send('Internal Server Error');
+                console.error(`Error logging click through, ${ttclid_view} redirected anyways. ${slug} ${offer}`, error);
+                return res.status(200).send('Proceed to offer');
             }
         }
         
         // Logic to log a landerView
         if (landerView) {
-            // Write SQL query to log the landerView
+            const landerViewQuery = {
+                text: 'INSERT INTO activitylog (TTCLID, landerView, slug, offer) VALUES ($1, $2, $3, $4)',
+                values: [ttclid, landerView, slug, offer]
+            };
+            try {
+                await client.query(landerViewQuery);
+                console.log(`User ${ttclid_view} is viewing ${offer} lander from ${slug}`);
+            } catch (error) {
+                console.error(`Error logging ${ttclid_view} lander view: ${slug} ${offer}`, error);
+            }
         }
 
         // Logic to log a botView
         if (botView) {
-            // Write SQL query to log the botView
+            const botViewQuery = {
+                text: 'INSERT INTO activitylog (botView, slug, offer) VALUES ($1, $2, $3)',
+                values: [botView, slug, offer]
+            };
+            try {
+                await client.query(botViewQuery);
+                console.log(`Bot attack defeated: ${slug} ${offer}`);
+            } catch (error) {
+                console.error(`Error logging bot attack: ${slug} ${offer}`, error);
+            }
         }
-
-        // Return success response if no action needed
-        res.status(200).send('Request processed successfully.');
     } catch (error) {
-        console.error('Error processing request:', error);
-        res.status(500).send('Internal server error.');
+        console.error('Unknown Error handling request:', error);
+        return res.status(200).send('Unknown Error');
     }
 });
 
