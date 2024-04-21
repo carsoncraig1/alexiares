@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 const { Client } = require('pg');
+const bodyParser = require('body-parser');
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -65,13 +66,42 @@ app.get('/:offer/:slug', (req, res, next) => {
 });
 
 // Middleware to receive and log analytics
-app.post('/response', (req, res) => {
-    // Extract data from the request body
-    const responseData = req.body;
+app.post('/response', async (req, res) => {
+    try {
+        const { ttclid, botView, landerView, clickedThrough, offer, slug } = req.body;
 
-    // Process the received data as needed
-    console.log('Received response:', responseData);
+        // Logic to log a clickThrough and return response so they can redirect
+        if (clickedThrough) {
+            const clickThroughQuery = {
+                text: 'UPDATE activitylog SET clickedthrough = TRUE WHERE TTCLID = $1',
+                values: [ttclid]
+            };
+            try {
+                await client.query(clickThroughQuery);
+                console.log(`User sent to ${offer} Offer thru ${slug}`);
+                return res.status(200).send('Click through logged successfully.');
+            } catch (error) {
+                console.error('Error logging click through:', error);
+                return res.status(500).send('Internal Server Error');
+            }
+        }
+        
+        // Logic to log a landerView
+        if (landerView) {
+            // Write SQL query to log the landerView
+        }
 
+        // Logic to log a botView
+        if (botView) {
+            // Write SQL query to log the botView
+        }
+
+        // Return success response if no action needed
+        res.status(200).send('Request processed successfully.');
+    } catch (error) {
+        console.error('Error processing request:', error);
+        res.status(500).send('Internal server error.');
+    }
 });
 
 // Start the HTTP server
