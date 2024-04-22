@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const fs = require('fs');
-const WebSocket = require('uWebSockets.js');
+const WebSocket = require('uwebsockets.js');
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
