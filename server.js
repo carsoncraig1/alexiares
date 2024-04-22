@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const fs = require('fs');
-const WebSocket = require('ws');
+const WebSocket = require('uWebSockets.js');
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -46,12 +46,13 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-// DASHBOARD
-const wss = new WebSocket.Server({ port: 8081 });
 
-// Function to send console messages to all connected clients
+
+// DASHBOARD
+const wsServer = new WebSocket.Server({ port: 8081 });
+
 function sendToClients(message) {
-    wss.clients.forEach(client => {
+    wsServer.clients.forEach(client => {
         if (client.readyState === WebSocket.OPEN) {
             client.send(message);
         }
@@ -67,7 +68,7 @@ console.log = function(...args) {
 };
 
 // WebSocket connection handling
-wss.on('connection', ws => {
+wsServer.on('connection', ws => {
     console.log('Client connected.');
     
     ws.on('close', () => {
