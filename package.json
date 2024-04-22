@@ -13,7 +13,7 @@
     "next": "14.2.0",
     "react": "^18",
     "react-dom": "^18",
-    "uWebSockets.js": "^20.40.0" 
+    "uwebsockets.js": "^20.43.0" 
   },
   "devDependencies": {
     "@types/node": "^20",
