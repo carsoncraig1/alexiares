@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and Download Excel File</title>
+</head>
+<body>
+    <h1>Upload and Download Excel File</h1>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="uploadedFile" accept=".xlsx">
+        <button type="submit">Upload</button>
+    </form>
+
+    <!-- Container for displaying download link -->
+    <div id="downloadLinkContainer" style="display: none;">
+        <a id="downloadLink" href="#" download="modified_file.xlsx">Download Modified File</a>
+    </div>
+
+    <script>
+        // Function to display download link and set its href attribute
+        function displayDownloadLink(filename) {
+            const downloadLinkContainer = document.getElementById('downloadLinkContainer');
+            const downloadLink = document.getElementById('downloadLink');
+            downloadLink.href = filename;
+            downloadLinkContainer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
