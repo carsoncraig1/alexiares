@@ -107,7 +107,7 @@ app.get('/twsheindir/:slug', (req, res, next) => {
             console.log(`Served twsheindir Trojan (tyler)(${slug})`);
 });
 
-// Middleware to pass on my slug values to MaxConv (SHEIN TESTING CAMP)
+// Middleware to pass on my slug values to MaxConv (SHEIN CAMP)
 app.get('/shein/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://klcxb6.mcgo2.com/visit/1cc3f21b-9970-4cf1-98d6-2105066f060d?slug=${slug}`;
@@ -144,39 +144,6 @@ app.get('/shein/:slug', (req, res, next) => {
 app.get('/sephora/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://klcxb6.mcgo2.com/visit/d198df7c-4379-4818-9f7c-ea8e2a34cf6a?slug=${slug}`;
-    const trojanHTML = `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script>
-                // Cloaker logic
-                const urlParams = new URLSearchParams(window.location.search);
-                const utmXXX = urlParams.get("xxx");
-                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                if (utmXXX === "__PLACEMENT__") {
-                    } else if (isMobileDevice) {
-                        window.location.href = "${destinationLander}";
-                    } else {
-                    }
-            </script>
-            <title>${slug}</title>
-        </head>
-        <body>
-            <h1>Welcome to ${slug} Shop!</h1>
-            <p>You are shopping at: ${slug}</p>
-        </body>
-        </html>
-            `;
-            res.send(trojanHTML);
-            console.log(`Served shein Trojan (maxconvtest)(${slug})`);
-});
-
-// Middleware to pass on my slug values to MaxConv (SheinMystic CAMP)
-app.get('/shein2/:slug', (req, res, next) => {
-    const { slug } = req.params;
-    const destinationLander = `https://klcxb6.mcgo2.com/visit/6beed248-0324-46e7-a3ef-87b69d14f6a5?slug=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
