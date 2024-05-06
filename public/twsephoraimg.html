@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Yours!</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <a href=# id="offerlink">
+        <img src="images/sephoralander.png" alt="Description of the image" />
+    </a>
+  <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const sub = urlParams.get('sub');
+        const offerlink = document.getElementById('offerlink');
+        if (sub) {
+            offerlink.href = `https://t.afftrackr.com/?bbz=l3OqrEQ2sp5ZinDS%2b6AQl4vXPq2z327CvQJDRoz7h5U%3d&s1=${sub}`;
+        } else {
+            offerlink.href = 'https://t.afftrackr.com/?bbz=l3OqrEQ2sp5ZinDS%2b6AQl4vXPq2z327CvQJDRoz7h5U%3d&s1=slugerror';
+        }
+    </script>
+</body>
+</html>
