@@ -230,8 +230,8 @@ app.get('/shein/:slug', (req, res, next) => {
             <title>${slug}</title>
         </head>
         <body>
-            <h1>Welcome to ${slug} Shop!</h1>
-            <p>You are shopping at: ${slug}</p>
+            <h1>Welcome to the ${slug} Store!</h1>
+            <p>You are browsing ${slug}'s Web Shop.</p>
         </body>
         </html>
             `;
