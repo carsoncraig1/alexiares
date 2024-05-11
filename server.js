@@ -269,7 +269,7 @@ app.get('/shein/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served shein Trojan (maxconvtest)(${slug})`);
+            console.log(`Served shein Trojan (${slug})`);
 });
 
 // Middleware to pass on my slug values to MaxConv (SHEIN CA CAMP)
@@ -302,7 +302,7 @@ app.get('/sheinca/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served shein Trojan (maxconvtest)(${slug})`);
+            console.log(`Served shein Trojan (${slug})`);
 });
 
 // Middleware to pass on my slug values to MaxConv (SHEIN AU CAMP)
@@ -335,7 +335,7 @@ app.get('/sheinuk/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served shein Trojan (maxconvtest)(${slug})`);
+            console.log(`Served shein Trojan (${slug})`);
 });
 
 // Middleware to pass on my slug values to MaxConv (SHEIN AU CAMP)
@@ -368,7 +368,7 @@ app.get('/sheinau/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served shein Trojan (maxconvtest)(${slug})`);
+            console.log(`Served shein Trojan (${slug})`);
 });
 
 // Middleware to pass on my slug values to MaxConv (SEPHORA CAMP)
@@ -401,7 +401,7 @@ app.get('/sephora/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served shein Trojan (maxconvtest)(${slug})`);
+            console.log(`Served shein Trojan (${slug})`);
 });
 
 // Middleware to handle requests to /:offer/:slug
