@@ -37,7 +37,7 @@
   const urlParams = new URLSearchParams(window.location.search);
         const slug = urlParams.get('slug');
         const offerlink = document.getElementById('offerlink');
-        if (sub) {
+        if (slug) {
             offerlink.href = `https://klcxb6.mcgo2.com/click?source=${slug}`;
         } else {
             offerlink.href = 'https://klcxb6.mcgo2.com/click?source=utmerror';
