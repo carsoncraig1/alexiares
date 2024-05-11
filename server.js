@@ -110,7 +110,7 @@ app.get('/twsheinimg/:slug', (req, res, next) => {
 // Middleware to pass on Tyler's SubIDs DIRECT
 app.get('/twsheindir/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://t.afftrackr.com/?oex3=qyKG87QeFmGbK3xz5A7M2qxsKXSq%2F5iYvQJDRoz7h5U%3D&s1=${slug}`;
+    const destinationLander = `https://sctrk.visit-24.com/4e06a3f4-32c3-5494-8c49-e059ad90b17e/?transaction_id=#clickid#&offer_id=#oid#&aff_id=#affid#&aff_sub=#traffic_source#&msisdn={mobile}&email={email}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
