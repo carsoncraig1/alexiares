@@ -308,7 +308,7 @@ app.get('/twryddir/:slug', (req, res, next) => {
 // Middleware to pass on Tyler's SubIDs Brandy IMG 
 app.get('/twbrandy/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://tok-reward.com/brandy.png?sub=${slug}`;
+    const destinationLander = `https://tok-reward.com/brandy.html?sub=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
