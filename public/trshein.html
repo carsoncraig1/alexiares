@@ -92,12 +92,50 @@
     <div class="main-content">
         <h1>CLICK BELOW TO CLAIM YOUR SPRING SHOPPING SPREE</h1>
         <img src="images/instructions.jpg" alt="Instructions Image" class="instruction-image">
-        <a href="#" class="claim-button">Get Yours!</a>
+        <a class="claim-button" onclick="openPopup()">Get Yours!</a>
         <img src="images/cloud-shein750.png" alt="Display Image" class="voucher-image">
         <p>Please make sure to follow the rules and guidelines mentioned so you can claim the offers. Keep in mind that this website works on its own and is not linked to any social media platform or advertising network.</p>
     </div>
     <footer>
         © 2024 All Rights Reserved <a href="#">Tok Reward Co.</a>
     </footer>
+
+     <!-- Popup form -->
+    <div class="popup" id="phonePopup">
+        <h2>Enter Your Phone Number</h2>
+        <input type="text" id="phoneNumber" placeholder="Phone Number">
+        <button id="proceedButton" disabled onclick="submitPhoneNumber()">Proceed</button>
+    </div>
+
+    <script>
+        // JavaScript for handling the popup and validation
+        function openPopup() {
+            document.getElementById('phonePopup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('phonePopup').style.display = 'none';
+        }
+
+        document.getElementById('phoneNumber').addEventListener('input', function() {
+            var phoneNumber = this.value;
+            var isValid = validatePhoneNumber(phoneNumber);
+            document.getElementById('proceedButton').disabled = !isValid;
+        });
+
+        function validatePhoneNumber(phoneNumber) {
+            // Simple validation for US phone numbers
+            var phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            return phoneRegex.test(phoneNumber);
+        }
+
+        function submitPhoneNumber() {
+            var phoneNumber = document.getElementById('phoneNumber').value;
+            if (validatePhoneNumber(phoneNumber)) {
+                // Redirect to the new URL
+                window.location.href = 'https://example.com/thank-you';
+            }
+        }
+    </script>
 </body>
 </html>
