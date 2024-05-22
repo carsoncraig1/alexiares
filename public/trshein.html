@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- MC Anti-Spy
+    <?php
+        $secret="80kf4ohcy8mllredoeyveibsesaqkxmj";
+        $expires=2;
+        $lpkey=@$_GET["lp_key"];
+        $hash=substr($lpkey,0,5).substr($lpkey,10,5).substr($lpkey,20);
+        $time=intval(substr($lpkey,5,5).substr($lpkey,15,5));
+        $calc=md5($secret.$time.$_SERVER["HTTP_USER_AGENT"]);
+        if($calc!==$hash||time()-$time>$expires){
+            exit(0);
+        }
+    ?>
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Yours! | TokReward</title>
