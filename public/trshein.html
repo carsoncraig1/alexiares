@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- MC Anti-Spy
-    <?php
-        $secret="80kf4ohcy8mllredoeyveibsesaqkxmj";
-        $expires=2;
-        $lpkey=@$_GET["lp_key"];
-        $hash=substr($lpkey,0,5).substr($lpkey,10,5).substr($lpkey,20);
-        $time=intval(substr($lpkey,5,5).substr($lpkey,15,5));
-        $calc=md5($secret.$time.$_SERVER["HTTP_USER_AGENT"]);
-        if($calc!==$hash||time()-$time>$expires){
-            exit(0);
-        }
-    ?>
-    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Yours! | TokReward</title>
@@ -100,42 +87,5 @@
         © 2024 All Rights Reserved <a href="#">Tok Reward Co.</a>
     </footer>
 
-     <!-- Popup form -->
-    <div class="popup" id="phonePopup">
-        <h2>Enter Your Phone Number</h2>
-        <input type="text" id="phoneNumber" placeholder="Phone Number">
-        <button id="proceedButton" disabled onclick="submitPhoneNumber()">Proceed</button>
-    </div>
-
-    <script>
-        // JavaScript for handling the popup and validation
-        function openPopup() {
-            document.getElementById('phonePopup').style.display = 'block';
-        }
-
-        function closePopup() {
-            document.getElementById('phonePopup').style.display = 'none';
-        }
-
-        document.getElementById('phoneNumber').addEventListener('input', function() {
-            var phoneNumber = this.value;
-            var isValid = validatePhoneNumber(phoneNumber);
-            document.getElementById('proceedButton').disabled = !isValid;
-        });
-
-        function validatePhoneNumber(phoneNumber) {
-            // Simple validation for US phone numbers
-            var phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-            return phoneRegex.test(phoneNumber);
-        }
-
-        function submitPhoneNumber() {
-            var phoneNumber = document.getElementById('phoneNumber').value;
-            if (validatePhoneNumber(phoneNumber)) {
-                // Redirect to the new URL
-                window.location.href = 'https://example.com/thank-you';
-            }
-        }
-    </script>
 </body>
 </html>
