@@ -35,6 +35,9 @@ app.get('/api/test/v1', async (req, res, next) => {
             }
         ]
     };
+    
+    console.log('Payload:', JSON.stringify(payload, null, 2)); // Log the payload
+    
     try {
         // Send the POST request to TikTok's API
         const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
