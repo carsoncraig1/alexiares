@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // TRAPIIIIIIIIIIII
 
 // Test Pixel Events
-app.get('/api/test/v1', (req, res, next) => {
+app.get('/api/test/v1', async (req, res, next) => {
     const { ttclid, s1 } = req.query;
     const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     const user_agent = req.headers['user-agent'];
@@ -31,7 +31,7 @@ app.get('/api/test/v1', (req, res, next) => {
                 },
                 page: {},
                 properties: {},
-                test_event_code: TEST72859
+                test_event_code: "TEST72859"
             }
         ]
     };
@@ -44,8 +44,13 @@ app.get('/api/test/v1', (req, res, next) => {
             }
         });
 
-       // Handle the response as needed and redirect on success
+        // Handle the response as needed and redirect on success
         console.log(`Test Event Sent. ${ttclid} ${s1}`, response.data);
+    } catch (error) {
+        console.error('Error TESTING POST request:', error);
+    }
+});
+
 
 // Middleware to cloak TRAPI Beta Traffic
 app.get('/trapi/:s1', (req, res, next) => {
