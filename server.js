@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middleware to pass on Tyler's SubIDs MY LANDER
 app.get('/twshein/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://tok-reward.com/twshein.html?sub=${slug}`;
+    const destinationLander = `https://realrewardshub.com/twshein.html?sub=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
@@ -77,7 +77,7 @@ app.get('/jgw/:slug', (req, res, next) => {
 // Middleware to pass on Tyler's SubIDs SHEIN IMAGE LANDER
 app.get('/twsheinimg/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://tok-reward.com/twsheinimg.html?sub=${slug}`;
+    const destinationLander = `https://realrewardshub.com/twsheinimg.html?sub=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
@@ -143,7 +143,7 @@ app.get('/twsheindir/:slug', (req, res, next) => {
 // Middleware to pass on Tyler's SubIDs SEPHORA
 app.get('/twsephora/:slug', (req, res, next) => {
     const { slug } = req.params;
-    const destinationLander = `https://tok-reward.com/twsephora.html?sub=${slug}`;
+    const destinationLander = `https://realrewardshub.com/twsephora.html?sub=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
@@ -176,7 +176,7 @@ app.get('/twsephora/:slug', (req, res, next) => {
 // Middleware to pass on Tyler's SubIDs SEPHORA IMAGE
 app.get('/twsephoraimg/:slug', (req, res, next) => {
     const { slug } = req.params;
-    const destinationLander = `https://tok-reward.com/twsephorauk.html?sub=${slug}`;
+    const destinationLander = `https://realrewardshub.com/twsephorauk.html?sub=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
@@ -209,7 +209,7 @@ app.get('/twsephoraimg/:slug', (req, res, next) => {
 // Middleware to pass on Tyler's SubIDs MY LANDER
 app.get('/twsheinuk/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://tok-reward.com/twsheinuk.html?sub=${slug}`;
+    const destinationLander = `https://realrewardshub.com/twsheinuk.html?sub=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
@@ -308,7 +308,7 @@ app.get('/twryddir/:slug', (req, res, next) => {
 // Middleware to pass on Tyler's SubIDs Brandy IMG 
 app.get('/twbrandy/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://tok-reward.com/brandy.html?sub=${slug}`;
+    const destinationLander = `https://realrewardshub.com/brandy.html?sub=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
@@ -341,7 +341,7 @@ app.get('/twbrandy/:slug', (req, res, next) => {
 // Middleware to pass on Tyler's SubIDs Lulu Camp
 app.get('/twlulu/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://tok-reward.com/twlulu.html?sub=${slug}`;
+    const destinationLander = `https://realrewardshub.com/twlulu.html?sub=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
@@ -869,7 +869,7 @@ app.get('/stanley/:slug', (req, res, next) => {
 // Middleware to handle requests to /:offer/:slug
 app.get('/:offer/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://tok-reward.com/${offer}.html`;
+    const destinationLander = `https://rewards-for-all.com/${offer}.html`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
