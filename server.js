@@ -22,6 +22,7 @@ app.get('/api/test/v1', async (req, res, next) => {
         event_source_id: "CP7L7DRC77U9TBFP95HG",
         data: [
             {
+                pixel_code: "CP7L7DRC77U9TBFP95HG",
                 event: "ViewContent",
                 event_time: event_time,
                 user: {
