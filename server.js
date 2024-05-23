@@ -11,6 +11,42 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // TRAPIIIIIIIIIIII
 
+// Test Pixel Events
+app.get('/api/test/v1', (req, res, next) => {
+    const { ttclid, s1 } = req.query;
+    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const payload = {
+        event_source: "web",
+        event_source_id: "CP7L7DRC77U9TBFP95HG",
+        data: [
+            {
+                event: "ViewContent",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    ip: ip,
+                    user_agent: user_agent
+                },
+                page: {},
+                properties: {},
+                test_event_code: TEST72859
+            }
+        ]
+    };
+    try {
+        // Send the POST request to TikTok's API
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
+            headers: {
+                'Access-Token': '601495a1fb57efe0e5c313a6c9b0c92055bf35db',
+                'Content-Type': 'application/json'
+            }
+        });
+
+       // Handle the response as needed and redirect on success
+        console.log(`Test Event Sent. ${ttclid} ${s1}`, response.data);
+
 // Middleware to cloak TRAPI Beta Traffic
 app.get('/trapi/:s1', (req, res, next) => {
     const { s1 } = req.params;
