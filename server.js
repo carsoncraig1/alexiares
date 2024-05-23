@@ -410,7 +410,7 @@ app.get('/twlulu/:slug', (req, res, next) => {
 // Middleware to pass on Tyler's SubIDs DIRECT TO MRR 
 app.get('/twryd/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://realrewardshub.com/twryd.html?slug=${slug}`;
+    const destinationLander = `https://realrewardshub.com/twryd.html?sub=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
