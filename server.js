@@ -18,23 +18,14 @@ app.get('/api/test/v1', async (req, res, next) => {
     const user_agent = req.headers['user-agent'];
     const event_time = Math.floor(Date.now() / 1000);
     const payload = {
-        event_source: "web",
-        event_source_id: "CP7L7DRC77U9TBFP95HG",
-        data: [
-            {
-                pixel_code: "CP7L7DRC77U9TBFP95HG",
-                event: "ViewContent",
-                event_time: event_time,
-                user: {
-                    ttclid: ttclid,
-                    ip: ip,
-                    user_agent: user_agent
-                },
-                page: {},
-                properties: {},
-                test_event_code: "TEST72859"
-            }
-        ]
+        pixel_code: "CP7L7DRC77U9TBFP95HG",
+        event: "ViewContent",
+        test_event_code: "TEST72859",
+        context: {
+            ttclid: ttclid,
+            user_agent: user_agent,
+            ip: ip
+        }
     };
     
     console.log('Payload:', JSON.stringify(payload, null, 2)); // Log the payload
