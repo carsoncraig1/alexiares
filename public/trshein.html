@@ -8,7 +8,6 @@
           ttq.load('CP7L7DRC77U9TBFP95HG');
           ttq.page();
         }(window, document, 'ttq');
-        ttq.track('ViewContent', {});
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,6 +82,43 @@
             text-decoration: none;
         }
     </style>
+    <!-- ttq.identify ttclid as external_id (SHA256) -->
+    <script>
+        function removeWhitespaces(str) {
+            return str.replace(/\s+/g, '');
+        }
+        const hashValue = val =>
+            crypto.subtle
+                .digest('SHA-256', new TextEncoder('utf-8').encode(val))
+                .then(h => {
+                    let hexes = [],
+                        view = new DataView(h);
+                    for (let i = 0; i < view.byteLength; i += 4)
+                        hexes.push(('00000000' + view.getUint32(i).toString(16)).slice(-8));
+                    return hexes.join('');
+                });
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+        document.addEventListener('DOMContentLoaded', async () => {
+            const ttclid = getQueryParameter('ttclid');
+            if (ttclid) {
+                const cleanedTtclid = removeWhitespaces(ttclid);
+                const hashedExternalId = await hashValue(cleanedTtclid);
+                ttq.identify({
+                    "external_id": hashedExternalId
+                });
+            }
+        });
+    </script>
+    
+    <!-- Send ViewContent + exID -->
+    <script>
+         ttq.track('ViewContent', {});
+    </script>
+    
+    <!-- Send ClickButton + exID Handler -->
     <script>
         function handleButtonClick() {
             ttq.track('ClickButton', {});
