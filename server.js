@@ -40,7 +40,6 @@ app.get('/api/test/v1', async (req, res, next) => {
         properties: {
             contents: [
                 {
-                    price: 8,
                     quantity: 1,
                     content_id: "75",
                     content_name: "tokreward"
@@ -136,15 +135,13 @@ app.get('/api/shein/v1/entry', async (req, res) => {
         properties: {
             contents: [
                 {
-                    price: 8,
                     quantity: 1,
                     content_id: "75"
                 }
             ],
             content_name: "tokreward",
             content_type: "product",
-            currency: "USD",
-            value: 8.00
+            currency: "USD"
         }
     };
     
@@ -196,15 +193,13 @@ app.get('/api/shein/v1/exit', async (req, res) => {
         properties: {
             contents: [
                 {
-                    price: 8,
                     quantity: 1,
-                    content_id: "75"
+                    content_id: "75",
                 }
             ],
             content_name: "tokreward",
             content_type: "product",
-            currency: "USD",
-            value: 8.00
+            currency: "USD"
         }
     };
 
