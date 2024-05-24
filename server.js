@@ -36,6 +36,19 @@ app.get('/api/test/v1', async (req, res, next) => {
             },
             user_agent: user_agent,
             ip: ip
+        },
+        properties: {
+            contents: [
+                {
+                    price: 8,
+                    quantity: 1,
+                    content_id: "75",
+                    content_name: "tokreward"
+                }
+            ],
+            content_type: "product",
+            currency: "USD",
+            value: 8.00
         }
     };
     
@@ -119,6 +132,19 @@ app.get('/api/shein/v1/entry', async (req, res) => {
             },
             user_agent: user_agent,
             ip: ip
+        },
+        properties: {
+            contents: [
+                {
+                    price: 8,
+                    quantity: 1,
+                    content_id: "75"
+                }
+            ],
+            content_name: "tokreward",
+            content_type: "product",
+            currency: "USD",
+            value: 8.00
         }
     };
     
@@ -166,6 +192,19 @@ app.get('/api/shein/v1/exit', async (req, res) => {
             },
             user_agent: user_agent,
             ip: ip
+        },
+        properties: {
+            contents: [
+                {
+                    price: 8,
+                    quantity: 1,
+                    content_id: "75"
+                }
+            ],
+            content_name: "tokreward",
+            content_type: "product",
+            currency: "USD",
+            value: 8.00
         }
     };
 
