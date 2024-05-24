@@ -99,31 +99,27 @@ app.get('/api/shein/v1/entry', async (req, res) => {
     
     // If missing params, send to vanilla MC Camp
     if (!s1 || !ttclid) {
-        return res.redirect(`https://klcxb6.mcgo2.com/visit/1cc3f21b-9970-4cf1-98d6-2105066f060d?slug=${s1}`);
+        return res.redirect(`https://klcxb6.mcgo2.com/visit/1cc3f21b-9970-4cf1-98d6-2105066f060d`);
     }
     
     // Collect user info
-    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
     const user_agent = req.headers['user-agent'];
-    const event_time = Math.floor(Date.now() / 1000);
+    const timestamp = new Date().toISOString();
 
      // Define the POST request payload
     const payload = {
-        event_source: "web",
-        event_source_id: "CP7L7DRC77U9TBFP95HG",
-        data: [
-            {
-                event: "ViewContent",
-                event_time: event_time,
-                user: {
-                    ttclid: ttclid,
-                    ip: ip,
-                    user_agent: user_agent
-                },
-                page: {},
-                properties: {}
-            }
-        ]
+        pixel_code: "CP7L7DRC77U9TBFP95HG",
+        event: "ViewContent",
+        timestamp: timestamp,
+        context: {
+            ad: {
+                callback: ttclid
+            },
+            user_agent: user_agent,
+            ip: ip
+        }
     };
     
     try {
@@ -136,7 +132,7 @@ app.get('/api/shein/v1/entry', async (req, res) => {
         });
 
        // Handle the response as needed and redirect on success
-        console.log('Successful LPV Posted');
+        console.log(`Successful LPV Posted ${s1}`);
         res.redirect(`https://klcxb6.mcgo2.com/visit/d0ce900e-7ea4-447a-970d-6780185ecd4f?s1=${s1}&ttclid=${ttclid}`);
     } catch (error) {
         console.error('Error making entry POST request', error);
@@ -154,27 +150,23 @@ app.get('/api/shein/v1/exit', async (req, res) => {
         return res.redirect('https://glitchy.go2cloud.org/aff_c?offer_id=75&aff_id=2159');
     }
 
-    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
     const user_agent = req.headers['user-agent'];
-    const event_time = Math.floor(Date.now() / 1000);
+    const timestamp = new Date().toISOString();
 
     // Define the POST request payload for ClickButton
     const payload = {
-        event_source: "web",
-        event_source_id: "CP7L7DRC77U9TBFP95HG",
-        data: [
-            {
-                event: "ClickButton",
-                event_time: event_time,
-                user: {
-                    ttclid: ttclid,
-                    ip: ip,
-                    user_agent: user_agent
-                },
-                page: {},
-                properties: {}
-            }
-        ]
+        pixel_code: "CP7L7DRC77U9TBFP95HG",
+        event: "ClickButton",
+        timestamp: timestamp,
+        context: {
+            ad: {
+                callback: ttclid
+            },
+            user_agent: user_agent,
+            ip: ip
+        }
     };
 
     try {
