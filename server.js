@@ -184,7 +184,7 @@ app.get('/api/shein/v1/exit', async (req, res) => {
     // Define the POST request payload for ClickButton
     const payload = {
         pixel_code: "CP7L7DRC77U9TBFP95HG",
-        event: "ClickButton",
+        event: "AddToCart",
         timestamp: timestamp,
         context: {
             ad: {
