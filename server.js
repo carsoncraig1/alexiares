@@ -31,7 +31,9 @@ app.get('/api/test/v1', async (req, res, next) => {
         timestamp: timestamp,
         test_event_code: "TEST72859",
         context: {
-            callback: ttclid,
+            ad: {
+                callback: ttclid
+            },
             user_agent: user_agent,
             ip: ip
         }
