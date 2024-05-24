@@ -6,6 +6,7 @@ const multer = require('multer');
 const xlsx = require('xlsx');
 const axios = require('axios');
 const WebSocket = require('ws');
+const http = require('http');
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -1139,6 +1140,9 @@ app.get('/:offer/:slug', (req, res, next) => {
 
 // Console App
 
+// Create HTTP server
+const server = http.createServer(app);
+
 // Create WebSocket server
 const wss = new WebSocket.Server({ server });
 
@@ -1161,7 +1165,7 @@ console.log = function (...args) {
 
 // Start the HTTP server
 const PORT = 8080;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
