@@ -229,7 +229,10 @@ app.get('/api/shein/v1/exit', async (req, res) => {
 
 
 // Middleware to receive TRAPI Beta Traffic (FLUENT CVR)
-
+app.get('/api/shein/v1/cvr', async (req, res) => {
+    const { s1, s5, price } = req.query;
+    const timestamp = new Date().toISOString();
+    console.log(`CVR Received: ${s1} ${s5} ${price}`);
 
 
 
