@@ -5,6 +5,7 @@ const fs = require('fs');
 const multer = require('multer');
 const xlsx = require('xlsx');
 const axios = require('axios');
+const WebSocket = require('ws');
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -1136,44 +1137,27 @@ app.get('/:offer/:slug', (req, res, next) => {
             console.log(`Served ${offer} Trojan (${slug})`);
 });
 
-// IMPORT/EXPORT App
+// Console App
 
-// Set up multer for handling file uploads
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/');
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname);
-  }
-});
-const upload = multer({ storage: storage });
+// Create WebSocket server
+const wss = new WebSocket.Server({ server });
 
-// Route for handling file uploads
-app.post('/upload', upload.single('uploadedFile'), (req, res) => {
-  // Read the uploaded file
-  const workbook = xlsx.readFile(req.file.path);
-  const sheetName = workbook.SheetNames[0];
-  const worksheet = workbook.Sheets[sheetName];
-
-  // Modify the data in the worksheet as needed
-  // For example, changing cell A1 to 'Hello World'
-  worksheet.A1.v = 'Hello World';
-
-  // Write the modified workbook to a new file
-  const outputPath = `modified_${req.file.originalname}`;
-  xlsx.writeFile(workbook, outputPath);
-
-  // Send the modified file as a response
-  res.download(outputPath, (err) => {
-    // Delete the modified file after it has been sent
-    fs.unlink(outputPath, (err) => {
-      if (err) {
-        console.error('Error deleting file:', err);
-      }
+// Broadcast to all connected clients
+wss.broadcast = function broadcast(data) {
+    wss.clients.forEach(client => {
+        if (client.readyState === WebSocket.OPEN) {
+            client.send(data);
+        }
     });
-  });
-});
+};
+
+// Log server console and broadcast to WebSocket clients
+const log = console.log;
+console.log = function (...args) {
+    log.apply(console, args);
+    const message = args.join(' ');
+    wss.broadcast(message);
+};
 
 // Start the HTTP server
 const PORT = 8080;
