@@ -24,7 +24,7 @@ app.get('/api/test/v1', async (req, res, next) => {
     const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     const ip = extractSingleIP(ipString);
     const user_agent = req.headers['user-agent'];
-    const timestamp = Math.floor(Date.now() / 1000);
+    const timestamp = new Date().toISOString();
     const payload = {
         pixel_code: "CP7L7DRC77U9TBFP95HG",
         event: "ViewContent",
