@@ -179,7 +179,7 @@ app.get('/api/shein/v1/exit', async (req, res) => {
         });
 
         // Handle the response as needed and redirect on success
-        console.log('Successful CTR Posted');
+        console.log(`Successful CTR Posted ${s1}`);
         res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=75&aff_id=2159&source=${s1}`);
     } catch (error) {
         console.error('Error making exit POST request:', error);
