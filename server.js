@@ -11,18 +11,27 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // TRAPIIIIIIIIIIII
 
+// Function to extract a single IP address (either IPv6 or IPv4)
+const extractSingleIP = (ipString) => {
+    if (!ipString) return null;
+    const ips = ipString.split(',');
+    return ips[0].trim(); // Return the first IP address in the list
+};
+
 // Test Pixel Events
 app.get('/api/test/v1', async (req, res, next) => {
     const { ttclid, s1 } = req.query;
-    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
     const user_agent = req.headers['user-agent'];
-    const event_time = Math.floor(Date.now() / 1000);
+    const timestamp = Math.floor(Date.now() / 1000);
     const payload = {
         pixel_code: "CP7L7DRC77U9TBFP95HG",
         event: "ViewContent",
+        timestamp: timestamp,
         test_event_code: "TEST72859",
         context: {
-            ttclid: ttclid,
+            callback: ttclid,
             user_agent: user_agent,
             ip: ip
         }
