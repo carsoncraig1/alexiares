@@ -228,7 +228,7 @@ app.get('/api/shein/v1/cvr', async (req, res) => {
     const { s1, s5, price, leadid, tid } = req.query;
     const timestamp = new Date().toISOString();
     res.status(200).send('OK');
-    console.log(`CVR Received: ${s1} ${s5} ${price} ${leadid} ${tid}`);
+    console.log(`CVR Received: s1:${s1} s5:${s5} price:${price} leadid:${leadid} tid:${tid}`);
 });
 
 
