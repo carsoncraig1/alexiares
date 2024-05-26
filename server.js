@@ -1166,7 +1166,173 @@ const auth = (req, res, next) => {
 
 // Apply the auth middleware to the /dashboard route
 app.get('/dashboard', auth, (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
+    res.send(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Alexiares Console</title>
+            <style>
+                body {
+                    background-color: #121212;
+                    color: #ffffff;
+                    font-family: 'Courier New', Courier, monospace;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 100vh;
+                    margin: 0;
+                }
+                .title {
+                    font-size: 2em;
+                    color: #00ffcc;
+                    margin: 20px 0;
+                }
+                .block {
+                    background-color: #1e1e1e;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+                    width: 80%;
+                    max-width: 800px;
+                    max-height: 70%; /* 70% larger vertically */
+                    overflow-y: auto;
+                    margin-bottom: 20px;
+                }
+                .line-item {
+                    background-color: #333333;
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+                }
+                .console-container {
+                    background-color: #1e1e1e;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+                    width: 80%;
+                    max-width: 800px;
+                    height: 300px; /* Set a fixed height for the console container */
+                    margin-bottom: 20px;
+                    overflow: hidden; /* Prevent outer scrollbar */
+                }
+                .console-log {
+                    background-color: #000000;
+                    padding: 10px;
+                    border-radius: 5px;
+                    color: #ffffff; /* Text color set to white */
+                    white-space: pre-wrap;
+                    word-wrap: break-word;
+                    height: 100%;
+                    overflow-y: auto; /* Only inner scrollbar */
+                }
+            </style>
+        </head>
+        <body>
+            <div class="title">Alexiares v4.1</div>
+            <div class="block" id="trojanBlock">
+                <p>Total Trojans Served: <span id="totalTrojans">0</span></p>
+                <p>Total LPVs Posted: <span id="totalLPVs">0</span></p>
+                <p>Total CTRs Posted: <span id="totalCTRs">0</span></p>
+                <div id="lineItems"></div>
+            </div>
+            <div class="console-container">
+                <div id="console-log" class="console-log"></div>
+            </div>
+            <script>
+                const socket = new WebSocket('wss://' + window.location.host);
+                const consoleLog = document.getElementById('console-log');
+                const totalTrojansElement = document.getElementById('totalTrojans');
+                const totalLPVsElement = document.getElementById('totalLPVs');
+                const totalCTRsElement = document.getElementById('totalCTRs');
+                const lineItemsContainer = document.getElementById('lineItems');
+
+                let totalTrojans = 0;
+                let totalLPVs = 0;
+                let totalCTRs = 0;
+                let s1Data = {};
+
+                socket.onmessage = function(event) {
+                    const message = event.data;
+                    const messageElement = document.createElement('div');
+                    messageElement.textContent = message;
+                    consoleLog.appendChild(messageElement);
+                    consoleLog.scrollTop = consoleLog.scrollHeight;
+
+                    if (message.startsWith('Served')) {
+                        totalTrojans++;
+                        totalTrojansElement.textContent = totalTrojans;
+
+                        const offerMatch = message.match(/Served (\w+) Trojan/);
+                        const s1Match = message.match(/$begin:math:text$([^)]+)$end:math:text$$/);
+                        if (offerMatch && s1Match) {
+                            const offer = offerMatch[1];
+                            const s1 = s1Match[1];
+                            const key = `${s1} (${offer})`;
+
+                            if (!s1Data[key]) {
+                                s1Data[key] = { trojans: 0, lpvs: 0, ctrs: 0, element: null };
+                                const lineItem = document.createElement('div');
+                                lineItem.classList.add('line-item');
+                                lineItem.id = \`line-item-\${key}\`;
+                                lineItem.textContent = \`\${s1}: 0 (\${offer}) - LPVs: 0 - CTRs: 0 - CTR: 0%\`;
+                                s1Data[key].element = lineItem;
+                                lineItemsContainer.appendChild(lineItem);
+                            }
+                            s1Data[key].trojans++;
+                            updateLineItem(key);
+                        }
+                    }
+
+                    if (message.startsWith('LPV Posted')) {
+                        totalLPVs++;
+                        totalLPVsElement.textContent = totalLPVs;
+
+                        const s1Match = message.match(/$begin:math:text$([^)]+)$end:math:text$$/);
+                        if (s1Match) {
+                            const s1 = s1Match[1];
+                            Object.keys(s1Data).forEach(key => {
+                                if (key.startsWith(s1)) {
+                                    s1Data[key].lpvs++;
+                                    updateLineItem(key);
+                                }
+                            });
+                        }
+                    }
+
+                    if (message.startsWith('CTR Posted')) {
+                        totalCTRs++;
+                        totalCTRsElement.textContent = totalCTRs;
+
+                        const s1Match = message.match(/$begin:math:text$([^)]+)$end:math:text$$/);
+                        if (s1Match) {
+                            const s1 = s1Match[1];
+                            Object.keys(s1Data).forEach(key => {
+                                if (key.startsWith(s1)) {
+                                    s1Data[key].ctrs++;
+                                    updateLineItem(key);
+                                }
+                            });
+                        }
+                    }
+                };
+
+                function updateLineItem(key) {
+                    const data = s1Data[key];
+                    const ctr = data.lpvs > 0 ? ((data.ctrs / data.lpvs) * 100).toFixed(2) : 0;
+                    data.element.textContent = \`\${key}: \${data.trojans} - LPVs: \${data.lpvs} - CTRs: \${data.ctrs} - CTR: \${ctr}%\`;
+                }
+
+                // Ensure the console log starts at the bottom on page load
+                window.onload = () => {
+                    consoleLog.scrollTop = consoleLog.scrollHeight;
+                };
+            </script>
+        </body>
+        </html>
+    `);
 });
 
 // Create HTTP server
