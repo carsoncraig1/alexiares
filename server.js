@@ -1139,6 +1139,36 @@ app.get('/:offer/:slug', (req, res, next) => {
 
 // Console App
 
+// Auth
+const auth = (req, res, next) => {
+    const authHeader = req.headers['authorization'];
+
+    if (!authHeader) {
+        res.setHeader('WWW-Authenticate', 'Basic');
+        res.sendStatus(401);
+        return;
+    }
+
+    const base64Credentials = authHeader.split(' ')[1];
+    const credentials = Buffer.from(base64Credentials, 'base64').toString('ascii');
+    const [username, password] = credentials.split(':');
+
+    const validUsername = 'c2ops';
+    const validPassword = '$47';
+
+    if (username === validUsername && password === validPassword) {
+        next();
+    } else {
+        res.setHeader('WWW-Authenticate', 'Basic');
+        res.sendStatus(401);
+    }
+};
+
+// Apply the auth middleware to the /dashboard route
+app.get('/dashboard', auth, (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
+});
+
 // Create HTTP server
 const server = http.createServer(app);
 
