@@ -157,7 +157,7 @@ app.get('/api/shein/v1/entry', async (req, res) => {
         });
 
        // Handle the response as needed and redirect on success
-        console.log(`Successful LPV Posted ${s1}`);
+        console.log(`LPV Posted (${s1})`);
         res.redirect(`https://klcxb6.mcgo2.com/visit/d0ce900e-7ea4-447a-970d-6780185ecd4f?s1=${s1}&ttclid=${ttclid}`);
     } catch (error) {
         console.error('Error making entry POST request', error);
@@ -215,7 +215,7 @@ app.get('/api/shein/v1/exit', async (req, res) => {
         });
 
         // Handle the response as needed and redirect on success
-        console.log(`Successful CTR Posted ${s1}`);
+        console.log(`CTR Posted (${s1})`);
         res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=75&aff_id=2159&source=${s1}`);
     } catch (error) {
         console.error('Error making exit POST request:', error);
@@ -230,7 +230,6 @@ app.get('/api/shein/v1/cvr', async (req, res) => {
     const { s1, s5, price, leadid, tid } = req.query;
     const timestamp = new Date().toISOString();
     res.status(200).send('OK');
-    console.log(`CVR Received: s1:${s1} s5:${s5} price:${price} leadid:${leadid} tid:${tid}`);
 });
 
 
