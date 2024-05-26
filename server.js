@@ -1214,9 +1214,8 @@ app.get('/dashboard', auth, (req, res) => {
                     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
                     width: 80%;
                     max-width: 800px;
-                    height: 300px; /* Set a fixed height for the console container */
-                    margin-bottom: 20px;
-                    overflow: hidden; /* Prevent outer scrollbar */
+                    overflow-y: auto;
+                    max-height: 60%;
                 }
                 .console-log {
                     background-color: #000000;
@@ -1226,7 +1225,7 @@ app.get('/dashboard', auth, (req, res) => {
                     white-space: pre-wrap;
                     word-wrap: break-word;
                     height: 100%;
-                    overflow-y: auto; /* Only inner scrollbar */
+                    overflow-y: auto;
                 }
             </style>
         </head>
@@ -1265,12 +1264,12 @@ app.get('/dashboard', auth, (req, res) => {
                         totalTrojans++;
                         totalTrojansElement.textContent = totalTrojans;
 
-                        const offerMatch = message.match(/Served (\\w+) Trojan/);
-                        const s1Match = message.match(/\$begin:math:text$([^)]+)\\$end:math:text$$/);
+                        const offerMatch = message.match(/Served (\w+) Trojan/);
+                        const s1Match = message.match(/$begin:math:text$([^)]+)$end:math:text$$/);
                         if (offerMatch && s1Match) {
                             const offer = offerMatch[1];
                             const s1 = s1Match[1];
-                            const key = \`\${s1} (\${offer})\`;
+                            const key = `${s1} (${offer})`;
 
                             if (!s1Data[key]) {
                                 s1Data[key] = { trojans: 0, lpvs: 0, ctrs: 0, element: null };
@@ -1290,7 +1289,7 @@ app.get('/dashboard', auth, (req, res) => {
                         totalLPVs++;
                         totalLPVsElement.textContent = totalLPVs;
 
-                        const s1Match = message.match(/\$begin:math:text$([^)]+)\\$end:math:text$$/);
+                        const s1Match = message.match(/$begin:math:text$([^)]+)$end:math:text$$/);
                         if (s1Match) {
                             const s1 = s1Match[1];
                             Object.keys(s1Data).forEach(key => {
@@ -1306,7 +1305,7 @@ app.get('/dashboard', auth, (req, res) => {
                         totalCTRs++;
                         totalCTRsElement.textContent = totalCTRs;
 
-                        const s1Match = message.match(/\$begin:math:text$([^)]+)\\$end:math:text$$/);
+                        const s1Match = message.match(/$begin:math:text$([^)]+)$end:math:text$$/);
                         if (s1Match) {
                             const s1 = s1Match[1];
                             Object.keys(s1Data).forEach(key => {
