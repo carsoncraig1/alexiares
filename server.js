@@ -1265,8 +1265,8 @@ app.get('/dashboard', auth, (req, res) => {
                         totalTrojans++;
                         totalTrojansElement.textContent = totalTrojans;
 
-                        const offerMatch = message.match(/Served (\w+) Trojan/);
-                        const s1Match = message.match(/$begin:math:text$([^)]+)$end:math:text$$/);
+                        const offerMatch = message.match(/Served (\\w+) Trojan/);
+                        const s1Match = message.match(/\$begin:math:text$([^)]+)\\$end:math:text$$/);
                         if (offerMatch && s1Match) {
                             const offer = offerMatch[1];
                             const s1 = s1Match[1];
@@ -1277,7 +1277,7 @@ app.get('/dashboard', auth, (req, res) => {
                                 const lineItem = document.createElement('div');
                                 lineItem.classList.add('line-item');
                                 lineItem.id = \`line-item-\${key}\`;
-                                lineItem.textContent = \`\${s1}: 0 (\${offer}) - LPVs: 0 - CTRs: 0 - CTR: 0%\`;
+                                lineItem.textContent = \`\${key}: 0 - LPVs: 0 - CTRs: 0 - CTR: 0%\`;
                                 s1Data[key].element = lineItem;
                                 lineItemsContainer.appendChild(lineItem);
                             }
@@ -1290,7 +1290,7 @@ app.get('/dashboard', auth, (req, res) => {
                         totalLPVs++;
                         totalLPVsElement.textContent = totalLPVs;
 
-                        const s1Match = message.match(/$begin:math:text$([^)]+)$end:math:text$$/);
+                        const s1Match = message.match(/\$begin:math:text$([^)]+)\\$end:math:text$$/);
                         if (s1Match) {
                             const s1 = s1Match[1];
                             Object.keys(s1Data).forEach(key => {
@@ -1306,7 +1306,7 @@ app.get('/dashboard', auth, (req, res) => {
                         totalCTRs++;
                         totalCTRsElement.textContent = totalCTRs;
 
-                        const s1Match = message.match(/$begin:math:text$([^)]+)$end:math:text$$/);
+                        const s1Match = message.match(/\$begin:math:text$([^)]+)\\$end:math:text$$/);
                         if (s1Match) {
                             const s1 = s1Match[1];
                             Object.keys(s1Data).forEach(key => {
