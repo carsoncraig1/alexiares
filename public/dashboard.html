@@ -63,7 +63,6 @@
 <body>
     <div class="title">Alexiares v4.1</div>
     <div class="block" id="trojanBlock">
-        <h3>Metrics</h3>
         <p>Total Trojans Served: <span id="totalTrojans">0</span></p>
         <p>Total LPVs Posted: <span id="totalLPVs">0</span></p>
         <p>Total CTRs Posted: <span id="totalCTRs">0</span></p>
@@ -108,7 +107,7 @@
                         const lineItem = document.createElement('div');
                         lineItem.classList.add('line-item');
                         lineItem.id = `line-item-${key}`;
-                        lineItem.textContent = `${s1}: 0 (${offer}) - CTR: 0%`;
+                        lineItem.textContent = `${s1}: 0 (${offer}) - LPVs: 0 - CTRs: 0 - CTR: 0%`;
                         s1Data[key].element = lineItem;
                         lineItemsContainer.appendChild(lineItem);
                     }
@@ -121,7 +120,7 @@
                 totalLPVs++;
                 totalLPVsElement.textContent = totalLPVs;
 
-                const s1Match = message.match(/s1:([^ ]+)/);
+                const s1Match = message.match(/\(([^)]+)\)$/);
                 if (s1Match) {
                     const s1 = s1Match[1];
                     Object.keys(s1Data).forEach(key => {
@@ -137,7 +136,7 @@
                 totalCTRs++;
                 totalCTRsElement.textContent = totalCTRs;
 
-                const s1Match = message.match(/s1:([^ ]+)/);
+                const s1Match = message.match(/\(([^)]+)\)$/);
                 if (s1Match) {
                     const s1 = s1Match[1];
                     Object.keys(s1Data).forEach(key => {
