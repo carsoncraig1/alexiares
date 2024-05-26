@@ -1214,8 +1214,8 @@ app.get('/dashboard', auth, (req, res) => {
                     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
                     width: 80%;
                     max-width: 800px;
-                    height: 300px; /* Set a fixed height for the console container */
-                    margin-bottom: 20px;
+                    height: 500px; /* Set a fixed height for the console container */
+                    margin-bottom: 10px;
                     overflow: hidden; /* Prevent outer scrollbar */
                 }
                 .console-log {
