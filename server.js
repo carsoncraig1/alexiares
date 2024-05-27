@@ -172,7 +172,7 @@ app.get('/api/shein/v1/exit', async (req, res) => {
 
     if (!s1 || !ttclid) {
         // Redirect to Offer Without Parameters if there are none
-        return res.redirect('https://glitchy.go2cloud.org/aff_c?offer_id=443&aff_id=2159');
+        return res.redirect('https://glitchy.go2cloud.org/aff_c?offer_id=477&aff_id=2159');
     }
 
     const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
@@ -216,10 +216,10 @@ app.get('/api/shein/v1/exit', async (req, res) => {
 
         // Handle the response as needed and redirect on success
         console.log(`CTR Posted (${s1})`);
-        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=443&aff_id=2159&source=${s1}`);
+        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=477&aff_id=2159&source=${s1}`);
     } catch (error) {
         console.error('Error making exit POST request:', error);
-        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=443&aff_id=2159&source=${s1}`);
+        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=477&aff_id=2159&source=${s1}`);
     }
 });
 
