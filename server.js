@@ -1276,102 +1276,102 @@ app.get('/dashboard', auth, (req, res) => {
             </div>
             <script>
                 const socket = new WebSocket('wss://' + window.location.host);
-const consoleLog = document.getElementById('console-log');
-const totalTrojansElement = document.getElementById('totalTrojans');
-const totalLPVsElement = document.getElementById('totalLPVs');
-const totalCTRsElement = document.getElementById('totalCTRs');
-const lineItemsContainer = document.getElementById('lineItems');
+                const consoleLog = document.getElementById('console-log');
+                const totalTrojansElement = document.getElementById('totalTrojans');
+                const totalLPVsElement = document.getElementById('totalLPVs');
+                const totalCTRsElement = document.getElementById('totalCTRs');
+                const lineItemsContainer = document.getElementById('lineItems');
 
-let totalTrojans = 0;
-let totalLPVs = 0;
-let totalCTRs = 0;
-let s1Data = {};
+                let totalTrojans = 0;
+                let totalLPVs = 0;
+                let totalCTRs = 0;
+                let s1Data = {};
 
-socket.onmessage = function(event) {
-    const message = event.data;
-    const messageElement = document.createElement('div');
-    messageElement.textContent = message;
-    consoleLog.appendChild(messageElement);
-    consoleLog.scrollTop = consoleLog.scrollHeight;
+                socket.onmessage = function(event) {
+                    const message = event.data;
+                    const messageElement = document.createElement('div');
+                    messageElement.textContent = message;
+                    consoleLog.appendChild(messageElement);
+                    consoleLog.scrollTop = consoleLog.scrollHeight;
 
-    console.log('Received message:', message); // Debugging
+                    console.log('Received message:', message); // Debugging
 
-    if (message.startsWith('Served')) {
-        totalTrojans++;
-        totalTrojansElement.textContent = totalTrojans;
+                    if (message.startsWith('Served')) {
+                        totalTrojans++;
+                        totalTrojansElement.textContent = totalTrojans;
 
-        const offerMatch = message.match(/Served (\w+) Trojan/);
-        const s1Match = message.match(/\(([^)]+)\)$/);
-        if (offerMatch && s1Match) {
-            const offer = offerMatch[1];
-            const s1 = s1Match[1];
-            const key = `${s1} (${offer})`;
+                        const offerMatch = message.match(/Served (\\w+) Trojan/);
+                        const s1Match = message.match(/\$begin:math:text$([^)]+)\\$end:math:text$$/);
+                        if (offerMatch && s1Match) {
+                            const offer = offerMatch[1];
+                            const s1 = s1Match[1];
+                            const key = \`\${s1} (\${offer})\`;
 
-            console.log('Offer:', offer); // Debugging
-            console.log('s1:', s1); // Debugging
+                            console.log('Offer:', offer); // Debugging
+                            console.log('s1:', s1); // Debugging
 
-            if (!s1Data[key]) {
-                s1Data[key] = { trojans: 0, lpvs: 0, ctrs: 0, element: null };
-                const lineItem = document.createElement('div');
-                lineItem.classList.add('line-item');
-                lineItem.id = `line-item-${key}`;
-                lineItem.textContent = `${key}: 0 - LPVs: 0 - CTRs: 0 - CTR: 0%`;
+                            if (!s1Data[key]) {
+                                s1Data[key] = { trojans: 0, lpvs: 0, ctrs: 0, element: null };
+                                const lineItem = document.createElement('div');
+                                lineItem.classList.add('line-item');
+                                lineItem.id = \`line-item-\${key}\`;
+                                lineItem.textContent = \`\${key}: 0 - LPVs: 0 - CTRs: 0 - CTR: 0%\`;
 
-                console.log('Created lineItem:', lineItem); // Debugging
+                                console.log('Created lineItem:', lineItem); // Debugging
 
-                s1Data[key].element = lineItem;
-                lineItemsContainer.appendChild(lineItem);
-            }
-            s1Data[key].trojans++;
-            updateLineItem(key);
-        }
-    }
+                                s1Data[key].element = lineItem;
+                                lineItemsContainer.appendChild(lineItem);
+                            }
+                            s1Data[key].trojans++;
+                            updateLineItem(key);
+                        }
+                    }
 
-    if (message.startsWith('LPV Posted')) {
-        totalLPVs++;
-        totalLPVsElement.textContent = totalLPVs;
+                    if (message.startsWith('LPV Posted')) {
+                        totalLPVs++;
+                        totalLPVsElement.textContent = totalLPVs;
 
-        const s1Match = message.match(/\(([^)]+)\)$/);
-        if (s1Match) {
-            const s1 = s1Match[1];
-            Object.keys(s1Data).forEach(key => {
-                if (key.startsWith(s1)) {
-                    s1Data[key].lpvs++;
-                    updateLineItem(key);
+                        const s1Match = message.match(/\$begin:math:text$([^)]+)\\$end:math:text$$/);
+                        if (s1Match) {
+                            const s1 = s1Match[1];
+                            Object.keys(s1Data).forEach(key => {
+                                if (key.startsWith(s1)) {
+                                    s1Data[key].lpvs++;
+                                    updateLineItem(key);
+                                }
+                            });
+                        }
+                    }
+
+                    if (message.startsWith('CTR Posted')) {
+                        totalCTRs++;
+                        totalCTRsElement.textContent = totalCTRs;
+
+                        const s1Match = message.match(/\$begin:math:text$([^)]+)\\$end:math:text$$/);
+                        if (s1Match) {
+                            const s1 = s1Match[1];
+                            Object.keys(s1Data).forEach(key => {
+                                if (key.startsWith(s1)) {
+                                    s1Data[key].ctrs++;
+                                    updateLineItem(key);
+                                }
+                            });
+                        }
+                    }
+                };
+
+                function updateLineItem(key) {
+                    const data = s1Data[key];
+                    const ctr = data.lpvs > 0 ? ((data.ctrs / data.lpvs) * 100).toFixed(2) : 0;
+                    data.element.textContent = \`\${key}: \${data.trojans} - LPVs: \${data.lpvs} - CTRs: \${data.ctrs} - CTR: \${ctr}%\`;
+
+                    console.log('Updated lineItem:', data.element); // Debugging
                 }
-            });
-        }
-    }
 
-    if (message.startsWith('CTR Posted')) {
-        totalCTRs++;
-        totalCTRsElement.textContent = totalCTRs;
-
-        const s1Match = message.match(/\(([^)]+)\)$/);
-        if (s1Match) {
-            const s1 = s1Match[1];
-            Object.keys(s1Data).forEach(key => {
-                if (key.startsWith(s1)) {
-                    s1Data[key].ctrs++;
-                    updateLineItem(key);
-                }
-            });
-        }
-    }
-};
-
-function updateLineItem(key) {
-    const data = s1Data[key];
-    const ctr = data.lpvs > 0 ? ((data.ctrs / data.lpvs) * 100).toFixed(2) : 0;
-    data.element.textContent = `${key}: ${data.trojans} - LPVs: ${data.lpvs} - CTRs: ${data.ctrs} - CTR: ${ctr}%`;
-
-    console.log('Updated lineItem:', data.element); // Debugging
-}
-
-// Ensure the console log starts at the bottom on page load
-window.onload = () => {
-    consoleLog.scrollTop = consoleLog.scrollHeight;
-};
+                // Ensure the console log starts at the bottom on page load
+                window.onload = () => {
+                    consoleLog.scrollTop = consoleLog.scrollHeight;
+                };
             </script>
         </body>
         </html>
