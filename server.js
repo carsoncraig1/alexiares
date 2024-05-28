@@ -59,7 +59,7 @@ app.get('/api/test/v1', async (req, res, next) => {
     
     try {
         // Send the POST request to TikTok's API
-        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/pixel/track/', payload, {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
             headers: {
                 'Access-Token': '601495a1fb57efe0e5c313a6c9b0c92055bf35db',
                 'Content-Type': 'application/json'
