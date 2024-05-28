@@ -7,50 +7,52 @@ const xlsx = require('xlsx');
 const axios = require('axios');
 const WebSocket = require('ws');
 const http = require('http');
+const crypto = require('crypto');
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 // TRAPIIIIIIIIIIII
 
-// Function to extract a single IP address (either IPv6 or IPv4)
+// Functions
 const extractSingleIP = (ipString) => {
     if (!ipString) return null;
     const ips = ipString.split(',');
-    return ips[0].trim(); // Return the first IP address in the list
+    return ips[0].trim();
 };
 
-// Test Pixel Events
+const hashValue = (value) => {
+    return crypto.createHash('sha256').update(value).digest('hex');
+};
+
+    // Test Pixel Events
 app.get('/api/test/v1', async (req, res, next) => {
-    const { ttclid, s1 } = req.query;
+    const { s1, ttclid } = req.query;
     const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     const ip = extractSingleIP(ipString);
     const user_agent = req.headers['user-agent'];
-    const timestamp = new Date().toISOString();
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
     const payload = {
-        pixel_code: "CP7L7DRC77U9TBFP95HG",
-        event: "ViewContent",
-        timestamp: timestamp,
-        test_event_code: "TEST72859",
-        context: {
-            ad: {
-                callback: ttclid
-            },
-            user_agent: user_agent,
-            ip: ip
-        },
-        properties: {
-            contents: [
-                {
-                    quantity: 1,
-                    content_id: "75",
-                    content_name: "tokreward"
+        event_source: "web",
+        event_source_id: "CP7L7DRC77U9TBFP95HG",
+        test_event_code: "TEST47787",
+        data: [
+            {
+                event: "ViewContent",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
+
+                },
+                page: {
+                    url: "https://testing.com"
                 }
-            ],
-            content_type: "product",
-            currency: "USD",
-            value: 8.00
-        }
+            }
+        ]
     };
     
     console.log('Payload:', JSON.stringify(payload, null, 2)); // Log the payload
