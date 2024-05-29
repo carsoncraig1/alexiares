@@ -222,7 +222,48 @@ app.get('/api/shein/v2/cvr', async (req, res) => {
 
 
 
+    // Test SEPH API Pixel Events
+app.get('/api/sephora/test/v1', async (req, res, next) => {
+    const { s1, ttclid } = req.query;
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
+    const payload = {
+        event_source: "web",
+        event_source_id: "CPBIPP3C77U2JI2IFOR0",
+        test_event_code: "TEST13106",
+        data: [
+            {
+                event: "ViewContent",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
 
+                },
+                page: {
+                    url: "https://testing.com"
+                }
+            }
+        ]
+    };
+    console.log('Payload:', JSON.stringify(payload, null, 2)); // Log the payload
+    try {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
+            headers: {
+                'Access-Token': '362bc64018aad2bc4fd55d121fd54c5f7c6f2ae0',
+                'Content-Type': 'application/json'
+            }
+        });
+        console.log(`Test Event Sent. ${ttclid} ${s1}`, response.data);
+    } catch (error) {
+        console.error('Error TESTING POST request:', error);
+    }
+});
 
 // Middleware to cloak SEPH API Traffic
 app.get('/sephapi/:s1', (req, res, next) => {
@@ -259,7 +300,7 @@ app.get('/sephapi/:s1', (req, res, next) => {
             console.log(`Served TRAPI Trojan (${s1})`);
 });
 
-// Middleware to receive TRAPI Beta Traffic (ENTRY)
+// Middleware to receive SEPH API Traffic (ENTRY)
 app.get('/api/sephora/v1/entry', async (req, res) => {
     const { s1, ttclid } = req.query;
     if (!s1 || !ttclid) {
@@ -309,7 +350,7 @@ app.get('/api/sephora/v1/entry', async (req, res) => {
 });
 
 
-// Middleware to receive TRAPI Beta Traffic (EXIT)
+// Middleware to receive SEPH API Traffic (EXIT)
 app.get('/api/sephora/v1/exit', async (req, res) => {
     const { s1, ttclid } = req.query;
     if (!s1 || !ttclid) {
