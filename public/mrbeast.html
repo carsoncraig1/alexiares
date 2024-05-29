@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Yours!</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <a href=# id="offerlink">
+        <img src="images/mrbeast.png" alt="Description of the image" />
+    </a>
+  <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const sub = urlParams.get('sub');
+        const offerlink = document.getElementById('offerlink');
+        if (sub) {
+            offerlink.href = `https://t.afftrackr.com/?eqi=TwUJt%2FDH1X2V4%2BSsrQW0ow728eqYFPAOvQJDRoz7h5U%3D&s1=${sub}`;
+        } else {
+            offerlink.href = 'https://t.afftrackr.com/?eqi=TwUJt%2FDH1X2V4%2BSsrQW0ow728eqYFPAOvQJDRoz7h5U%3D&s1=slugerror';
+        }
+    </script>
+</body>
+</html>
