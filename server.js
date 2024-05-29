@@ -54,25 +54,19 @@ app.get('/api/test/v1', async (req, res, next) => {
             }
         ]
     };
-    
     console.log('Payload:', JSON.stringify(payload, null, 2)); // Log the payload
-    
     try {
-        // Send the POST request to TikTok's API
         const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
             headers: {
                 'Access-Token': '601495a1fb57efe0e5c313a6c9b0c92055bf35db',
                 'Content-Type': 'application/json'
             }
         });
-
-        // Handle the response as needed and redirect on success
         console.log(`Test Event Sent. ${ttclid} ${s1}`, response.data);
     } catch (error) {
         console.error('Error TESTING POST request:', error);
     }
 });
-
 
 // Middleware to cloak TRAPI Beta Traffic
 app.get('/trapi/:s1', (req, res, next) => {
@@ -112,53 +106,48 @@ app.get('/trapi/:s1', (req, res, next) => {
 // Middleware to receive TRAPI Beta Traffic (ENTRY)
 app.get('/api/shein/v1/entry', async (req, res) => {
     const { s1, ttclid } = req.query;
-    
-    // If missing params, send to vanilla MC Camp
     if (!s1 || !ttclid) {
         return res.redirect(`https://klcxb6.mcgo2.com/visit/1cc3f21b-9970-4cf1-98d6-2105066f060d`);
     }
-    
-    // Collect user info
     const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     const ip = extractSingleIP(ipString);
     const user_agent = req.headers['user-agent'];
-    const timestamp = new Date().toISOString();
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
 
-     // Define the POST request payload
     const payload = {
-        pixel_code: "CP7L7DRC77U9TBFP95HG",
-        event: "ViewContent",
-        timestamp: timestamp,
-        context: {
-            ad: {
-                callback: ttclid
-            },
-            user_agent: user_agent,
-            ip: ip
-        },
-        properties: {
-            contents: [
-                {
-                    quantity: 1,
-                    content_id: "75"
+        event_source: "web",
+        event_source_id: "CP7L7DRC77U9TBFP95HG",
+        data: [
+            {
+                event: "ViewContent",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
+
+                },
+                properties: {
+                    content_type: "product",
+                    currency: "USD"
+                },
+                page: {
+                    url: "https://tok-reward.com"
                 }
-            ],
-            content_name: "tokreward",
-            content_type: "product",
-            currency: "USD"
-        }
+            }
+        ]
     };
     
     try {
-        // Send the POST request to TikTok's API
-        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/pixel/track/', payload, {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
             headers: {
                 'Access-Token': '601495a1fb57efe0e5c313a6c9b0c92055bf35db',
                 'Content-Type': 'application/json'
             }
         });
 
-       // Handle the response as needed and redirect on success
         console.log(`LPV Posted (${s1})`);
         res.redirect(`https://klcxb6.mcgo2.com/visit/d0ce900e-7ea4-447a-970d-6780185ecd4f?s1=${s1}&ttclid=${ttclid}`);
     } catch (error) {
@@ -171,52 +160,48 @@ app.get('/api/shein/v1/entry', async (req, res) => {
 // Middleware to receive TRAPI Beta Traffic (EXIT)
 app.get('/api/shein/v1/exit', async (req, res) => {
     const { s1, ttclid } = req.query;
-
     if (!s1 || !ttclid) {
-        // Redirect to Offer Without Parameters if there are none
         return res.redirect('https://glitchy.go2cloud.org/aff_c?offer_id=477&aff_id=2159');
     }
-
     const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     const ip = extractSingleIP(ipString);
     const user_agent = req.headers['user-agent'];
-    const timestamp = new Date().toISOString();
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
 
-    // Define the POST request payload for ClickButton
-    const payload = {
-        pixel_code: "CP7L7DRC77U9TBFP95HG",
-        event: "AddToCart",
-        timestamp: timestamp,
-        context: {
-            ad: {
-                callback: ttclid
-            },
-            user_agent: user_agent,
-            ip: ip
-        },
-        properties: {
-            contents: [
-                {
-                    quantity: 1,
-                    content_id: "75",
+   const payload = {
+        event_source: "web",
+        event_source_id: "CP7L7DRC77U9TBFP95HG",
+        data: [
+            {
+                event: "AddToCart",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
+
+                },
+                properties: {
+                    content_type: "product",
+                    currency: "USD"
+                },
+                page: {
+                    url: "https://tok-reward.com"
                 }
-            ],
-            content_name: "tokreward",
-            content_type: "product",
-            currency: "USD"
-        }
+            }
+        ]
     };
 
     try {
-        // Send the POST request to TikTok's API
-        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/pixel/track/', payload, {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
             headers: {
                 'Access-Token': '601495a1fb57efe0e5c313a6c9b0c92055bf35db',
                 'Content-Type': 'application/json'
             }
         });
 
-        // Handle the response as needed and redirect on success
         console.log(`CTR Posted (${s1})`);
         res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=477&aff_id=2159&source=${s1}`);
     } catch (error) {
@@ -228,7 +213,7 @@ app.get('/api/shein/v1/exit', async (req, res) => {
 
 
 // Middleware to receive TRAPI Beta Traffic (FLUENT CVR)
-app.get('/api/shein/v1/cvr', async (req, res) => {
+app.get('/api/shein/v2/cvr', async (req, res) => {
     const { s1, s5, price, leadid, tid } = req.query;
     const timestamp = new Date().toISOString();
     res.status(200).send('OK');
