@@ -438,9 +438,9 @@ app.get('/twshein/:slug', (req, res, next) => {
 });
 
 // Middleware to pass on Tyler's SubIDs MR BEAST
-app.get('/twshein/:slug', (req, res, next) => {
+app.get('/mrbeast/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `https://realrewardshub.com/mrbeast.html?sub=${slug}`;
+    const destinationLander = `https://fortyseven.cloud/mrbeast.html?sub=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
@@ -467,7 +467,7 @@ app.get('/twshein/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served twshein Trojan (tyler)(${slug})`);
+            console.log(`Served mrbeast Trojan (ryder)(${slug})`);
 });
 
 // Middleware to pass on Tyler's Debt lander
