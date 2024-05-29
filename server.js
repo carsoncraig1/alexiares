@@ -297,7 +297,7 @@ app.get('/sephapi/:s1', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served TRAPI Trojan (${s1})`);
+            console.log(`Served SephAPI Trojan (${s1})`);
 });
 
 // Middleware to receive SEPH API Traffic (ENTRY)
