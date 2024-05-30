@@ -637,7 +637,7 @@ app.get('/mrbeast/:slug', (req, res, next) => {
 // Middleware to pass on Tyler's Germany Shopify
 app.get('/germany/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const destinationLander = `Germany link: https://shop-vivienna.myshopify.com/products/new-balance-9060-baskets-rose-cristal`;
+    const destinationLander = `https://shop-vivienna.myshopify.com/products/new-balance-9060-baskets-rose-cristal`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
