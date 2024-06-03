@@ -772,7 +772,6 @@ app.get('/jshein/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served shein Trojan (jay)(${slug})`);
 });
 
 // Middleware to pass on Jay's SubIDs SHEIN D2O
@@ -805,7 +804,6 @@ app.get('/jsheindir/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served sheindirect Trojan (jay)(${slug})`);
 });
 
 // Middleware to pass on Tyler's SubIDs MY LANDER
