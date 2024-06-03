@@ -871,7 +871,6 @@ app.get('/mrbeast/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served mrbeast Trojan (ryder)(${slug})`);
 });
 
 // Middleware to pass on Tyler's Germany Shopify
