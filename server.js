@@ -463,7 +463,7 @@ app.get('/luluapi/:s1', (req, res, next) => {
                 const utmXXX = urlParams.get("xxx");
                 const ttclid = urlParams.get("ttclid");
                 const s1 = "${s1}";
-                const destination = \`https://tok-reward.com/api/sephora/v1/entry?s1=\${s1}&ttclid=\${ttclid}\`;
+                const destination = \`https://tok-reward.com/api/lulu/v1/entry?s1=\${s1}&ttclid=\${ttclid}\`;
                 const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
                 if (utmXXX === "__PLACEMENT__") {
                     } else if (isMobileDevice) {
