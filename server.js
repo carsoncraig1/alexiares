@@ -537,7 +537,7 @@ app.get('/api/lulu/v1/entry', async (req, res) => {
 app.get('/api/lulu/v1/exit', async (req, res) => {
     const { s1, ttclid } = req.query;
     if (!s1 || !ttclid) {
-        return res.redirect('https://glitchy.go2cloud.org/aff_c?offer_id=559&aff_id=2159');
+        return res.redirect('https://glitchy.go2cloud.org/aff_c?offer_id=463&aff_id=2159');
     }
     const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     const ip = extractSingleIP(ipString);
@@ -574,10 +574,10 @@ app.get('/api/lulu/v1/exit', async (req, res) => {
         });
 
         console.log(`CTR Posted (${s1})`);
-        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=559&aff_id=2159&source=${s1}`);
+        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=463&aff_id=2159&source=${s1}`);
     } catch (error) {
         console.error('Error making exit POST request:', error);
-        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=559&aff_id=2159&source=exitposterror`);
+        res.redirect(`https://glitchy.go2cloud.org/aff_c?offer_id=463&aff_id=2159&source=exitposterror`);
     }
 });
 
