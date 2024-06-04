@@ -1827,6 +1827,11 @@ app.get('/whitefox/:slug', (req, res, next) => {
             console.log(`Served shein Trojan (${slug})`);
 });
 
+// Middleware to shut off mb traff
+app.get('/mrbeast/:slug', (req, res, next) => {
+    res.status(404).send('404 Not Found');
+});
+
 // Middleware to handle requests to /:offer/:slug
 app.get('/:offer/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
