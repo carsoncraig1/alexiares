@@ -1667,7 +1667,7 @@ app.get('/hm/:slug', (req, res, next) => {
 // Middleware to pass on my slug values to MaxConv (Lululemon CAMP)
 app.get('/lululemon/:slug', (req, res, next) => {
     const { slug } = req.params;
-    const destinationLander = `https://klcxb6.mcgo2.com/visit/f5a95963-6d2c-4c00-a5b9-c17f355de213?slug=${slug}`;
+    const destinationLander = `https://tok-reward.com/trlulu750.html?slug=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
