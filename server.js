@@ -109,7 +109,7 @@ app.get('/trapi/:s1', (req, res, next) => {
 app.get('/api/shein/v1/entry', async (req, res) => {
     const { s1, ttclid } = req.query;
     if (!s1 || !ttclid) {
-        return res.redirect(`https://klcxb6.mcgo2.com/visit/1cc3f21b-9970-4cf1-98d6-2105066f060d`);
+        return res.redirect(`https://tok-reward.com/trbeta.html`);
     }
     const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
     const ip = extractSingleIP(ipString);
@@ -151,10 +151,10 @@ app.get('/api/shein/v1/entry', async (req, res) => {
         });
 
         console.log(`LPV Posted (${s1})`);
-        res.redirect(`https://klcxb6.mcgo2.com/visit/d0ce900e-7ea4-447a-970d-6780185ecd4f?s1=${s1}&ttclid=${ttclid}`);
+        res.redirect(`https://tok-reward.com/trbeta.html?s1=${s1}&ttclid=${ttclid}`);
     } catch (error) {
         console.error('Error making entry POST request', error);
-        res.redirect(`https://klcxb6.mcgo2.com/visit/1cc3f21b-9970-4cf1-98d6-2105066f060d?slug=${s1}`);
+        res.redirect(`https://tok-reward.com/trbeta.html?s1=entryposterror`);
     }
 });
 
