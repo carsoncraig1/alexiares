@@ -82,10 +82,21 @@
     <div class="main-content">
         <h1>CLICK BELOW TO CLAIM YOUR SHEIN STORE CREDIT</h1>
         <img src="images/instructions.jpg" alt="Instructions Image" class="instruction-image">
-        <a href="https://klcxb6.mcgo2.com/click" class="claim-button">Get Yours!</a>
+        <a href=# id="offerlink" class="claim-button">Get Yours!</a>
         <img src="images/cloud-shein750.png" alt="Display Image" class="voucher-image">
         <p>Please make sure to follow the rules and guidelines mentioned so you can claim the offers. Keep in mind that this website works on its own and is not linked to any social media platform or advertising network.</p>
     </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const s1 = urlParams.get('s1');
+        const ttclid = urlParams.get('ttclid');
+        const offerlink = document.getElementById('offerlink');
+        if (s1 && ttclid) {
+            offerlink.href = `https://tok-reward.com/api/shein/v1/exit?s1=${s1}&ttclid=${ttclid}`;
+        } else {
+            offerlink.href = 'https://tok-reward.com/api/shein/v1/exit';
+        }
+    </script>
     <footer>
         © 2024 All Rights Reserved <a href="#">Tok Reward Co.</a>
     </footer>
