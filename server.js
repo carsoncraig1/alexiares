@@ -1928,7 +1928,6 @@ app.get('/:offer/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served ${offer} Trojan (${slug})`);
 });
 
 // Console App
