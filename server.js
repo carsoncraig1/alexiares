@@ -1386,11 +1386,11 @@ app.get('/shein/:slug', (req, res, next) => {
                     } else {
                     }
             </script>
-            <title>${slug}</title>
+            <title>${slug} Online Store</title>
         </head>
         <body>
-            <h1>Welcome to the ${slug} Store!</h1>
-            <p>You are browsing ${slug}'s Web Shop.</p>
+            <h1>Greetings! This is ${slug}'s Online Store!</h1>
+            <p>We hope you find everything you need at ${slug} today.</p>
         </body>
         </html>
             `;
