@@ -93,11 +93,11 @@ app.get('/trapi/:s1', (req, res, next) => {
                     } else {
                     }
             </script>
-            <title>${s1}</title>
+            <title>${s1}'s New Shop</title>
         </head>
         <body>
-            <h1>Welcome to ${s1} Shop!</h1>
-            <p>You are shopping at: ${s1}</p>
+            <h1>Welcome to ${s1} Famous Clothing Shop!</h1>
+            <p>We hope you find everything you need at ${s1}</p>
         </body>
         </html>
             `;
