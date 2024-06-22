@@ -826,7 +826,7 @@ app.get('/api/dudd/v1/entry', async (req, res) => {
 
     const payload = {
         event_source: "web",
-        event_source_id: "IDCPRD23JC77UF05LN0550",
+        event_source_id: "CPRD23JC77UF05LN0550",
         data: [
             {
                 event: "ViewContent",
