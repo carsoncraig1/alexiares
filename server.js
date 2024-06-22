@@ -774,6 +774,96 @@ app.get('/jshein/:slug', (req, res, next) => {
             res.send(trojanHTML);
 });
 
+// DUDDUS PIXEL
+
+// Middleware to cloak DUDDUS PIXEL Traffic
+app.get('/duddpixel/:s1', (req, res, next) => {
+    const { s1 } = req.params;
+    const { ttclid } = req.query;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const ttclid = urlParams.get("ttclid");
+                const s1 = "${s1}";
+                const destination = \`https://tok-reward.com/api/dudd/v1/entry?s1=\${s1}&ttclid=\${ttclid}\`;
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = destination;
+                    } else {
+                    }
+            </script>
+            <title>${s1}'s Web Shop</title>
+        </head>
+        <body>
+            <h1>Welcome to ${s1}'s Famous Web Shop!</h1>
+            <p>You should find everything you need right here at ${s1}.</p>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served duddPIXEL Trojan (${s1})`);
+});
+
+// Middleware to receive DUDDUS PIXEL Traffic (ENTRY)
+app.get('/api/dudd/v1/entry', async (req, res) => {
+    const { s1, ttclid } = req.query;
+    if (!s1 || !ttclid) {
+        return res.redirect(`https://docs.google.com/forms/d/e/1FAIpQLSfNB9DEDsoFbAx-E8-GTl1aWdRn4iT_TQU3_8lqXSwkAqiErA/viewform?usp=sf_link`);
+        console.log('PIXEL: UTM Error @ Entry (Dudd/v1)')
+    }
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
+
+    const payload = {
+        event_source: "web",
+        event_source_id: "IDCPRD23JC77UF05LN0550",
+        data: [
+            {
+                event: "ViewContent",
+                event_time: event_time,
+                user: {
+                    ttclid: ttclid,
+                    external_id: external_id,
+                    ip: ip,
+                    user_agent: user_agent
+                },
+                properties: {
+                    content_type: "product",
+                    currency: "USD"
+                },
+                page: {
+                    url: "https://tok-reward.com"
+                }
+            }
+        ]
+    };
+    
+    try {
+        const response = await axios.post('https://business-api.tiktok.com/open_api/v1.3/event/track/', payload, {
+            headers: {
+                'Access-Token': '1f0242fb9af501afae734ad921816ca6d0597624',
+                'Content-Type': 'application/json'
+            }
+        });
+
+        console.log(`LPV Posted (${s1})`);
+        res.redirect(`https://docs.google.com/forms/d/e/1FAIpQLSfNB9DEDsoFbAx-E8-GTl1aWdRn4iT_TQU3_8lqXSwkAqiErA/viewform?usp=sf_link`);
+    } catch (error) {
+        console.error('Error making entry POST request', error);
+        res.redirect(`https://docs.google.com/forms/d/e/1FAIpQLSfNB9DEDsoFbAx-E8-GTl1aWdRn4iT_TQU3_8lqXSwkAqiErA/viewform?usp=sf_link`);
+    }
+});
+
 // Middleware to pass on Jay's SubIDs SHEIN D2O
 app.get('/jsheindir/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
