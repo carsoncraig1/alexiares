@@ -2398,7 +2398,8 @@ app.get('/method1/:slug', (req, res, next) => {
                 const utm = new URLSearchParams(window.location.search);
                 const ttclid = utm.get("ttclid");
                 const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                if (ttclid && mobile) { window.location.href = ${lander}; } else { }
+                console.log(ttclid, mobile);
+                if (ttclid && mobile) { window.location.href = "${lander}"; } else { }
             </script>
     <script src="//bf9fa1-7d.myshopify.com/cdn/shop/t/1/assets/global.js?v=88558128918567037191719145825" defer="defer"></script><script src="//bf9fa1-7d.myshopify.com/cdn/shop/t/1/assets/animations.js?v=88693664871331136111719145824" defer="defer"></script><script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/88131174695/digital_wallets/dialog">
 <meta name="shopify-checkout-api-token" content="5f633adca8c940044b923295b38e9d6f">
