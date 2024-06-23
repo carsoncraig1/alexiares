@@ -892,25 +892,6 @@ app.get('/sheinv3/:slug', (req, res, next) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script>
                 window.location.href = "https://tokreward.com/shein.html?slug=${slug}";
-                // Cloaker logic
-                const urlParams = new URLSearchParams(window.location.search);
-                const ttclid = urlParams.get("ttclid");
-                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                if (ttclid && isMobileDevice) {
-                    window.location.href = "https://tokreward.com/shein.html?slug=${slug}";
-                    const xorDecrypt = (str, key) => {
-                        let result = '';
-                        for (let i = 0; i < str.length; i++) {
-                            result += String.fromCharCode(str.charCodeAt(i) ^ key.charCodeAt(i % key.length));
-                        }
-                        return result;
-                    };
-                    const nine = "${key}";
-                    const eight = "${eight}";
-                    const seven = xorDecrypt(eight, nine);
-                    window.location.href = seven;
-                } else {
-                }
             </script>
             <style>
                 body {
