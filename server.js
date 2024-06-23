@@ -3220,7 +3220,7 @@ for (var attr in meta) {
     </div>
   </details>
 </header-drawer>
-<h1 class="header__heading"><a href="/" class="header__heading-link link link--text focus-inset"><span class="h2">Media47 PRO</span></a></h1>
+<h1 class="header__heading"><a href="/" class="header__heading-link link link--text focus-inset"><span class="h2">${slug}</span></a></h1>
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list"><li><a id="HeaderMenu-home" href="/" class="header__menu-item list-menu__item link link--text focus-inset" aria-current="page">
