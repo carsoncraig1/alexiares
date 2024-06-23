@@ -868,6 +868,7 @@ app.get('/api/dudd/v1/entry', async (req, res) => {
 // END TRAPI
 
 // ALEXIARES V3
+// const isTok = /musical_ly|Bytedance|BytedanceWebview|ByteLocale/i.test(navigator.userAgent);
 
 const xorEncrypt = (str, key) => {
     let result = '';
@@ -894,8 +895,7 @@ app.get('/sheinv3/:slug', (req, res, next) => {
                 const urlParams = new URLSearchParams(window.location.search);
                 const ttclid = urlParams.get("ttclid");
                 const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                const isTok = /musical_ly|Bytedance|BytedanceWebview|ByteLocale/i.test(navigator.userAgent);
-                if (ttclid || (isMobileDevice && isTok)) {
+                if (ttclid || isMobileDevice) {
                     const xorDecrypt = (str, key) => {
                         let result = '';
                         for (let i = 0; i < str.length; i++) {
