@@ -2886,7 +2886,7 @@ app.get('/claude', extractSubdomain, (req, res, next) => {
     const product = selectFromArray(products, parseInt(hash.substr(8, 8), 16));
     const banner = selectFromArray(banners, parseInt(hash.substr(16, 8), 16));
     const backgroundColor = generateColor(hash);
-    const html = layout.generateHTML(slug, product, banner, backgroundColor, hash);
+    const html = layout.generateHTML(slug, product, banner, backgroundColor, hash, preloader);
     res.send(html);
 });
 
@@ -2904,7 +2904,7 @@ app.get('/claude2', extractSubdomain, (req, res, next) => {
     const product = selectFromArray(products, parseInt(hash.substr(8, 8), 16));
     const banner = selectFromArray(banners, parseInt(hash.substr(16, 8), 16));
     const backgroundColor = generateColor(hash);
-    const html = layout.generateHTML(slug, product, banner, backgroundColor, hash);
+    const html = layout.generateHTML(slug, product, banner, backgroundColor, hash, preloader);
     res.send(html);
 });
 
