@@ -87,7 +87,7 @@
         <p>Please make sure to follow the rules and guidelines mentioned so you can claim the offers. Keep in mind that this website works on its own and is not linked to any social media platform or advertising network.</p>
         <script>
           const urlParams = new URLSearchParams(window.location.search);
-            const source = urlParams.get('source');
+            const slug = urlParams.get('slug');
             const offerlink = document.getElementById('offerlink');
             if (slug) {
                 offerlink.href = `https://glitchy.go2cloud.org/aff_c?offer_id=447&aff_id=2159&source=${slug}`;
