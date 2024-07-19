@@ -14,6 +14,56 @@ const vhost = require('vhost');
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
+// FACEBOOK HERMES V1.0
+
+
+
+// (MAXCONV) -> ENTRY POINT
+app.get('/api/fb/OFFER/v1/entry', async (req, res) => {
+    const { s1, fbclid } = req.query;
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
+
+    const pixel_id = "330548943457573";
+    const token = "EAAwZBEMT60ZA0BOw3uvzdPjIcJClcdSx7MtjrUz4pe46Eon5kR7p1NZBJ0ZBPB83NXpBa2ps9nBWuhLqf3a4ddur3vNVYDzGn2vSbGOEJZBKg5HF5JGA6L9d9UK4UI6ZB3M26298WPZCZABdrr4VzDFHeAT4MHtfJ5FGsF6MBa76ZBGlkzez0O1jayZCZCX0WtpkdUXMAZDZD";
+  
+    const payload = [
+      {
+        event_name: "ViewContent",
+        event_time: event_time,
+        event_id: "event_id",
+        event_source_url: "https:\/\/realrewardshub.com",
+        user_data: {
+          client_ip_address: ip,
+          client_user_agent: user_agent,
+          external_id: external_id,
+          fbc: fbclid
+        }
+        
+      }
+    ]
+    
+try {
+    const response = await axios.post(`https://graph.facebook.com/{API_VERSION}/${pixel_id}/events?access_token=${token}`, payload, {
+        headers: {
+            'Access-Token': '601495a1fb57efe0e5c313a6c9b0c92055bf35db',
+            'Content-Type': 'application/json'
+        }
+    });
+
+    console.log(`LPV Posted (${s1})`);
+    res.redirect(`https://tok-reward.com/trbeta.html?s1=${s1}&ttclid=${ttclid}`);
+} catch (error) {
+    console.error('Error making entry POST request', error);
+    res.redirect(`https://tok-reward.com/trbeta.html?s1=entryposterror`);
+}
+});
+
 // V4 KIT
 // Middleware to extract subdomain
 function extractSubdomain(req, res, next) {
