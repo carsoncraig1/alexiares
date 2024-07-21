@@ -1360,45 +1360,67 @@ app.get('/9053/:slug', (req, res, next) => {
         margin: 0;
         padding: 0;
         height: 100%;
-        font-family: 'Courier New', monospace;
-        background-color: #000;
-        color: #0f0;
-        overflow: hidden;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
     }
-    .terminal {
+    .container {
+        display: flex;
+        flex-direction: column;
         height: 100vh;
-        overflow-y: auto;
-        padding: 20px;
-        box-sizing: border-box;
     }
-    .cursor {
-        animation: blink 1s step-end infinite;
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
     }
-    @keyframes blink {
-        50% { opacity: 0; }
+    nav {
+        background-color: #444;
+        padding: 0.5rem;
     }
-    .header {
-        font-size: 1.5em;
-        margin-bottom: 20px;
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
     }
-    .content {
-        margin-bottom: 20px;
+    nav ul li {
+        margin: 0 1rem;
     }
-    .menu {
-        margin-bottom: 20px;
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
     }
-    .menu-item {
-        cursor: pointer;
+    main {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
     }
-    .menu-item:hover {
-        text-decoration: underline;
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 1rem;
+        padding: 1.5rem;
+        width: 300px;
+        transition: transform 0.3s ease;
     }
-    .footer {
-        margin-top: 40px;
-        font-size: 0.8em;
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
     }
     a {
-        color: #0f0;
+        color: #007bff;
         text-decoration: none;
     }
     a:hover {
@@ -1407,46 +1429,39 @@ app.get('/9053/:slug', (req, res, next) => {
 </style>
 </head>
 <body>
-<div class="terminal">
-    <div class="header">
-        <pre>${slug}</pre>
-        <p>Welcome to ${slug} System v1.0.0</p>
+    <div class="container">
+        <header>
+            <h1>${slug} Hub</h1>
+            <p>Your gateway to ${slug} innovations</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <div class="card">
+                <h2>Discover ${slug}</h2>
+                <p>Explore the cutting-edge advancements in ${slug} technology.</p>
+            </div>
+            <div class="card">
+                <h2>${slug} Solutions</h2>
+                <p>Tailored ${slug} solutions to meet your unique needs.</p>
+            </div>
+            <div class="card">
+                <h2>${slug} Community</h2>
+                <p>Join our thriving community of ${slug} enthusiasts and experts.</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 ${slug} Hub | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+        </footer>
     </div>
-
-    <div class="content">
-        <p>> Initializing ${slug} protocols...</p>
-        <p>> ${slug} core systems online.</p>
-        <p>> Enter command or select option:</p>
-    </div>
-
-    <div class="menu">
-        <p class="menu-item">> 1. Access ${slug} Database</p>
-        <p class="menu-item">> 2. Run ${slug} Diagnostics</p>
-        <p class="menu-item">> 3. Activate ${slug} Subsystems</p>
-        <p class="menu-item">> 4. Exit</p>
-    </div>
-
-    <div class="input">
-        > <span class="cursor">█</span>
-    </div>
-
-    <div class="footer">
-        <p>${slug} System &copy; 2024 | <a href="https://tokreward.com/pp.html">Privacy Protocol</a></p>
-    </div>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const menuItems = document.querySelectorAll('.menu-item');
-        menuItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const response = document.createElement('p');
-                response.textContent = `> Executing ${item.textContent.slice(3)}...`;
-                item.parentNode.insertBefore(response, item.nextSibling);
-            });
-        });
-    });
-</script>
 </body>
 </html>
             `;
