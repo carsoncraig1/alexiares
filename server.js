@@ -1409,9 +1409,7 @@ app.get('/9053/:slug', (req, res, next) => {
 <body>
 <div class="terminal">
     <div class="header">
-        <pre>
- ____  ${slug} ____
-        </pre>
+        <pre>${slug}</pre>
         <p>Welcome to ${slug} System v1.0.0</p>
     </div>
 
