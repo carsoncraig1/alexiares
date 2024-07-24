@@ -18,8 +18,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/v5.0/:lid', async (req, res) => {
   const { lid } = req.params;
-  // Adjust the file path to include 'alexiares/public'
-  const filePath = path.join(__dirname, 'alexiares', 'public', 'wps', `${lid}.html`);
+  // Adjust the file path to look in the public/wps directory
+  const filePath = path.join(__dirname, 'public', 'wps', `${lid}.html`);
 
   try {
     const content = await fs.readFile(filePath, 'utf-8');
