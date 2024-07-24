@@ -18,12 +18,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/v5.0/:lid', async (req, res) => {
   const { lid } = req.params;
-  const filePath = path.join(__dirname, 'wps', `${lid}.html`);
+  // Adjust the file path to include 'alexiares/public'
+  const filePath = path.join(__dirname, 'alexiares', 'public', 'wps', `${lid}.html`);
 
   try {
     const content = await fs.readFile(filePath, 'utf-8');
     res.send(content);
-    console.log(`Served ${lid} Trojan (${lid}`);
+    console.log(`Served ${lid} Trojan (${lid})`);
   } catch (error) {
     console.error('Error reading file:', error);
     res.status(404).send('File not found');
