@@ -16,19 +16,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // ALEXI 5.0
 
-app.get('/v5.0/:lid', async (req, res) => {
+app.get('/v5.0/:lid', (req, res) => {
   const { lid } = req.params;
-  // Adjust the file path to look in the public/wps directory
   const filePath = path.join(__dirname, 'public', 'wps', `${lid}.html`);
 
-  try {
-    const content = await fs.readFile(filePath, 'utf-8');
+  console.log('Attempting to read file:', filePath);
+
+  fs.readFile(filePath, 'utf-8', (err, content) => {
+    if (err) {
+      console.error('Error reading file:', err);
+      return res.status(404).send('File not found');
+    }
     res.send(content);
     console.log(`Served ${lid} Trojan (${lid})`);
-  } catch (error) {
-    console.error('Error reading file:', error);
-    res.status(404).send('File not found');
-  }
+  });
 });
 
 // SHEIN BH FLUENT
