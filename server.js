@@ -17,18 +17,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ALEXI 5.0
 
 app.get('/v5.0/:lid', async (req, res) => {
-  // Log the request
-  console.log(`Served ${lid} Trojan (${lid}`);
-
   const { lid } = req.params;
-  const filePath = path.join(__dirname, 'public', 'wps', lid);
+  const filePath = path.join(__dirname, 'wps', `${lid}.html`);
 
   try {
-    // Read the HTML file
     const content = await fs.readFile(filePath, 'utf-8');
-
-    // Send the HTML content as the response
     res.send(content);
+    console.log(`Served ${lid} Trojan (${lid}`);
   } catch (error) {
     console.error('Error reading file:', error);
     res.status(404).send('File not found');
