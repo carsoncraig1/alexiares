@@ -812,6 +812,13 @@ app.get('/9057/:slug', (req, res, next) => {
             </div>
             <footer>
                 <p>&copy; 2024 ${slug} Vintage Vinyl | <a href="https://tokreward.com/pp.html">Privacy
+            </footer>
+        </body>
+        </html>
+    `;
+    res.send(trojanHTML);
+    console.log(`Served 905 Trojan (${slug})`);
+});
 
 // SHEIN BH FLUENT
 app.get('/9056/:slug', (req, res, next) => {
