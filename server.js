@@ -19,9 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/v5.0/:lid', (req, res) => {
   const { lid } = req.params;
   const filePath = path.join(__dirname, 'public', 'wps', `${lid}.html`);
-
-  console.log('Attempting to read file:', filePath);
-
   fs.readFile(filePath, 'utf-8', (err, content) => {
     if (err) {
       console.error('Error reading file:', err);
