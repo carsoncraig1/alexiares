@@ -29,6 +29,15 @@ app.get('/v5.0/:lid', (req, res) => {
   });
 });
 
+// FLUENT CVR CONSOLE LOGGING
+app.get('/api/cvr', (req, res) => {
+  console.log('Conversion Postback Received:');
+  console.log('Time:', new Date().toISOString());
+  console.log('Query Parameters:', req.query);
+  console.log('Full URL:', req.protocol + '://' + req.get('host') + req.originalUrl);
+  res.status(200).send('OK');
+});
+
 // SHEIN BH FLUENT
 app.get('/94889/:slug', (req, res, next) => {
     const { slug } = req.params;
