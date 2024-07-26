@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/cdn/preloader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Chic Boutique</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f5f1;
+            color: #333;
+        }
+        header {
+            background-color: #2c7744;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            background-color: #1a4a2a;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #2c7744;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eco Chic Boutique</h1>
+        <p>Sustainable Fashion for a Greener Future</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="bamboo-tee.jpg" alt="Bamboo T-Shirt">
+                <h3>Bamboo T-Shirt</h3>
+                <p>$29.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="recycled-jeans.jpg" alt="Recycled Denim Jeans">
+                <h3>Recycled Denim Jeans</h3>
+                <p>$79.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="hemp-dress.jpg" alt="Hemp Summer Dress">
+                <h3>Hemp Summer Dress</h3>
+                <p>$59.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="organic-sweater.jpg" alt="Organic Cotton Sweater">
+                <h3>Organic Cotton Sweater</h3>
+                <p>$69.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Eco Chic Boutique. All rights reserved.</p>
+        <p><a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
