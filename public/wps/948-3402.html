@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/cdn/preloader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VintageVogue Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f0e6d2;
+            color: #4a4a4a;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #8b4513;
+            color: #f0e6d2;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            background-color: #d2b48c;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #4a4a4a;
+            text-decoration: none;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #d2b48c;
+            padding: 15px;
+            text-align: center;
+        }
+        footer {
+            background-color: #8b4513;
+            color: #f0e6d2;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #f0e6d2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VintageVogue Emporium</h1>
+        <p>Step back in time with our curated collection</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>1950s Polka Dot Dress</h3>
+                <p>Authentic vintage dress perfect for swing dancing</p>
+                <p>Price 89.99</p>
+            </div>
+            <div class="product-card">
+                <h3>Retro Leather Jacket</h3>
+                <p>Classic biker style from the 1960s</p>
+                <p>Price 129.99</p>
+            </div>
+            <div class="product-card">
+                <h3>Vintage High Waist Jeans</h3>
+                <p>Worn in denim with perfect 70s fit</p>
+                <p>Price 69.99</p>
+            </div>
+            <div class="product-card">
+                <h3>1980s Neon Windbreaker</h3>
+                <p>Colorful and fun throwback piece</p>
+                <p>Price 54.99</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 VintageVogue Emporium. All rights reserved. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
