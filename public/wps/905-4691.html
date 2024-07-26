@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/cdn/preloader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VintageVogue Boutique</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f0e6d2;
+            color: #4a4a4a;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #8b4513;
+            color: #f0e6d2;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            background-color: #d2691e;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #f0e6d2;
+            text-decoration: none;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #d2691e;
+            padding: 15px;
+            text-align: center;
+        }
+        footer {
+            background-color: #8b4513;
+            color: #f0e6d2;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VintageVogue Boutique</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>Retro Polka Dot Dress</h3>
+                <p>A charming 1950s inspired dress</p>
+                <p>$79.99</p>
+            </div>
+            <div class="product-card">
+                <h3>Vintage Leather Jacket</h3>
+                <p>Authentic 1970s biker style</p>
+                <p>$129.99</p>
+            </div>
+            <div class="product-card">
+                <h3>Classic Fedora Hat</h3>
+                <p>Timeless accessory for any outfit</p>
+                <p>$49.99</p>
+            </div>
+            <div class="product-card">
+                <h3>Retro High-Waist Jeans</h3>
+                <p>1980s inspired denim</p>
+                <p>$89.99</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 VintageVogue Boutique. All rights reserved.</p>
+        <p><a href="https://tokreward.com/privacy.html" style="color: #f0e6d2;">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
