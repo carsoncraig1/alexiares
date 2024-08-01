@@ -245,18 +245,7 @@ const base64Encode = (str) => {
   return Buffer.from(str).toString('base64');
 };
 
-// TRAPIIIIIIIIIIII
-
-// Functions
-const extractSingleIP = (ipString) => {
-    if (!ipString) return null;
-    const ips = ipString.split(',');
-    return ips[0].trim();
-};
-
-const hashValue = (value) => {
-    return crypto.createHash('sha256').update(value).digest('hex');
-};
+// TRAPIIIIIIIIIII
 
 // TRAPI Beta (Shein)
 
