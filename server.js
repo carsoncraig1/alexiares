@@ -183,21 +183,24 @@ const handleCVR = async (req, res) => {
     const formattedPayout = formatPayout(payout);
     console.log(`Conversion data received: s1=${s1}, s4=${s4}, ttclid=${ttclid}, payout=${formattedPayout}, tid=${tid}`);
     try {
-        const payload = createPayload("CompletePayment", ttclid, req, {
-            currency: "USD",
-            value: formattedPayout
-        });
-        try {
-            await sendEventToTikTok(payload);
-            console.log(`CVR Posted ${s1} ${formattedPayout} ${ttclid}`);
-        } catch (tiktokError) {
-            console.error('Error sending CVR to TikTok API:', tiktokError);
+        if (ttclid) {
+            const payload = createPayload("CompletePayment", ttclid, req, {
+                currency: "USD",
+                value: formattedPayout
+            });
+            try {
+                await sendEventToTikTok(payload);
+                console.log(`CVR Posted to TikTok: s1=${s1}, payout=${formattedPayout}, ttclid=${ttclid}`);
+            } catch (tiktokError) {
+                console.error('Error sending CVR to TikTok API:', tiktokError);
+            }
         }
         // Forward CVR postback to MaxConv
         if (s4) {
             const postbackUrl = `https://klcxb6.mcattr.com/conv?clid=${s4}&payout=${formattedPayout}&txid=${tid}`;
             try {
                 const response = await axios.get(postbackUrl);
+                console.log(`Postback sent to MaxConv: s4=${s4}, payout=${formattedPayout}, tid=${tid}`);
             } catch (postbackError) {
                 console.error('Error sending postback to MaxConv:', postbackError);
             }
