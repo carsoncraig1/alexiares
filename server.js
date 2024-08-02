@@ -102,12 +102,37 @@ const formatPayout = (payout) => {
 };
 
   // Route Handlers
-    // Test Events
+ // Test Events
 const handleTestEvent = async (req, res) => {
     const { s1, ttclid } = req.query;
-    const payload = createPayload("ViewContent", ttclid, req, {
-        test_event_code: "TEST52683"
-    });
+    const ipString = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const ip = extractSingleIP(ipString);
+    const user_agent = req.headers['user-agent'];
+    const event_time = Math.floor(Date.now() / 1000);
+    const external_id = hashValue(ttclid);
+
+    const payload = {
+        event_source: "web",
+        event_source_id: v5_EVENT_SOURCE_ID,
+        test_event_code: "TEST52683",
+        data: [{
+            event: "ViewContent",
+            event_time: event_time,
+            user: {
+                ttclid: ttclid,
+                external_id: external_id,
+                ip: ip,
+                user_agent: user_agent
+            },
+            properties: {
+                contents: [{
+                    content_id: '216897'
+                }],
+                currency: "USD",
+                value: "0.00"
+            }
+        }]
+    };
     console.log('Payload:', JSON.stringify(payload, null, 2));
     try {
         const response = await sendEventToTikTok(payload);
@@ -118,6 +143,7 @@ const handleTestEvent = async (req, res) => {
         res.sendStatus(200);
     }
 };
+
 // Entry Endpoint
 const handleEntry = async (req, res) => {
     const { s1, ttclid } = req.query;
