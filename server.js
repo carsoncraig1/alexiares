@@ -14,6 +14,14 @@ const vhost = require('vhost');
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+// HOUDINI AUTH ENDPOINT
+app.get('/houdini/auth', (req, res) => {
+  const authCode = req.query.auth_code;
+  const extensionId = 'eadalfbnnmljlceffgpkinkflmbnnabi';
+  if (authCode) { res.redirect(`chrome-extension://${extensionId}/redirect.html?auth_code=${authCode}`); }
+  else { res.status(400).send('Authorization code not found'); }
+});
+
 // ALEXI 5.0
 
 app.get('/v5.0/:lid', (req, res) => {
